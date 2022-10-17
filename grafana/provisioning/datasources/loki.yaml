@@ -1,0 +1,10 @@
+apiVersion: 1
+datasources: 
+  - 
+    access: proxy
+    basicAuth: false
+    jsonData: 
+      maxLines: 1000
+    name: Loki
+    type: loki
+    url: "http://loki:3100/"
