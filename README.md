@@ -4,7 +4,7 @@
 ![License](https://img.shields.io/badge/prometheus-exporter-blueviolet)
 
 ## Description
-MKTXP-Monitor is a dockerized monitoring stack for [MKTXP Exporter](https://github.com/akpw/mktxp). 
+MKTXP-Stack is a dockerized monitoring stack for [MKTXP Exporter](https://github.com/akpw/mktxp). 
 
 As an out-of-the-box solution, it let's you quickly get up & running with [MKTXP](https://github.com/akpw/mktxp), [Prometheus](https://prometheus.io/), and [Grafana](https://grafana.com/) and have your Mikrotik RouterOS devices monitored with least amount of configuration. 
 
