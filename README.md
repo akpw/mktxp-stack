@@ -13,19 +13,19 @@ MKTXP-Monitor is an out-of-the-box dockerized monitoring stack for [MKTXP Export
 
 
 #### Install:
- - Download the code from this repository and extract it into a directory
+ - Download the code from this repository and extract it into a directory:
 ```
 wget https://github.com/akpw/mktxp-monitor/archive/main.zip
 unzip main.zip
 cd mktxp-monitor-main
 ```
 
-- Edit the base mktxp config file & add a dedicated user to your router as described in [MKTXP Getting Started](https://github.com/akpw/mktxp#getting-started)
+- Edit the base mktxp config file & add a dedicated user to your router as described in [MKTXP Getting Started](https://github.com/akpw/mktxp#getting-started):
 ```
 nano mktxp/mktxp.conf
 ```
 
- - Run docker-compose, give the containers some time to start up and then point your Web browser to Grafana at http://localhost:3000/ 
+ - Run docker-compose, give the containers some time to start up and then point your Web browser to [Grafana]:(http://localhost:3000)
 ```
 docker-compose -f ./docker-compose-mktxp.yml up -d
 ```
