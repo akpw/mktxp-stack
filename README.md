@@ -36,7 +36,7 @@ cd mktxp-stack-main
   /user add name=mktxp_user group=mktxp_group password=mktxp_user_password
   ```
 
- - Run docker-compose, give the containers some time to start up, and then point your Web browser to [Grafana](http://localhost:3000)
+ - Now run docker-compose, give the containers some time to start up, and point your Web browser to [Grafana](http://localhost:3000)
 ```
 docker-compose -f ./docker-compose-mktxp.yml up -d
 ```
