@@ -25,7 +25,7 @@ cd mktxp-stack-main
 ```
 
 - Configure mktxp as described in [MKTXP Getting Started](https://github.com/akpw/mktxp#getting-started):\
-  a) edit the main mktxp config file, adding your Mikrotik device ip address & authentication info:
+  a) edit the main mktxp config file, adding your Mikrotik device ip address & authentication info to provided sample entry:
   ```
   nano mktxp/mktxp.conf
   ```
