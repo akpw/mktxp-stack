@@ -20,9 +20,14 @@ unzip main.zip
 cd mktxp-monitor-main
 ```
 
-- Edit the base mktxp config file & add a dedicated user to your router as described in [MKTXP Getting Started](https://github.com/akpw/mktxp#getting-started):
+- [Edit the base mktxp config file]((https://github.com/akpw/mktxp#getting-started)) & [add a dedicated user to your router](https://github.com/akpw/mktxp#mikrotik-device-config):
 ```
 nano mktxp/mktxp.conf
+```
+
+```
+/user group add name=mktxp_group policy=api,read
+/user add name=mktxp_user group=mktxp_group password=mktxp_user_password
 ```
 
  - Run docker-compose, give the containers some time to start up and then point your Web browser to [Grafana]:(http://localhost:3000)
