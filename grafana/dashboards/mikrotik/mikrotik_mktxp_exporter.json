@@ -28,16 +28,15 @@
   "graphTooltip": 0,
   "links": [
     {
-      "asDropdown": false,
+      "asDropdown": true,
       "icon": "external link",
       "includeVars": false,
       "keepTime": false,
       "tags": [
-        "mikrotik",
-        "loki"
+        "mikrotik"
       ],
       "targetBlank": false,
-      "title": "Mikrotik Logs",
+      "title": "Mikrotik",
       "tooltip": "",
       "type": "dashboards",
       "url": ""
