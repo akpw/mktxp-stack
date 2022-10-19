@@ -8,7 +8,7 @@ MKTXP-Monitor is an out-of-the-box dockerized monitoring stack for [MKTXP Export
 
 
 #### Requirements:
-[Docker](https://docs.docker.com/get-docker/)
+[Docker](https://docs.docker.com/get-docker/)\
 [Docker Compose](https://docs.docker.com/compose/install/)
 
 
