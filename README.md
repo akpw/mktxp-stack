@@ -25,12 +25,12 @@ cd mktxp-stack-main
 ```
 
 - Configure mktxp as described in [MKTXP Getting Started](https://github.com/akpw/mktxp#getting-started):\
-  a) edit the main mktxp config file:
+  a) edit the main mktxp config file, adding your Mikrotik device ip address & authentication info:
   ```
   nano mktxp/mktxp.conf
   ```
 
-  b) [add a dedicated API user](https://github.com/akpw/mktxp#mikrotik-device-config) to your router:
+  b) if needed, [add a dedicated API user](https://github.com/akpw/mktxp#mikrotik-device-config) from the mktxp config to your RouterOS device:
   ```
   /user group add name=mktxp_group policy=api,read
   /user add name=mktxp_user group=mktxp_group password=mktxp_user_password
