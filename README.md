@@ -11,12 +11,12 @@ As an out-of-the-box solution, it let's you quickly get up & running with [MKTXP
 While complementary to [MKTXP](https://github.com/akpw/mktxp), this project also adds some extra capabilitis such an Mikrotik log processing based on [syslog-ng](https://www.syslog-ng.com/) & [Loki](https://grafana.com/docs/loki/latest).
 
 
-#### Requirements:
+## Requirements:
 [Docker](https://docs.docker.com/get-docker/)\
 [Docker Compose](https://docs.docker.com/compose/install/)
 
 
-#### Install:
+## Install:
  - Download the code from this repository and extract it into a directory:
 ```
 wget https://github.com/akpw/mktxp-stack/archive/main.zip
