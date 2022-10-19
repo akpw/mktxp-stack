@@ -20,7 +20,7 @@ unzip main.zip
 cd mktxp-monitor-main
 ```
 
-- [Edit the base mktxp config file]((https://github.com/akpw/mktxp#getting-started)) & [add a dedicated user to your router](https://github.com/akpw/mktxp#mikrotik-device-config):
+- [Edit the base mktxp config file](https://github.com/akpw/mktxp#getting-started) & [add a dedicated user to your router](https://github.com/akpw/mktxp#mikrotik-device-config):
 ```
 nano mktxp/mktxp.conf
 ```
