@@ -21,22 +21,21 @@
       }
     ]
   },
-  "description": "Mikrotik Loki Logs",
   "editable": true,
   "fiscalYearStartMonth": 0,
-  "gnetId": 17139,
   "graphTooltip": 0,
+  "id": 10,
   "links": [
     {
-      "asDropdown": false,
+      "asDropdown": true,
       "icon": "external link",
       "includeVars": false,
       "keepTime": false,
       "tags": [
-        "mktxp"
+        "mikrotik"
       ],
       "targetBlank": false,
-      "title": "MKTXP",
+      "title": "Mikrotik",
       "tooltip": "",
       "type": "dashboards",
       "url": ""
@@ -44,20 +43,82 @@
     {
       "asDropdown": true,
       "icon": "external link",
-      "includeVars": false,
       "keepTime": false,
       "tags": [
         "system"
       ],
-      "targetBlank": false,
       "title": "System",
-      "tooltip": "",
-      "type": "dashboards",
-      "url": ""
+      "type": "dashboards"
     }
   ],
   "liveNow": false,
   "panels": [
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "P8E80F9AEF21F6940"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "semi-dark-orange",
+                "value": null
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 9,
+        "x": 0,
+        "y": 0
+      },
+      "id": 4,
+      "interval": "$smooth",
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "sum"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.2.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "P8E80F9AEF21F6940"
+          },
+          "editorMode": "code",
+          "expr": "count_over_time({job=\"syslog\"} [$__interval] |~\"(?i)$topics\" |~\"(?i)$searchable_pattern\" !~\"$exclude_pattern\")",
+          "legendFormat": "{{host}}",
+          "queryType": "range",
+          "refId": "A"
+        }
+      ],
+      "title": "Log Counts By Topic",
+      "transformations": [],
+      "type": "stat"
+    },
     {
       "datasource": {
         "type": "loki",
@@ -75,25 +136,24 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
+            "fillOpacity": 30,
+            "gradientMode": "opacity",
             "hideFrom": {
               "legend": false,
               "tooltip": false,
               "viz": false
             },
-            "lineInterpolation": "linear",
+            "lineInterpolation": "smooth",
             "lineWidth": 1,
             "pointSize": 5,
             "scaleDistribution": {
-              "log": 10,
-              "type": "log"
+              "type": "linear"
             },
             "showPoints": "never",
-            "spanNulls": false,
+            "spanNulls": true,
             "stacking": {
               "group": "A",
-              "mode": "none"
+              "mode": "normal"
             },
             "thresholdsStyle": {
               "mode": "off"
@@ -118,79 +178,44 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 12,
-        "w": 24,
-        "x": 0,
+        "h": 7,
+        "w": 15,
+        "x": 9,
         "y": 0
       },
-      "id": 4,
-      "links": [],
-      "maxDataPoints": 100,
+      "id": 3,
+      "interval": "$smooth",
       "options": {
         "legend": {
           "calcs": [
             "mean",
-            "lastNotNull",
-            "max"
+            "sum"
           ],
           "displayMode": "table",
           "placement": "right",
           "showLegend": true
         },
         "tooltip": {
-          "mode": "multi",
+          "mode": "none",
           "sort": "none"
         }
       },
-      "pluginVersion": "9.2.0",
+      "pluginVersion": "8.1.2",
       "targets": [
         {
           "datasource": {
             "type": "loki",
             "uid": "P8E80F9AEF21F6940"
           },
-          "expr": "count_over_time({job=\"syslog\"} |=\"GT Critical\" [5m])",
-          "legendFormat": "Critical",
+          "editorMode": "code",
+          "expr": "count_over_time({job=\"syslog\"} [$__interval] | pattern \"<prefix>:<_>\" |~\"(?i)$topics\" |~\"(?i)$searchable_pattern\" !~\"$exclude_pattern\" !~\"$exclude_pattern\")",
+          "legendFormat": "{{prefix}}",
+          "queryType": "range",
           "refId": "A"
-        },
-        {
-          "datasource": {
-            "type": "loki",
-            "uid": "P8E80F9AEF21F6940"
-          },
-          "expr": "count_over_time({job=\"syslog\"} |=\"GT Error\" !=\"critical\"  [5m])",
-          "legendFormat": "Error",
-          "refId": "B"
-        },
-        {
-          "datasource": {
-            "type": "loki",
-            "uid": "P8E80F9AEF21F6940"
-          },
-          "expr": "count_over_time({job=\"syslog\"} |=\"GT Warning\" !=\"critical\"  [5m])",
-          "legendFormat": "Warning",
-          "refId": "C"
-        },
-        {
-          "datasource": {
-            "type": "loki",
-            "uid": "P8E80F9AEF21F6940"
-          },
-          "expr": "count_over_time({job=\"syslog\"} |=\"GT Firewall\" [5m])",
-          "legendFormat": "Firewall",
-          "refId": "D"
-        },
-        {
-          "datasource": {
-            "type": "loki",
-            "uid": "P8E80F9AEF21F6940"
-          },
-          "expr": "count_over_time({job=\"syslog\"} |=\"GT Info\" !=\"firewall\"  [5m])",
-          "legendFormat": "Info",
-          "refId": "E"
         }
       ],
-      "title": "Logs counts",
+      "title": "Log Counts By Topic Over Time",
+      "transformations": [],
       "type": "timeseries"
     },
     {
@@ -198,15 +223,14 @@
         "type": "loki",
         "uid": "P8E80F9AEF21F6940"
       },
+      "description": "",
       "gridPos": {
-        "h": 15,
-        "w": 15,
+        "h": 17,
+        "w": 24,
         "x": 0,
-        "y": 12
+        "y": 7
       },
-      "id": 12,
-      "links": [],
-      "maxDataPoints": 100,
+      "id": 5,
       "options": {
         "dedupStrategy": "none",
         "enableLogDetails": true,
@@ -217,192 +241,103 @@
         "sortOrder": "Descending",
         "wrapLogMessage": false
       },
-      "pluginVersion": "7.3.5",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "datasource": {
             "type": "loki",
             "uid": "P8E80F9AEF21F6940"
           },
-          "expr": "{job=\"syslog\"} |=\"GT Firewall\" |~ \"(?i)$searchable_pattern\"",
+          "editorMode": "code",
+          "expr": "{job=\"syslog\"} |~\"(?i)$topics\" |~\"(?i)$searchable_pattern\" !~\"$exclude_pattern\"",
           "legendFormat": "",
+          "queryType": "range",
           "refId": "A"
         }
       ],
-      "title": "Firewall ",
-      "type": "logs"
-    },
-    {
-      "datasource": {
-        "type": "loki",
-        "uid": "P8E80F9AEF21F6940"
-      },
-      "gridPos": {
-        "h": 9,
-        "w": 9,
-        "x": 15,
-        "y": 12
-      },
-      "id": 8,
-      "links": [],
-      "maxDataPoints": 100,
-      "options": {
-        "dedupStrategy": "none",
-        "enableLogDetails": true,
-        "prettifyLogMessage": false,
-        "showCommonLabels": false,
-        "showLabels": false,
-        "showTime": true,
-        "sortOrder": "Descending",
-        "wrapLogMessage": false
-      },
-      "pluginVersion": "7.3.5",
-      "targets": [
-        {
-          "datasource": {
-            "type": "loki",
-            "uid": "P8E80F9AEF21F6940"
-          },
-          "expr": "{job=\"syslog\"} |=\"GT Critical\" |~ \"(?i)$searchable_pattern\"",
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "title": "Critical ",
-      "type": "logs"
-    },
-    {
-      "datasource": {
-        "type": "loki",
-        "uid": "P8E80F9AEF21F6940"
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 9,
-        "x": 15,
-        "y": 21
-      },
-      "id": 10,
-      "links": [],
-      "maxDataPoints": 100,
-      "options": {
-        "dedupStrategy": "none",
-        "enableLogDetails": true,
-        "prettifyLogMessage": false,
-        "showCommonLabels": false,
-        "showLabels": false,
-        "showTime": true,
-        "sortOrder": "Descending",
-        "wrapLogMessage": false
-      },
-      "pluginVersion": "7.3.5",
-      "targets": [
-        {
-          "datasource": {
-            "type": "loki",
-            "uid": "P8E80F9AEF21F6940"
-          },
-          "expr": "{job=\"syslog\"} |=\"GT Error\" |~ \"(?i)$searchable_pattern\"",
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "title": "Error ",
-      "type": "logs"
-    },
-    {
-      "datasource": {
-        "type": "loki",
-        "uid": "P8E80F9AEF21F6940"
-      },
-      "gridPos": {
-        "h": 13,
-        "w": 15,
-        "x": 0,
-        "y": 27
-      },
-      "id": 6,
-      "links": [],
-      "maxDataPoints": 100,
-      "options": {
-        "dedupStrategy": "none",
-        "enableLogDetails": true,
-        "prettifyLogMessage": false,
-        "showCommonLabels": false,
-        "showLabels": false,
-        "showTime": true,
-        "sortOrder": "Descending",
-        "wrapLogMessage": false
-      },
-      "pluginVersion": "7.3.5",
-      "targets": [
-        {
-          "datasource": {
-            "type": "loki",
-            "uid": "P8E80F9AEF21F6940"
-          },
-          "expr": "{job=\"syslog\"} |=\"GT Info\" !=\"firewall\"|~ \"(?i)$searchable_pattern\"",
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "title": "Info ",
-      "transformations": [],
-      "type": "logs"
-    },
-    {
-      "datasource": {
-        "type": "loki",
-        "uid": "P8E80F9AEF21F6940"
-      },
-      "gridPos": {
-        "h": 11,
-        "w": 9,
-        "x": 15,
-        "y": 29
-      },
-      "id": 14,
-      "links": [],
-      "maxDataPoints": 100,
-      "options": {
-        "dedupStrategy": "none",
-        "enableLogDetails": true,
-        "prettifyLogMessage": false,
-        "showCommonLabels": false,
-        "showLabels": false,
-        "showTime": true,
-        "sortOrder": "Descending",
-        "wrapLogMessage": false
-      },
-      "pluginVersion": "7.3.5",
-      "targets": [
-        {
-          "datasource": {
-            "type": "loki",
-            "uid": "P8E80F9AEF21F6940"
-          },
-          "expr": "{job=\"syslog\"} |=\"GT Warning\" !=\"critical\"|~ \"(?i)$searchable_pattern\"",
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "title": "Warning ",
+      "title": "Logs Lines By Topic",
       "type": "logs"
     }
   ],
-  "refresh": "10s",
+  "refresh": "30s",
   "schemaVersion": 37,
   "style": "dark",
   "tags": [
     "mikrotik",
-    "loki",
-    "dashboard"
+    "loki"
   ],
   "templating": {
     "list": [
       {
         "current": {
-          "selected": false,
+          "selected": true,
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
+        },
+        "hide": 0,
+        "includeAll": true,
+        "label": "Topics",
+        "multi": true,
+        "name": "topics",
+        "options": [
+          {
+            "selected": true,
+            "text": "All",
+            "value": "$__all"
+          },
+          {
+            "selected": false,
+            "text": "account",
+            "value": "account"
+          },
+          {
+            "selected": false,
+            "text": "caps",
+            "value": "caps"
+          },
+          {
+            "selected": false,
+            "text": "critical",
+            "value": "critical"
+          },
+          {
+            "selected": false,
+            "text": "error",
+            "value": "error"
+          },
+          {
+            "selected": false,
+            "text": "firewall",
+            "value": "firewall"
+          },
+          {
+            "selected": false,
+            "text": "info",
+            "value": "info"
+          },
+          {
+            "selected": false,
+            "text": "warning",
+            "value": "warning"
+          },
+          {
+            "selected": false,
+            "text": "wireless",
+            "value": "wireless"
+          }
+        ],
+        "query": "account,caps,critical,error,firewall,info,warning,wireless",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      },
+      {
+        "current": {
+          "selected": true,
           "text": "",
           "value": ""
         },
@@ -419,19 +354,100 @@
         "query": "",
         "skipUrlSync": false,
         "type": "textbox"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": "5m",
+          "value": "5m"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": "Smooth",
+        "multi": false,
+        "name": "smooth",
+        "options": [
+          {
+            "selected": false,
+            "text": "30s",
+            "value": "30s"
+          },
+          {
+            "selected": false,
+            "text": "1m",
+            "value": "1m"
+          },
+          {
+            "selected": false,
+            "text": "2m",
+            "value": "2m"
+          },
+          {
+            "selected": true,
+            "text": "5m",
+            "value": "5m"
+          },
+          {
+            "selected": false,
+            "text": "10m",
+            "value": "10m"
+          },
+          {
+            "selected": false,
+            "text": "15m",
+            "value": "15m"
+          },
+          {
+            "selected": false,
+            "text": "30m",
+            "value": "30m"
+          },
+          {
+            "selected": false,
+            "text": "1h",
+            "value": "1h"
+          },
+          {
+            "selected": false,
+            "text": "2h",
+            "value": "2h"
+          }
+        ],
+        "query": "30s,1m,2m,5m,10m,15m,30m,1h,2h",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "@@@",
+          "value": "@@@"
+        },
+        "hide": 0,
+        "label": "Exclude",
+        "name": "exclude_pattern",
+        "options": [
+          {
+            "selected": true,
+            "text": "@@@",
+            "value": "@@@"
+          }
+        ],
+        "query": "@@@",
+        "skipUrlSync": false,
+        "type": "textbox"
       }
     ]
   },
   "time": {
-    "from": "now-12h",
+    "from": "now-24h",
     "to": "now"
   },
-  "timepicker": {
-    "hidden": false
-  },
+  "timepicker": {},
   "timezone": "",
-  "title": "Mikrotik Loki Logs",
-  "uid": "L4lAcEaGz",
-  "version": 1,
+  "title": "Mikrotik Loki Logs Generic",
+  "uid": "alix6doiakp-mkt-loki",
+  "version": 11,
   "weekStart": ""
 }
