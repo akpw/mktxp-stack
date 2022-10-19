@@ -4,7 +4,11 @@
 ![License](https://img.shields.io/badge/prometheus-exporter-blueviolet)
 
 ## Description
-MKTXP-Monitor is an out-of-the-box dockerized monitoring stack for [MKTXP Exporter](https://github.com/akpw/mktxp). This is mostly to get people up & running with [mktxp](https://github.com/akpw/mktxp) and have your Mikrotik routers monitored with least amount of configuration, though this project also adds some extra capabilitis such an [Loki](https://grafana.com/docs/loki/latest/?tech=target&pg=oss-loki&plcmt=quick-links&cta=A)-based Mikrotik log processing, etc. 
+MKTXP-Monitor is a dockerized monitoring stack for [MKTXP Exporter](https://github.com/akpw/mktxp). 
+
+As an out-of-the-box solution, it let's you quickly get up & running with [MKTXP](https://github.com/akpw/mktxp), [Prometheus](https://prometheus.io/), and [Grafana](https://grafana.com/) and have your Mikrotik RouterOS devices monitored with least amount of configuration. 
+
+While complementary to [MKTXP](https://github.com/akpw/mktxp), this project also adds some extra capabilitis such an [syslog-ng](https://www.syslog-ng.com/) & [Loki](https://grafana.com/docs/loki/latest) based Mikrotik log processing, etc. 
 
 
 #### Requirements:
