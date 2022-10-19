@@ -19,9 +19,9 @@ While complementary to [MKTXP](https://github.com/akpw/mktxp), this project also
 #### Install:
  - Download the code from this repository and extract it into a directory:
 ```
-wget https://github.com/akpw/mktxp-monitor/archive/main.zip
+wget https://github.com/akpw/mktxp-stack/archive/main.zip
 unzip main.zip
-cd mktxp-monitor-main
+cd mktxp-stack-main
 ```
 
 - Configure mktxp as described in [MKTXP Getting Started](https://github.com/akpw/mktxp#getting-started):\
