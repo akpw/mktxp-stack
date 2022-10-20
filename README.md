@@ -40,11 +40,12 @@ cd mktxp-stack-main
 docker-compose -f ./docker-compose-mktxp.yml up -d
 ```
 
-Now give the containers some time to start up and point your Web browser to [Grafana](http://localhost:3000), where you should see the default MKTXP Dashboard:
+Now give the containers some time to start up and point your Web browser to [Grafana](http://localhost:3000), where you should see the default MKTXP Dashboard:\
 <img src="https://akpw-s3.s3.eu-central-1.amazonaws.com/mktxp_black.png" width="400" height="620">
 
-
 ## Mikrotik Logging pipeline
+In addition to RouterOS devices monitoring, MKTXP-Stack also rovides a preconfigured  [syslog-ng](https://www.syslog-ng.com/) / [promtail](https://grafana.com/docs/loki/latest/clients/promtail/) / [Loki](https://grafana.com/docs/loki/latest) stack to easily send your router logs to a centralized location for further processing in a visual way:
+
 <img width="400" alt="Screenshot 2022-10-20 at 10 26 25 AM" src="https://user-images.githubusercontent.com/5028474/196961203-24e48499-da84-404b-adb6-d17e56cb6732.png">
-In addition to RouterOS devices monitoring, MKTXP-Stack also rovides a preconfigured syslong-ng / promtail / loki stack to easily send your router logs to a centralized location for further processing in a visual way.
+
 
