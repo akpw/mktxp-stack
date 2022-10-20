@@ -22,6 +22,8 @@ scrape_configs:
       target_label: 'host'
     - source_labels: ['__syslog_connection_ip_address']
       target_label: 'host_ip'
+    - source_labels: ['__syslog_message_hostname']
+      target_label: 'sender'
     - source_labels: ['__syslog_message_severity']
       target_label: 'severity'
     - source_labels: ['__syslog_message_facility']
