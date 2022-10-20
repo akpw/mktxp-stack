@@ -6,7 +6,7 @@
 ## Description
 MKTXP-Stack is a dockerized monitoring stack for [MKTXP Exporter](https://github.com/akpw/mktxp). 
 
-As an out-of-the-box solution, it let's you quickly get up & running with [MKTXP](https://github.com/akpw/mktxp), [Prometheus](https://prometheus.io/), and [Grafana](https://grafana.com/) and have your Mikrotik RouterOS devices monitored with least amount of configuration. 
+As an out-of-the-box solution, it lets you quickly get up & running with [MKTXP](https://github.com/akpw/mktxp), [Prometheus](https://prometheus.io/), and [Grafana](https://grafana.com/) and have your Mikrotik RouterOS devices monitored with least amount of configuration. 
 
 While complementary to [MKTXP](https://github.com/akpw/mktxp), this project also adds some extra capabilitis such an Mikrotik log processing based on [syslog-ng](https://www.syslog-ng.com/) & [Loki](https://grafana.com/docs/loki/latest).
 
@@ -42,5 +42,12 @@ docker-compose -f ./docker-compose-mktxp.yml up -d
 
 Now give the containers some time to start up and point your Web browser to [Grafana](http://localhost:3000), where you should see the default MKTXP Dashboard:
 <img src="https://akpw-s3.s3.eu-central-1.amazonaws.com/mktxp_black.png" width="400" height="620">
+
+
+## Mikrotik Logging pipeline
+<img width="400" alt="Screenshot 2022-10-20 at 10 26 25 AM" src="https://user-images.githubusercontent.com/5028474/196961203-24e48499-da84-404b-adb6-d17e56cb6732.png">
+
+
+
 
 
