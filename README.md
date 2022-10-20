@@ -12,11 +12,10 @@ While complementary to [MKTXP](https://github.com/akpw/mktxp), this project also
 
 
 ## Requirements:
-[Docker](https://docs.docker.com/get-docker/)\
 [Docker Compose](https://docs.docker.com/compose/install/)
 
 
-## Install:
+## Install & Getting Started:
  - Download the code from this repository and extract it into a directory:
 ```
 wget https://github.com/akpw/mktxp-stack/archive/main.zip
@@ -36,8 +35,10 @@ cd mktxp-stack-main
   /user add name=mktxp_user group=mktxp_group password=mktxp_user_password
   ```
 
- - Now run docker-compose, give the containers some time to start up, and point your Web browser to [Grafana](http://localhost:3000)
+ - Run docker-compose(http://localhost:3000)
 ```
 docker-compose -f ./docker-compose-mktxp.yml up -d
 ```
 
+Now give the containers some time to start up and point your Web browser to [Grafana], where you should see the default MKTXP Dashboard
+<img src="https://akpw-s3.s3.eu-central-1.amazonaws.com/mktxp_black.png" width="400" height="620">
