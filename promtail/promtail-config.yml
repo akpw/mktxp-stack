@@ -18,13 +18,13 @@ scrape_configs:
     labels:
       job: "syslog"
   relabel_configs:
-    - source_labels: ['__syslog_connection_hostname']
-      target_label: 'host'
-    - source_labels: ['__syslog_connection_ip_address']
-      target_label: 'host_ip'
     - source_labels: ['__syslog_message_hostname']
-      target_label: 'sender'
+      target_label: 'host'
     - source_labels: ['__syslog_message_severity']
       target_label: 'severity'
     - source_labels: ['__syslog_message_facility']
       target_label: 'facility'
+    - source_labels: ['__syslog_connection_hostname']
+      target_label: 'syslog_srv'
+    - source_labels: ['__syslog_connection_ip_address']
+      target_label: 'syslog_srv_ip'
