@@ -35,10 +35,12 @@ cd mktxp-stack-main
   /user add name=mktxp_user group=mktxp_group password=mktxp_user_password
   ```
 
- - Run docker-compose(http://localhost:3000)
+ - Run docker-compose:
 ```
 docker-compose -f ./docker-compose-mktxp.yml up -d
 ```
 
-Now give the containers some time to start up and point your Web browser to [Grafana], where you should see the default MKTXP Dashboard
+Now give the containers some time to start up and point your Web browser to [Grafana](http://localhost:3000), where you should see the default MKTXP Dashboard:
 <img src="https://akpw-s3.s3.eu-central-1.amazonaws.com/mktxp_black.png" width="400" height="620">
+
+
