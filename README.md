@@ -46,8 +46,5 @@ Now give the containers some time to start up and point your Web browser to [Gra
 
 ## Mikrotik Logging pipeline
 <img width="400" alt="Screenshot 2022-10-20 at 10 26 25 AM" src="https://user-images.githubusercontent.com/5028474/196961203-24e48499-da84-404b-adb6-d17e56cb6732.png">
-
-
-
-
+In addition to RouterOS devices monitoring, MKTXP-Stack also rovides a preconfigured syslong-ng / promtail / loki stack to easily send your router logs to a centralized location for further processing in a visual way.
 
