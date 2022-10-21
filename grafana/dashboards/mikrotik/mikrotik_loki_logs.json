@@ -26,7 +26,6 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 17139,
   "graphTooltip": 0,
-  "id": 6,
   "links": [
     {
       "asDropdown": true,
@@ -261,7 +260,7 @@
       "type": "logs"
     }
   ],
-  "refresh": false,
+  "refresh": "5s",
   "schemaVersion": 37,
   "style": "dark",
   "tags": [
@@ -273,12 +272,8 @@
       {
         "current": {
           "selected": true,
-          "text": [
-            "All"
-          ],
-          "value": [
-            "$__all"
-          ]
+          "text": "MKT-MBD-PD",
+          "value": "MKT-MBD-PD"
         },
         "datasource": {
           "type": "loki",
@@ -286,9 +281,9 @@
         },
         "definition": "",
         "hide": 0,
-        "includeAll": true,
+        "includeAll": false,
         "label": "Routerboard",
-        "multi": true,
+        "multi": false,
         "name": "routerboard",
         "options": [],
         "query": {
@@ -456,13 +451,13 @@
     ]
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Mikrotik Loki Logs",
   "uid": "awslix6doiakp-mkt-loki",
-  "version": 6,
+  "version": 1,
   "weekStart": ""
 }
