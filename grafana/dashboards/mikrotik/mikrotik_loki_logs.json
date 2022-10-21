@@ -26,7 +26,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 17139,
   "graphTooltip": 0,
-  "id": 7,
+  "id": 6,
   "links": [
     {
       "asDropdown": true,
@@ -111,7 +111,7 @@
             "uid": "P8E80F9AEF21F6940"
           },
           "editorMode": "code",
-          "expr": "count_over_time({job=\"syslog\"} [$__interval] |~\"(?i)$topics\" |~\"(?i)$searchable_pattern\" !~\"$exclude_pattern\")",
+          "expr": "count_over_time({job=\"syslog\", routerboard=\"$routerboard\"} [$__interval] |~\"(?i)$topics\" |~\"(?i)$searchable_pattern\")",
           "legendFormat": "{{host}}",
           "queryType": "range",
           "refId": "A"
@@ -210,7 +210,7 @@
             "uid": "P8E80F9AEF21F6940"
           },
           "editorMode": "code",
-          "expr": "count_over_time({job=\"syslog\"} [$__interval] | pattern \"<prefix>:<_>\" |~\"(?i)$topics\" |~\"(?i)$searchable_pattern\" !~\"$exclude_pattern\")",
+          "expr": "count_over_time({job=\"syslog\", routerboard=\"$routerboard\"} [$__interval] | pattern \"<prefix>:<_>\" |~\"(?i)$topics\" |~\"(?i)$searchable_pattern\")",
           "legendFormat": "{{prefix}}",
           "queryType": "range",
           "refId": "A"
@@ -251,7 +251,7 @@
             "uid": "P8E80F9AEF21F6940"
           },
           "editorMode": "code",
-          "expr": "{job=\"syslog\"} |~\"(?i)$topics\" |~\"(?i)$searchable_pattern\" !~\"$exclude_pattern\"",
+          "expr": "{job=\"syslog\", routerboard=\"$routerboard\"} |~\"(?i)$topics\" |~\"(?i)$searchable_pattern\"",
           "legendFormat": "",
           "queryType": "range",
           "refId": "A"
@@ -272,7 +272,40 @@
     "list": [
       {
         "current": {
-          "selected": false,
+          "selected": true,
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
+        },
+        "datasource": {
+          "type": "loki",
+          "uid": "P8E80F9AEF21F6940"
+        },
+        "definition": "",
+        "hide": 0,
+        "includeAll": true,
+        "label": "Routerboard",
+        "multi": true,
+        "name": "routerboard",
+        "options": [],
+        "query": {
+          "label": "routerboard",
+          "refId": "LokiVariableQueryEditor-VariableQuery",
+          "stream": "",
+          "type": 1
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": true,
           "text": [
             "All"
           ],
@@ -419,26 +452,6 @@
         "queryValue": "",
         "skipUrlSync": false,
         "type": "custom"
-      },
-      {
-        "current": {
-          "selected": false,
-          "text": "@@",
-          "value": "@@"
-        },
-        "hide": 0,
-        "label": "Exclude",
-        "name": "exclude_pattern",
-        "options": [
-          {
-            "selected": true,
-            "text": "@@",
-            "value": "@@"
-          }
-        ],
-        "query": "@@",
-        "skipUrlSync": false,
-        "type": "textbox"
       }
     ]
   },
@@ -450,6 +463,6 @@
   "timezone": "",
   "title": "Mikrotik Loki Logs",
   "uid": "awslix6doiakp-mkt-loki",
-  "version": 1,
+  "version": 6,
   "weekStart": ""
 }

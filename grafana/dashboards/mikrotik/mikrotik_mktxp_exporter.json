@@ -1453,7 +1453,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "yellow",
@@ -1488,7 +1489,7 @@
         "showThresholdMarkers": true,
         "text": {}
       },
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "targets": [
         {
           "datasource": {
@@ -1519,7 +1520,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1553,7 +1555,7 @@
         "showUnfilled": true,
         "text": {}
       },
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "targets": [
         {
           "application": {
@@ -1616,7 +1618,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "yellow",
@@ -1653,7 +1656,7 @@
         "showUnfilled": true,
         "text": {}
       },
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "targets": [
         {
           "datasource": {
@@ -1718,7 +1721,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1830,7 +1833,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "yellow",
@@ -1867,7 +1871,7 @@
         "showUnfilled": true,
         "text": {}
       },
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "targets": [
         {
           "datasource": {
@@ -1903,7 +1907,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1932,7 +1937,7 @@
         },
         "showHeader": true
       },
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "targets": [
         {
           "datasource": {
@@ -1995,7 +2000,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2101,7 +2107,7 @@
           }
         ]
       },
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "targets": [
         {
           "datasource": {
@@ -2213,7 +2219,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2408,7 +2414,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2537,7 +2543,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2666,7 +2672,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2795,7 +2801,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2916,7 +2922,7 @@
         "alertThreshold": false
       },
       "percentage": false,
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -3017,7 +3023,7 @@
         "alertThreshold": false
       },
       "percentage": false,
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -3137,6 +3143,7 @@
         "x": 0,
         "y": 79
       },
+      "hideBranding": false,
       "highlightCards": true,
       "id": 87,
       "legend": {
@@ -3233,7 +3240,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -3300,7 +3308,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "targets": [
         {
           "datasource": {
@@ -4436,7 +4444,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -4503,7 +4512,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "targets": [
         {
           "datasource": {
@@ -4572,7 +4581,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -4666,7 +4676,7 @@
           }
         ]
       },
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "targets": [
         {
           "datasource": {
@@ -4735,7 +4745,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "#EAB839",
@@ -4773,7 +4784,7 @@
         "showUnfilled": true,
         "text": {}
       },
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "targets": [
         {
           "application": {
@@ -4837,7 +4848,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "red"
+                "color": "red",
+                "value": null
               },
               {
                 "color": "orange",
@@ -4884,7 +4896,7 @@
         "showUnfilled": true,
         "text": {}
       },
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "targets": [
         {
           "application": {
@@ -4968,7 +4980,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -5095,7 +5107,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -5252,7 +5264,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "yellow",
@@ -5295,7 +5308,7 @@
         "showUnfilled": true,
         "text": {}
       },
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "targets": [
         {
           "application": {
@@ -5384,7 +5397,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.4",
+      "pluginVersion": "9.2.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -5503,7 +5516,7 @@
         "definition": "label_values(mktxp_system_identity_info, routerboard_address)",
         "hide": 0,
         "includeAll": false,
-        "label": "node",
+        "label": "Routerboard",
         "multi": false,
         "name": "node",
         "options": [],
