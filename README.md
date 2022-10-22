@@ -79,6 +79,7 @@ Unless you already done it during the previous [MKTXP Exporter configuration](ht
 docker-compose -f ./docker-compose-mktxp-stack.yml up -d
 ```
 As soon as the containers are up & running, just point your Web browser to included [Grafana dashboards](http://localhost:3000/dashboards) and open the one called "Mikrotik Loki Logs".
+
 &nbsp;
 
 ## Alternative docker-compose configurations
