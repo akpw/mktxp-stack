@@ -49,8 +49,7 @@ In addition to RouterOS devices monitoring, MKTXP-Stack also rovides a preconfig
 <img width="400" alt="Screenshot 2022-10-20 at 10 26 25 AM" src="https://user-images.githubusercontent.com/5028474/197340304-0d30d68f-1784-4556-be00-fad80e89ca3a.png">
 
 
-To make it work, we basically need to configure our Mikrotik devices to send their logs to a specified log server target. \
-For this, let's first configure the corresponding remote action (replace XX.XX.XX.XX with your docker-compose host IP address):
+To make it work, we basically need to configure our Mikrotik devices to send their logs to a specified log server target. Let's first configure the corresponding remote action (replace XX.XX.XX.XX with your docker-compose host IP address):
 ```
 /system logging action
 set remote bsd-syslog=yes name=remote remote=XX.XX.XX.XX remote-port=514 src-address=0.0.0.0 syslog-facility=local0 syslog-severity=auto target=remote
@@ -68,6 +67,5 @@ add action=remote disabled=no prefix=:Account topics=account
 add action=remote disabled=no prefix=:Caps topics=caps
 add action=remote disabled=no prefix=:Wireles topics=wireless
 ```
-
-From there, point your Web browser to included [Grafana dashboards](http://localhost:3000/dashboards) and open "Mikrotik Loki Logs"
+And that's all -- from there, just point your Web browser to included [Grafana dashboards](http://localhost:3000/dashboards) and open the one called "Mikrotik Loki Logs".
 
