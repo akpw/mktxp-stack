@@ -8,7 +8,7 @@ MKTXP-Stack is a dockerized monitoring stack for [MKTXP Exporter](https://github
 
 As an out-of-the-box solution, it lets you quickly get up & running with [MKTXP](https://github.com/akpw/mktxp), [Prometheus](https://prometheus.io/), and [Grafana](https://grafana.com/) and have your Mikrotik RouterOS devices monitored with least amount of configuration. 
 
-While complementary to [MKTXP](https://github.com/akpw/mktxp), this project also adds some extra capabilitis such an Mikrotik log processing based on [syslog-ng](https://www.syslog-ng.com/) & [Loki](https://grafana.com/docs/loki/latest).
+While complementary to [MKTXP](https://github.com/akpw/mktxp), this project also adds some extra capabilitis such an [centralized Mikrotik log processing](https://github.com/akpw/mktxp-stack#mikrotik-centralized-logging) based on [syslog-ng](https://www.syslog-ng.com/) & [Loki](https://grafana.com/docs/loki/latest).
 
 
 ## Requirements:
