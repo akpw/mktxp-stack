@@ -49,7 +49,8 @@ In addition to RouterOS devices monitoring, MKTXP-Stack also rovides a preconfig
 <img width="400" alt="Screenshot 2022-10-20 at 10 26 25 AM" src="https://user-images.githubusercontent.com/5028474/197340304-0d30d68f-1784-4556-be00-fad80e89ca3a.png">
 
 
-For this to work, we basically need to configure our Mikrotik devices to send their logs to a specified log server target. For this, let's first configure the corresponding remote action (replace XX.XX.XX.XX with your docker-compose host IP address):
+To make it work, we basically need to configure our Mikrotik devices to send their logs to a specified log server target. \
+For this, let's first configure the corresponding remote action (replace XX.XX.XX.XX with your docker-compose host IP address):
 ```
 /system logging action
 set remote bsd-syslog=yes name=remote remote=XX.XX.XX.XX remote-port=514 src-address=0.0.0.0 syslog-facility=local0 syslog-severity=auto target=remote
