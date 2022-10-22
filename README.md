@@ -8,7 +8,7 @@ MKTXP-Stack is a dockerized monitoring stack for [MKTXP Exporter](https://github
 
 As an out-of-the-box solution, it lets quickly get up & running with [MKTXP](https://github.com/akpw/mktxp), [Prometheus](https://prometheus.io/), and [Grafana](https://grafana.com/) and have multiple Mikrotik RouterOS devices monitored with least amount of configuration. 
 
-While complementary to [MKTXP](https://github.com/akpw/mktxp), this project also adds some extra capabilitis such an [centralized Mikrotik log processing](https://github.com/akpw/mktxp-stack#mikrotik-centralized-logging) based on a preconfigured  [syslog-ng](https://www.syslog-ng.com/) / [promtail](https://grafana.com/docs/loki/latest/clients/promtail/) / [Loki](https://grafana.com/docs/loki/latest) stack. 
+While complementary to [MKTXP](https://github.com/akpw/mktxp), this project also adds some extra capabilities such an [centralized Mikrotik log processing](https://github.com/akpw/mktxp-stack#mikrotik-centralized-logging) based on a preconfigured  [syslog-ng](https://www.syslog-ng.com/) / [promtail](https://grafana.com/docs/loki/latest/clients/promtail/) / [Loki](https://grafana.com/docs/loki/latest) stack. 
 
 The project offers multiple [docker-compose configurations](https://github.com/akpw/mktxp-stack/blob/main/README.md#alternative-docker-compose-configurations), to load only relevant parts of the stack as actually required.
 
@@ -25,9 +25,9 @@ unzip main.zip
 cd mktxp-stack-main
 ```
 
-#### MKTXP Exporter
-- Configure mktxp as described in [MKTXP Getting Started](https://github.com/akpw/mktxp#getting-started):\
-  a) edit the main mktxp config file, adding your Mikrotik device ip address & authentication info to provided sample entry:
+#### MKTXP Exporter configuration
+- Following the steps described in [MKTXP Getting Started](https://github.com/akpw/mktxp#getting-started), let's:\
+  a) edit the main mktxp config file, adding your Mikrotik device IP address & authentication info to provided sample entry:
   ```
   nano mktxp/mktxp.conf
   ```
@@ -40,7 +40,7 @@ cd mktxp-stack-main
 
  - Run docker-compose:
 ```
-docker-compose -f ./docker-compose-mktxp.yml up -d
+docker-compose -f ./docker-compose-mktxp-stack.yml up -d
 ```
 
 Now give the containers some time to start up and point your Web browser to [Grafana](http://localhost:3000).\
@@ -50,12 +50,12 @@ You should see the default MKTXP Dashboard:\
  
 
 #### Mikrotik Centralized Logging
-In addition to RouterOS devices monitoring, MKTXP-Stack also rovides a preconfigured  [syslog-ng](https://www.syslog-ng.com/) / [promtail](https://grafana.com/docs/loki/latest/clients/promtail/) / [Loki](https://grafana.com/docs/loki/latest) stack to  send logs from your Mikrotik RouterOS devices to a centralized location:
+In addition to RouterOS devices monitoring, MKTXP-Stack provides a preconfigured  [syslog-ng](https://www.syslog-ng.com/) / [promtail](https://grafana.com/docs/loki/latest/clients/promtail/) / [Loki](https://grafana.com/docs/loki/latest) stack to  send logs from your Mikrotik RouterOS devices to a centralized location:
 
 <img width="400" alt="Screenshot 2022-10-20 at 10 26 25 AM" src="https://user-images.githubusercontent.com/5028474/197340304-0d30d68f-1784-4556-be00-fad80e89ca3a.png">
 
 
-To make it work, we need to configure our Mikrotik devices to send their logs to a specified log server target. Let's first configure the corresponding remote action (replace XX.XX.XX.XX with your docker-compose host IP address):
+To make it work, we need to configure our Mikrotik devices to send their logs to a specified log server target. Let's first configure the corresponding remote logging action (replace XX.XX.XX.XX with your docker-compose host IP address):
 ```
 /system logging action
 set remote bsd-syslog=yes name=remote remote=XX.XX.XX.XX remote-port=514 src-address=0.0.0.0 syslog-facility=local0 syslog-severity=auto target=remote
@@ -74,11 +74,32 @@ add action=remote disabled=no prefix=:Caps topics=caps
 add action=remote disabled=no prefix=:Wireles topics=wireless
 ```
 
-Unless you already done as it during the previous [MKTXP Exporter configuration](https://github.com/akpw/mktxp-stack/blob/main/README.md#mktxp-exporter), run docker-compose:
+Unless you already done it during the previous [MKTXP Exporter configuration](https://github.com/akpw/mktxp-stack/blob/main/README.md#mktxp-exporter), run docker-compose:
 ```
-docker-compose -f ./docker-compose-mktxp.yml up -d
+docker-compose -f ./docker-compose-mktxp-stack.yml up -d
 ```
-ANd that all -- from there, just point your Web browser to included [Grafana dashboards](http://localhost:3000/dashboards) and open the one called "Mikrotik Loki Logs".
+As soon as the containers are up & running, just point your Web browser to included [Grafana dashboards](http://localhost:3000/dashboards) and open the one called "Mikrotik Loki Logs".
 
 
 ## Alternative docker-compose configurations
+The project offers multiple [ocker-compose files to load only relevant parts of the stack as actually required.
+
+To go with full stack, run docker-compose as described above:
+```
+docker-compose -f ./docker-compose-mktxp-stack.yml up -d
+```
+
+In case you need only MKTXP Exporter functionality:
+```
+docker-compose -f ./docker-compose-mktxp-stack-no-logs.yml up -d
+```
+
+If only central logging is needed:
+```
+docker-compose -f ./docker-compose-mktxp-stack-logs-only.yml up -d
+```
+
+
+
+
+
