@@ -23,6 +23,7 @@ unzip main.zip
 cd mktxp-stack-main
 ```
 
+#### MKTXP Exporter
 - Configure mktxp as described in [MKTXP Getting Started](https://github.com/akpw/mktxp#getting-started):\
   a) edit the main mktxp config file, adding your Mikrotik device ip address & authentication info to provided sample entry:
   ```
@@ -40,10 +41,13 @@ cd mktxp-stack-main
 docker-compose -f ./docker-compose-mktxp.yml up -d
 ```
 
-Now give the containers some time to start up and point your Web browser to [Grafana](http://localhost:3000), where you should see the default MKTXP Dashboard:\
+Now give the containers some time to start up and point your Web browser to [Grafana](http://localhost:3000).\
+You should see the default MKTXP Dashboard:\
 <img src="https://akpw-s3.s3.eu-central-1.amazonaws.com/mktxp_black.png" width="400" height="620">
+\
+\
 
-## Mikrotik Centralized Logging
+#### Mikrotik Centralized Logging
 In addition to RouterOS devices monitoring, MKTXP-Stack also rovides a preconfigured  [syslog-ng](https://www.syslog-ng.com/) / [promtail](https://grafana.com/docs/loki/latest/clients/promtail/) / [Loki](https://grafana.com/docs/loki/latest) stack to  send logs from your Mikrotik RouterOS devices to a centralized location:
 
 <img width="400" alt="Screenshot 2022-10-20 at 10 26 25 AM" src="https://user-images.githubusercontent.com/5028474/197340304-0d30d68f-1784-4556-be00-fad80e89ca3a.png">
@@ -69,3 +73,5 @@ add action=remote disabled=no prefix=:Wireles topics=wireless
 ```
 And that's all -- from there, just point your Web browser to included [Grafana dashboards](http://localhost:3000/dashboards) and open the one called "Mikrotik Loki Logs".
 
+
+## Alternative Docker-Compose configurations
