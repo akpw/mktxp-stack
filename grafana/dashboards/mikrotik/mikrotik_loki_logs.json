@@ -28,7 +28,7 @@
   "graphTooltip": 0,
   "links": [
     {
-      "asDropdown": true,
+      "asDropdown": false,
       "icon": "external link",
       "includeVars": false,
       "keepTime": false,
@@ -36,7 +36,7 @@
         "mikrotik"
       ],
       "targetBlank": false,
-      "title": "Mikrotik",
+      "title": "Mikrotik MKTXP Exporter",
       "tooltip": "",
       "type": "dashboards",
       "url": ""
@@ -48,7 +48,7 @@
       "tags": [
         "system"
       ],
-      "title": "System",
+      "title": "System Overview",
       "type": "dashboards"
     }
   ],
@@ -271,9 +271,9 @@
     "list": [
       {
         "current": {
-          "selected": true,
-          "text": "MKT-MBD-PD",
-          "value": "MKT-MBD-PD"
+          "selected": false,
+          "text": "MKT-GT-PD",
+          "value": "MKT-GT-PD"
         },
         "datasource": {
           "type": "loki",

@@ -28,15 +28,16 @@
   "graphTooltip": 0,
   "links": [
     {
-      "asDropdown": true,
+      "asDropdown": false,
       "icon": "external link",
       "includeVars": false,
       "keepTime": false,
       "tags": [
-        "mikrotik"
+        "mikrotik",
+        "loki"
       ],
       "targetBlank": false,
-      "title": "Mikrotik",
+      "title": "Mikrotik Loki Logs ",
       "tooltip": "",
       "type": "dashboards",
       "url": ""
@@ -50,7 +51,7 @@
         "system"
       ],
       "targetBlank": false,
-      "title": "System",
+      "title": "System Overview",
       "tooltip": "",
       "type": "dashboards",
       "url": ""
@@ -3227,7 +3228,7 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "fixed"
+            "mode": "thresholds"
           },
           "custom": {
             "align": "center",
@@ -3258,7 +3259,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "Status"
+              "options": "status"
             },
             "properties": [
               {
@@ -3267,9 +3268,13 @@
                   {
                     "options": {
                       "0": {
+                        "color": "red",
+                        "index": 0,
                         "text": "Down"
                       },
                       "1": {
+                        "color": "green",
+                        "index": 1,
                         "text": "Up"
                       }
                     },
@@ -3280,11 +3285,8 @@
               {
                 "id": "color",
                 "value": {
-                  "mode": "fixed"
+                  "mode": "thresholds"
                 }
-              },
-              {
-                "id": "color"
               }
             ]
           }
@@ -5264,8 +5266,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "yellow",
