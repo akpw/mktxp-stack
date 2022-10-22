@@ -44,8 +44,29 @@ Now give the containers some time to start up and point your Web browser to [Gra
 <img src="https://akpw-s3.s3.eu-central-1.amazonaws.com/mktxp_black.png" width="400" height="620">
 
 ## Mikrotik Centralized Logging
-In addition to RouterOS devices monitoring, MKTXP-Stack also rovides a preconfigured  [syslog-ng](https://www.syslog-ng.com/) / [promtail](https://grafana.com/docs/loki/latest/clients/promtail/) / [Loki](https://grafana.com/docs/loki/latest) stack to easily send your router logs to a centralized location for further processing:
+In addition to RouterOS devices monitoring, MKTXP-Stack also rovides a preconfigured  [syslog-ng](https://www.syslog-ng.com/) / [promtail](https://grafana.com/docs/loki/latest/clients/promtail/) / [Loki](https://grafana.com/docs/loki/latest) stack to  send logs from your Mikrotik RouterOS devices to a centralized location:
 
-<img width="400" alt="Screenshot 2022-10-20 at 10 26 25 AM" src="https://user-images.githubusercontent.com/5028474/196961203-24e48499-da84-404b-adb6-d17e56cb6732.png">
+<img width="400" alt="Screenshot 2022-10-20 at 10 26 25 AM" src="https://user-images.githubusercontent.com/5028474/197340304-0d30d68f-1784-4556-be00-fad80e89ca3a.png">
 
-For this to work, all we need is to tell a Mikrotic router where to send its logs.
+
+For this to work, we basically need to configure our Mikrotik devices to send their logs to a specified log server target. For this, let's first configure the corresponding remote action (replace XX.XX.XX.XX with your docker-compose host IP address):
+```
+/system logging action
+set remote bsd-syslog=yes name=remote remote=XX.XX.XX.XX remote-port=514 src-address=0.0.0.0 syslog-facility=local0 syslog-severity=auto target=remote
+```
+Next, let's modify relevant log topics to use this action:
+```
+/system logging
+set 0 action=remote prefix=:Info
+set 1 action=remote prefix=:Error
+set 2 action=remote prefix=:Warning
+set 3 action=remote prefix=:Critical
+
+add action=remote disabled=no prefix=:Firewall topics=firewall
+add action=remote disabled=no prefix=:Account topics=account
+add action=remote disabled=no prefix=:Caps topics=caps
+add action=remote disabled=no prefix=:Wireles topics=wireless
+```
+
+From there, point your Web browser to included [Grafana dashboards](http://localhost:3000/dashboards) and open "Mikrotik Loki Logs"
+
