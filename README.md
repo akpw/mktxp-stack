@@ -47,7 +47,7 @@ Now give the containers some time to start up and point your Web browser to [Gra
 You should see the default MKTXP Dashboard:\
 <img src="https://akpw-s3.s3.eu-central-1.amazonaws.com/mktxp_black.png" width="400" height="620">
 \
-\
+ 
 
 #### Mikrotik Centralized Logging
 In addition to RouterOS devices monitoring, MKTXP-Stack also rovides a preconfigured  [syslog-ng](https://www.syslog-ng.com/) / [promtail](https://grafana.com/docs/loki/latest/clients/promtail/) / [Loki](https://grafana.com/docs/loki/latest) stack to  send logs from your Mikrotik RouterOS devices to a centralized location:
