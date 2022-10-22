@@ -58,7 +58,7 @@ To make it work, we need to configure our Mikrotik devices to send their logs to
 /system logging action
 set remote bsd-syslog=yes name=remote remote=XX.XX.XX.XX remote-port=514 src-address=0.0.0.0 syslog-facility=local0 syslog-severity=auto target=remote
 ```
-Next, let's modify relevant log topics to use this action:
+Next, let's modify relevant log topics to use with this remote action:
 ```
 /system logging
 set 0 action=remote prefix=:Info
@@ -71,6 +71,8 @@ add action=remote disabled=no prefix=:Account topics=account
 add action=remote disabled=no prefix=:Caps topics=caps
 add action=remote disabled=no prefix=:Wireles topics=wireless
 ```
+You can extend the list above as needed, following [Mikrotik's description](https://help.mikrotik.com/docs/display/ROS/Log) of the topics used by various RouterOS facilities 
+
 
 Unless you already done it during the previous [MKTXP Exporter configuration](https://github.com/akpw/mktxp-stack#mktxp-exporter-configuration), run docker-compose:
 ```
