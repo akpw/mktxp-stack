@@ -73,7 +73,12 @@ add action=remote disabled=no prefix=:Account topics=account
 add action=remote disabled=no prefix=:Caps topics=caps
 add action=remote disabled=no prefix=:Wireles topics=wireless
 ```
-And that's all -- from there, just point your Web browser to included [Grafana dashboards](http://localhost:3000/dashboards) and open the one called "Mikrotik Loki Logs".
+
+Unless you already done so in the previous step, run docker-compose:
+```
+docker-compose -f ./docker-compose-mktxp.yml up -d
+```
+ANd that all -- from there, just point your Web browser to included [Grafana dashboards](http://localhost:3000/dashboards) and open the one called "Mikrotik Loki Logs".
 
 
 ## Alternative docker-compose configurations
