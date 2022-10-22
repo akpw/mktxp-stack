@@ -38,22 +38,24 @@ cd mktxp-stack-main
   /user add name=mktxp_user group=mktxp_group password=mktxp_user_password
   ```
 
- - Run docker-compose:
+With that out the of way, things should be ready for running docker-compose:
 ```
 docker-compose -f ./docker-compose-mktxp-stack.yml up -d
 ```
 
-Now give the containers some time to start up and point your Web browser to [Grafana](http://localhost:3000).\
+Now give the containers some time to start up, and then point a Web browser to [Grafana](http://localhost:3000).\
 You should see the default MKTXP Dashboard:\
 <img src="https://akpw-s3.s3.eu-central-1.amazonaws.com/mktxp_black.png" width="400" height="620">
 
+&nbsp;
+
 #### Mikrotik Centralized Logging configuration
-In addition to RouterOS devices monitoring, MKTXP-Stack provides a preconfigured  [syslog-ng](https://www.syslog-ng.com/) / [promtail](https://grafana.com/docs/loki/latest/clients/promtail/) / [Loki](https://grafana.com/docs/loki/latest) stack to  send logs from your Mikrotik RouterOS devices to a centralized location:
+In addition to RouterOS devices monitoring, MKTXP-Stack provides a preconfigured  [syslog-ng](https://www.syslog-ng.com/) / [promtail](https://grafana.com/docs/loki/latest/clients/promtail/) / [Loki](https://grafana.com/docs/loki/latest) stack to receieve & process logs from multiple Mikrotik RouterOS devices in a centralized location:
 
 <img width="400" alt="Screenshot 2022-10-20 at 10 26 25 AM" src="https://user-images.githubusercontent.com/5028474/197340304-0d30d68f-1784-4556-be00-fad80e89ca3a.png">
 
 
-To make it work, we need to configure our Mikrotik devices to send their logs to a specified log server target. Let's first configure the corresponding remote logging action (replace XX.XX.XX.XX with your docker-compose host IP address):
+To make this work, we need to configure our Mikrotik devices to send their logs to a specified log server target. Let's first configure the corresponding remote logging action (replace XX.XX.XX.XX with your docker-compose host IP address):
 ```
 /system logging action
 set remote bsd-syslog=yes name=remote remote=XX.XX.XX.XX remote-port=514 src-address=0.0.0.0 syslog-facility=local0 syslog-severity=auto target=remote
@@ -71,10 +73,9 @@ add action=remote disabled=no prefix=:Account topics=account
 add action=remote disabled=no prefix=:Caps topics=caps
 add action=remote disabled=no prefix=:Wireles topics=wireless
 ```
-You can extend the list above as needed, following [Mikrotik's description](https://help.mikrotik.com/docs/display/ROS/Log) of the topics used by various RouterOS facilities 
+You can extend the list above as needed, following [Mikrotik's description](https://help.mikrotik.com/docs/display/ROS/Log) of the log topics used by various RouterOS facilities 
 
-
-Unless you already done it during the previous [MKTXP Exporter configuration](https://github.com/akpw/mktxp-stack#mktxp-exporter-configuration), run docker-compose:
+Now all should be ready and, unless you already done so during the previous [MKTXP Exporter configuration](https://github.com/akpw/mktxp-stack#mktxp-exporter-configuration), it's time for docker-compose:
 ```
 docker-compose -f ./docker-compose-mktxp-stack.yml up -d
 ```
@@ -91,11 +92,6 @@ docker-compose -f ./docker-compose-mktxp-stack.yml up -d
 In case you need only MKTXP Exporter functionality:
 ```
 docker-compose -f ./docker-compose-mktxp-stack-no-logs.yml up -d
-```
-
-If only central logging is needed:
-```
-docker-compose -f ./docker-compose-mktxp-stack-logs-only.yml up -d
 ```
 
 
