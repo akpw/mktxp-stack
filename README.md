@@ -3,7 +3,7 @@
 ![License](https://img.shields.io/badge/mikrotik-routeros-orange)
 ![License](https://img.shields.io/badge/prometheus-exporter-blueviolet)
 
-## Description
+### Description
 MKTXP-Stack is a dockerized monitoring stack for [MKTXP Exporter](https://github.com/akpw/mktxp). 
 
 As an out-of-the-box solution, it lets quickly get up & running with [MKTXP](https://github.com/akpw/mktxp), [Prometheus](https://prometheus.io/), and [Grafana](https://grafana.com/) and have multiple Mikrotik RouterOS devices monitored with least amount of configuration. 
@@ -13,11 +13,11 @@ While complementary to [MKTXP](https://github.com/akpw/mktxp), this project also
 The project offers multiple [docker-compose configurations](https://github.com/akpw/mktxp-stack/blob/main/README.md#alternative-docker-compose-configurations), to load only relevant parts of the stack as actually required.
 
 
-## Requirements:
+### Requirements:
 [Docker Compose](https://docs.docker.com/compose/install/)
 
 
-## Install & Getting Started:
+### Install & Getting Started:
  - Download the code from this repository and extract it into a directory:
 ```
 wget https://github.com/akpw/mktxp-stack/archive/main.zip
@@ -46,8 +46,6 @@ docker-compose -f ./docker-compose-mktxp-stack.yml up -d
 Now give the containers some time to start up and point your Web browser to [Grafana](http://localhost:3000).\
 You should see the default MKTXP Dashboard:\
 <img src="https://akpw-s3.s3.eu-central-1.amazonaws.com/mktxp_black.png" width="400" height="620">
-
-&nbsp;
 
 #### Mikrotik Centralized Logging configuration
 In addition to RouterOS devices monitoring, MKTXP-Stack provides a preconfigured  [syslog-ng](https://www.syslog-ng.com/) / [promtail](https://grafana.com/docs/loki/latest/clients/promtail/) / [Loki](https://grafana.com/docs/loki/latest) stack to  send logs from your Mikrotik RouterOS devices to a centralized location:
@@ -79,8 +77,6 @@ Unless you already done it during the previous [MKTXP Exporter configuration](ht
 docker-compose -f ./docker-compose-mktxp-stack.yml up -d
 ```
 As soon as the containers are up & running, just point your Web browser to included [Grafana dashboards](http://localhost:3000/dashboards) and open the one called "Mikrotik Loki Logs".
-
-&nbsp;
 
 ## Alternative docker-compose configurations
 The project offers multiple [ocker-compose files to load only relevant parts of the stack as actually required.
