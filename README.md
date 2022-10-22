@@ -46,6 +46,7 @@ docker-compose -f ./docker-compose-mktxp-stack.yml up -d
 Now give the containers some time to start up and point your Web browser to [Grafana](http://localhost:3000).\
 You should see the default MKTXP Dashboard:\
 <img src="https://akpw-s3.s3.eu-central-1.amazonaws.com/mktxp_black.png" width="400" height="620">
+
 &nbsp;
 
 #### Mikrotik Centralized Logging configuration
