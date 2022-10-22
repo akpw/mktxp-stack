@@ -79,7 +79,7 @@ docker-compose -f ./docker-compose-mktxp-stack.yml up -d
 As soon as the containers are up & running, just point your Web browser to included [Grafana dashboards](http://localhost:3000/dashboards) and open the one called "Mikrotik Loki Logs".
 
 ## Alternative docker-compose configurations
-The project offers multiple [ocker-compose files to load only relevant parts of the stack as actually required.
+The project offers multiple docker-compose files to load only relevant parts of the stack as actually required.
 
 To go with full stack, run docker-compose as described above:
 ```
