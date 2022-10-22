@@ -10,7 +10,7 @@ As an out-of-the-box solution, it lets quickly get up & running with [MKTXP](htt
 
 While complementary to [MKTXP](https://github.com/akpw/mktxp), this project also adds some extra capabilitis such an [centralized Mikrotik log processing](https://github.com/akpw/mktxp-stack#mikrotik-centralized-logging) based on a preconfigured  [syslog-ng](https://www.syslog-ng.com/) / [promtail](https://grafana.com/docs/loki/latest/clients/promtail/) / [Loki](https://grafana.com/docs/loki/latest) stack. 
 
-The project offers multiple alternative docker-compose configurations, to load only relevant parts of the stack as actually required.
+The project offers multiple [docker-compose configurations](https://github.com/akpw/mktxp-stack/blob/main/README.md#alternative-docker-compose-configurations), to load only relevant parts of the stack as actually required.
 
 
 ## Requirements:
@@ -74,7 +74,7 @@ add action=remote disabled=no prefix=:Caps topics=caps
 add action=remote disabled=no prefix=:Wireles topics=wireless
 ```
 
-Unless you already done so in the previous step, run docker-compose:
+Unless you already done as it during the previous [MKTXP Exporter configuration](https://github.com/akpw/mktxp-stack/blob/main/README.md#mktxp-exporter), run docker-compose:
 ```
 docker-compose -f ./docker-compose-mktxp.yml up -d
 ```
