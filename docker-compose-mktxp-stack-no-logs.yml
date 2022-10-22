@@ -1,0 +1,50 @@
+networks:
+  mktxp: {}
+services:
+  mktxp:
+    container_name: mktxp
+    image: ghcr.io/akpw/mktxp:latest
+    volumes:
+      - './mktxp/:/home/mktxp/mktxp/'
+    networks:
+      mktxp: null
+    restart: unless-stopped  
+  grafana:
+    container_name: grafana
+    environment:
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: Admin
+      GF_AUTH_BASIC_ENABLED: "false"
+      GF_AUTH_DISABLE_LOGIN_FORM: "true"
+      GF_USERS_DEFAULT_THEME: "light"
+      GF_INSTALL_PLUGINS: "flant-statusmap-panel"
+      GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /var/lib/grafana/dashboards/mikrotik/mikrotik_mktxp_exporter.json
+    image: grafana/grafana:latest
+    networks:
+      mktxp: null
+    ports:
+    - protocol: tcp
+      published: 3000
+      target: 3000
+    restart: always
+    volumes:
+    - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources:ro
+    - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards:ro
+    - ./grafana/dashboards:/var/lib/grafana/dashboards
+  prometheus:
+    command:
+    - --config.file=/etc/prometheus/prometheus.yml
+    - --storage.tsdb.path=/prometheus
+    - --web.enable-admin-api
+    - --web.enable-lifecycle
+    container_name: prometheus
+    image: prom/prometheus:latest
+    networks:
+      mktxp: null
+    ports:
+    - published: 9090
+      target: 9090
+    restart: always
+    volumes:
+    - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+version: '3.3'
