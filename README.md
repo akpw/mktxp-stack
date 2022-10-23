@@ -95,5 +95,14 @@ docker-compose -f ./docker-compose-mktxp-stack-no-logs.yml up -d
 
 
 
-
+## Overview of components used in this project:
+ - [MKTXP Exporter](https://github.com/akpw/mktxp): an open-source Prometheus Exporter for Mikrotik RouterOS devices
+ - [Prometheus](https://prometheus.io/): an open-source monitoring & alerting toolkit for cloud / native environments
+ - [Grafana](https://grafana.com/): an open-source analytics & interactive visualization platform
+ - [Loki](https://grafana.com/oss/loki/): an open-source log aggregation system inspired by Prometheus
+ - [promtail](https://grafana.com/docs/loki/latest/clients/promtail/): an open-source agent to deliver the logs to Loki ]
+ - [syslog-ng](https://www.syslog-ng.com/): an open-source log server implementing the syslog protocol 
+ 
+ ## Dashboards
+  - 
 
