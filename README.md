@@ -43,7 +43,7 @@ With that out the of way, things should be ready for running docker-compose:
 docker-compose -f ./docker-compose-mktxp-stack.yml up -d
 ```
 
-Now give the containers some time to start up, and then point a Web browser to [Grafana](http://localhost:3000). You should see the default MKTXP Dashboard:\
+Now give the containers some time to start up, and then point a Web browser to [Grafana](http://localhost:3000). You should see the default [MKTXP Exporter Dashboard](https://grafana.com/grafana/dashboards/13679-mikrotik-mktxp-exporter/):\
 <img src="https://akpw-s3.s3.eu-central-1.amazonaws.com/mktxp_black.png" width="400" height="620">
 
 &nbsp;
