@@ -104,8 +104,8 @@ docker-compose -f ./docker-compose-mktxp-stack-no-logs.yml up -d
  - [syslog-ng](https://www.syslog-ng.com/): an open-source log server implementing the syslog protocol 
  
  ## Included Dashboards
-  - [MKTXP Exporter Dashboard](https://grafana.com/grafana/dashboards/13679-mikrotik-mktxp-exporter/): the default dashboard
-  - [Mikrotik Loki Logs](https://grafana.com/grafana/dashboards/17139-mikrotik-loki-logs/): designed for this project
-  - [Grafana Internals](https://grafana.com/grafana/dashboards/3590-grafana-internals/): Grafana-related stats
-  - [Prometheus 2.0 Stats](https://grafana.com/grafana/dashboards/15489-prometheus-2-0-stats/): Prometheus-related stats
+  - [MKTXP Exporter Dashboard](https://grafana.com/grafana/dashboards/13679-mikrotik-mktxp-exporter/): set as default Grafana dashboard
+  - [Mikrotik Loki Logs](https://grafana.com/grafana/dashboards/17139-mikrotik-loki-logs/): logging dashboard designed for this project
+  - [Grafana Internals](https://grafana.com/grafana/dashboards/3590-grafana-internals/): Grafana-related stats for system overivew, credits to [Grafana community](https://grafana.com/grafana/dashboards/)
+  - [Prometheus 2.0 Stats](https://grafana.com/grafana/dashboards/15489-prometheus-2-0-stats/): Prometheus-related stats for system overivew, credits to [Grafana community](https://grafana.com/grafana/dashboards/)
 
