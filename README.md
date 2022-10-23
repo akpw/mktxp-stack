@@ -103,6 +103,8 @@ docker-compose -f ./docker-compose-mktxp-stack-no-logs.yml up -d
  - [promtail](https://grafana.com/docs/loki/latest/clients/promtail/): an open-source agent to deliver the logs to Loki ]
  - [syslog-ng](https://www.syslog-ng.com/): an open-source log server implementing the syslog protocol 
  
- ## Dashboards
+ ## Included Dashboards
+  - [MKTXP Exporter Dashboard](https://grafana.com/grafana/dashboards/13679-mikrotik-mktxp-exporter/): the default dashboard
+  - [Mikrotik Loki Logs](https://grafana.com/grafana/dashboards/17139-mikrotik-loki-logs/)
   - 
 
