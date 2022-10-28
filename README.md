@@ -20,9 +20,8 @@ The project offers multiple [docker-compose configurations](https://github.com/a
 ### Install & Getting Started:
  - Download the code from this repository and extract it into a directory:
 ```
-wget https://github.com/akpw/mktxp-stack/archive/main.zip
-unzip main.zip
-cd mktxp-stack-main
+git clone https://github.com/akpw/mktxp-stack.git
+cd mktxp-stack
 ```
 
 #### MKTXP Exporter configuration
