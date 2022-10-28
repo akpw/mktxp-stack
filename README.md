@@ -44,15 +44,14 @@ docker-compose -f ./docker-compose-mktxp-stack.yml up -d
 ```
 
 Now give the containers some time to start up, and then point a Web browser to [Grafana](http://localhost:3000). You should see the default [MKTXP Exporter Dashboard](https://grafana.com/grafana/dashboards/13679-mikrotik-mktxp-exporter/):\
-<img src="https://akpw-s3.s3.eu-central-1.amazonaws.com/mktxp_black.png" width="400" height="620">
+![](https://akpw-s3.s3.eu-central-1.amazonaws.com/mktxp_black.png)
 
 &nbsp;
 
 #### Mikrotik Centralized Logging configuration
 In addition to RouterOS devices monitoring, MKTXP-Stack provides a preconfigured  [syslog-ng](https://www.syslog-ng.com/) / [promtail](https://grafana.com/docs/loki/latest/clients/promtail/) / [Loki](https://grafana.com/docs/loki/latest) stack to receieve & process logs from multiple Mikrotik RouterOS devices in a centralized location:
 
-<img width="400" alt="Screenshot 2022-10-20 at 10 26 25 AM" src="https://user-images.githubusercontent.com/5028474/197340304-0d30d68f-1784-4556-be00-fad80e89ca3a.png">
-
+![](https://user-images.githubusercontent.com/5028474/198598490-3664a3db-a6ca-4312-b34a-a34fbc12a634.png)
 
 To make this work, we need to configure our Mikrotik devices to send their logs to a specified log server target. Let's first configure the corresponding remote logging action (replace XX.XX.XX.XX with your docker-compose host IP address):
 ```
