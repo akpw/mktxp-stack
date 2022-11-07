@@ -1,6 +1,8 @@
-# my global config
+# global config
 global:
-  scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+global:
+  scrape_interval: 45s # Set the scrape interval to every 45 seconds. Default is every 1 minute.
+  scrape_timeout: 30s
   evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
   external_labels:
     origin_prometheus: mktxp
