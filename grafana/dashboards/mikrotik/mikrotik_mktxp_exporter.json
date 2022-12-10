@@ -26,7 +26,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 13679,
   "graphTooltip": 0,
-  "id": 26,
+  "id": 7,
   "links": [
     {
       "asDropdown": false,
@@ -89,7 +89,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "fieldConfig": {
@@ -146,12 +146,12 @@
         "text": {},
         "textMode": "name"
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "9.2.6",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_system_identity_info{routerboard_name=\"$node\"}  ",
@@ -167,7 +167,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "fieldConfig": {
@@ -224,12 +224,12 @@
         "text": {},
         "textMode": "name"
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "9.2.6",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_system_uptime{routerboard_name=\"$node\"}",
@@ -245,7 +245,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -335,12 +335,12 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "9.2.6",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_installed_packages_info{routerboard_name=\"$node\"}",
@@ -390,7 +390,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -453,7 +453,7 @@
         "showUnfilled": true,
         "text": {}
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "9.2.6",
       "targets": [
         {
           "application": {
@@ -461,7 +461,7 @@
           },
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "(1 - mktxp_system_free_memory{routerboard_name=\"$node\"} / mktxp_system_total_memory{routerboard_name=\"$node\"})*100",
@@ -490,7 +490,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_system_cpu_load{routerboard_name=\"$node\"}",
@@ -502,7 +502,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "(1 - mktxp_system_free_hdd_space{routerboard_name=\"$node\"} / mktxp_system_total_hdd_space{routerboard_name=\"$node\"})*100",
@@ -521,7 +521,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "editable": true,
       "error": false,
@@ -561,7 +561,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "9.2.6",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -576,7 +576,7 @@
           },
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_system_cpu_load{routerboard_name=\"$node\"}",
@@ -640,7 +640,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -696,7 +696,7 @@
         "text": {},
         "textMode": "name"
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "9.2.6",
       "targets": [
         {
           "application": {
@@ -704,7 +704,7 @@
           },
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_system_uptime{routerboard_name=\"$node\"}",
@@ -737,7 +737,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -793,12 +793,12 @@
         "showThresholdMarkers": true,
         "text": {}
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "9.2.6",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_system_routerboard_temperature{routerboard_name=\"$node\"}  ",
@@ -810,7 +810,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_system_cpu_temperature{routerboard_name=\"$node\"}  ",
@@ -826,7 +826,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -882,7 +882,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "9.2.6",
       "targets": [
         {
           "application": {
@@ -890,7 +890,7 @@
           },
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_system_uptime{routerboard_name=\"$node\"}",
@@ -923,7 +923,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -1018,12 +1018,12 @@
           }
         ]
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "9.2.6",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_active_users_info{routerboard_name=\"$node\"}",
@@ -1074,7 +1074,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "fieldConfig": {
@@ -1121,7 +1121,7 @@
         "text": {},
         "textMode": "value"
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "9.2.6",
       "targets": [
         {
           "application": {
@@ -1129,7 +1129,7 @@
           },
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_system_routerboard_voltage{routerboard_name=\"$node\"}",
@@ -1162,7 +1162,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -1321,7 +1321,7 @@
           },
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_system_total_hdd_space{routerboard_name=\"$node\"} - mktxp_system_free_hdd_space{routerboard_name=\"$node\"}",
@@ -1352,7 +1352,7 @@
           },
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_system_total_hdd_space{routerboard_name=\"$node\"}",
@@ -1384,7 +1384,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "fieldConfig": {
@@ -1441,12 +1441,12 @@
         "text": {},
         "textMode": "name"
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "9.2.6",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_public_ip_address_info{routerboard_name=\"$node\"}",
@@ -1458,7 +1458,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_public_ip_address_info{routerboard_name=\"$node\"}",
@@ -1489,7 +1489,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "fieldConfig": {
@@ -1548,7 +1548,7 @@
               },
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "mktxp_ip_pool_used{routerboard_name=\"$node\"} ",
@@ -1581,7 +1581,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -1711,7 +1711,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "mktxp_dhcp_lease_info{routerboard_name=\"$node\"}",
@@ -1766,7 +1766,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "fieldConfig": {
@@ -1825,7 +1825,7 @@
               },
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "mktxp_dhcp_lease_active_count{routerboard_name=\"$node\"}",
@@ -1858,7 +1858,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "fieldConfig": {
@@ -1917,7 +1917,7 @@
               },
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "sum(mktxp_dhcp_lease_active_count{routerboard_name=\"$node\"})",
@@ -1989,7 +1989,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "fieldConfig": {
@@ -2048,12 +2048,12 @@
         "showThresholdMarkers": true,
         "text": {}
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "9.2.6",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_routes_total_routes{routerboard_name=\"$node\"}",
@@ -2070,7 +2070,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -2115,7 +2115,7 @@
         "showUnfilled": true,
         "text": {}
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "9.2.6",
       "targets": [
         {
           "application": {
@@ -2123,7 +2123,7 @@
           },
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_routes_protocol_count{routerboard_name=\"$node\"}",
@@ -2156,7 +2156,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "fieldConfig": {
@@ -2217,12 +2217,12 @@
         "showUnfilled": true,
         "text": {}
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "9.2.6",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_interface_full_duplex{routerboard_name=\"$node\"}",
@@ -2243,7 +2243,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "editable": true,
       "error": false,
@@ -2283,7 +2283,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "9.2.6",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2298,7 +2298,7 @@
           },
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_interface_rx_error_total{routerboard_name=\"$node\"}",
@@ -2327,7 +2327,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_interface_tx_error_total{routerboard_name=\"$node\"}",
@@ -2376,7 +2376,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "fieldConfig": {
@@ -2437,12 +2437,12 @@
         "showUnfilled": true,
         "text": {}
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "9.2.6",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_interface_status{routerboard_name=\"$node\"}",
@@ -2459,7 +2459,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -2504,12 +2504,12 @@
         },
         "showHeader": true
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "9.2.6",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_interface_rate{routerboard_name=\"$node\"}",
@@ -2550,7 +2550,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -2675,12 +2675,12 @@
           }
         ]
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "9.2.6",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "mktxp_poe_info{routerboard_name=\"$node\"}",
@@ -2738,7 +2738,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "fieldConfig": {
@@ -2782,8 +2782,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2875,7 +2874,7 @@
           },
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "rate(mktxp_interface_rx_byte_total{routerboard_name=\"$node\"}[4m])",
@@ -2907,7 +2906,7 @@
           },
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "rate(mktxp_interface_tx_byte_total{routerboard_name=\"$node\"}[4m])",
@@ -2973,7 +2972,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "editable": true,
@@ -3032,7 +3031,7 @@
           },
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "rate(mktxp_firewall_filter_total{routerboard_name=\"$node\", log=\"1\"}[4m])",
@@ -3103,7 +3102,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "editable": true,
@@ -3162,7 +3161,7 @@
           },
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "rate(mktxp_firewall_raw_total{routerboard_name=\"$node\", log=\"1\"}[4m])",
@@ -3233,7 +3232,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "editable": true,
@@ -3292,7 +3291,7 @@
           },
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "rate(mktxp_firewall_filter_total{routerboard_name=\"$node\"}[4m])",
@@ -3363,7 +3362,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "E1M7U50Gz"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "editable": true,
@@ -3422,7 +3421,7 @@
           },
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
           "expr": "rate(mktxp_firewall_raw_total{routerboard_name=\"$node\"}[4m])",
@@ -3527,7 +3526,7 @@
           },
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "gridPos": {
@@ -3557,7 +3556,7 @@
               },
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "max_over_time(mktxp_netwatch_status{routerboard_name=\"$node\"}[1m])",
@@ -3616,7 +3615,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -3707,7 +3706,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "mktxp_netwatch_info{routerboard_name=\"$node\"}",
@@ -3799,7 +3798,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -3848,7 +3847,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "mktxp_wlan_noise_floor{routerboard_name=\"$node\"}",
@@ -3898,7 +3897,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 2,
           "fieldConfig": {
@@ -3948,7 +3947,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "mktxp_wlan_overall_tx_ccq{routerboard_name=\"$node\"}",
@@ -3995,7 +3994,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -4112,7 +4111,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "mktxp_wlan_clients_devices_info{routerboard_name=\"$node\"}",
@@ -4166,7 +4165,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 0,
           "fieldConfig": {
@@ -4216,7 +4215,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "mktxp_wlan_registered_clients{routerboard_name=\"$node\"}",
@@ -4266,7 +4265,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 0,
           "description": "",
@@ -4318,7 +4317,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "mktxp_wlan_clients_tx_ccq{routerboard_name=\"$node\"}",
@@ -4371,7 +4370,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "editable": true,
@@ -4440,7 +4439,7 @@
               },
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "rate(mktxp_wlan_clients_tx_bytes_total{routerboard_name=\"$node\"}[4m])",
@@ -4472,7 +4471,7 @@
               },
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "rate(mktxp_wlan_clients_rx_bytes_total{routerboard_name=\"$node\"}[4m])",
@@ -4539,7 +4538,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 0,
           "fieldConfig": {
@@ -4595,7 +4594,7 @@
               },
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "mktxp_wlan_clients_signal_strength{routerboard_name=\"$node\"}",
@@ -4661,7 +4660,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -4716,7 +4715,7 @@
               },
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "mktxp_wlan_clients_signal_to_noise{routerboard_name=\"$node\"}",
@@ -4805,7 +4804,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -4893,7 +4892,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "mktxp_capsman_remote_caps_info{routerboard_name=\"$node\"}",
@@ -4940,7 +4939,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -5057,7 +5056,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "mktxp_capsman_clients_devices_info{routerboard_name=\"$node\"}",
@@ -5109,7 +5108,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "fieldConfig": {
@@ -5168,7 +5167,7 @@
               },
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "mktxp_capsman_registrations_count{routerboard_name=\"$node\"}",
@@ -5197,7 +5196,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "sum(mktxp_capsman_registrations_count{routerboard_name=\"$node\"})",
@@ -5213,7 +5212,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -5281,7 +5280,7 @@
               },
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "mktxp_capsman_clients_signal_strength{routerboard_name=\"$node\"}",
@@ -5318,7 +5317,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -5373,7 +5372,7 @@
               },
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "mktxp_capsman_clients_signal_strength{routerboard_name=\"$node\"}",
@@ -5444,7 +5443,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "editable": true,
           "error": false,
@@ -5512,7 +5511,7 @@
               },
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "rate(mktxp_capsman_clients_tx_bytes_total{routerboard_name=\"$node\"}[4m])",
@@ -5544,7 +5543,7 @@
               },
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "rate(mktxp_capsman_clients_rx_bytes_total{routerboard_name=\"$node\"}[4m])",
@@ -5630,7 +5629,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "fieldConfig": {
@@ -5674,8 +5673,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -5750,7 +5748,7 @@
               },
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "mktxp_queue_tree_rates_total{routerboard_name=\"$node\"}",
@@ -5783,7 +5781,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "fieldConfig": {
@@ -5827,8 +5825,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -5905,7 +5902,7 @@
               },
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "mktxp_queue_tree_bytes_total{routerboard_name=\"$node\"}",
@@ -5938,7 +5935,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "fieldConfig": {
@@ -5982,8 +5979,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -6060,7 +6056,7 @@
               },
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "rate(mktxp_queue_tree_queued_bytes_total{routerboard_name=\"$node\"}[4m])",
@@ -6093,7 +6089,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "E1M7U50Gz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "fieldConfig": {
@@ -6137,8 +6133,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -6215,7 +6210,7 @@
               },
               "datasource": {
                 "type": "prometheus",
-                "uid": "E1M7U50Gz"
+                "uid": "PBFA97CFB590B2093"
               },
               "editorMode": "code",
               "expr": "rate(mktxp_queue_tree_dropped_total{routerboard_name=\"$node\"}[4m])",
@@ -6250,7 +6245,7 @@
       "type": "row"
     },
     {
-      "collapsed": true,
+      "collapsed": false,
       "datasource": {
         "type": "prometheus",
         "uid": "E1M7U50Gz"
@@ -6262,458 +6257,7 @@
         "y": 67
       },
       "id": 80,
-      "panels": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "E1M7U50Gz"
-          },
-          "fieldConfig": {
-            "defaults": {
-              "color": {
-                "mode": "thresholds"
-              },
-              "links": [],
-              "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  {
-                    "color": "green",
-                    "value": null
-                  },
-                  {
-                    "color": "yellow",
-                    "value": 10
-                  },
-                  {
-                    "color": "purple",
-                    "value": 20
-                  },
-                  {
-                    "color": "orange",
-                    "value": 50
-                  }
-                ]
-              },
-              "unit": "ms"
-            },
-            "overrides": []
-          },
-          "gridPos": {
-            "h": 8,
-            "w": 6,
-            "x": 0,
-            "y": 68
-          },
-          "id": 78,
-          "links": [],
-          "options": {
-            "displayMode": "gradient",
-            "minVizHeight": 10,
-            "minVizWidth": 0,
-            "orientation": "horizontal",
-            "reduceOptions": {
-              "calcs": [
-                "lastNotNull"
-              ],
-              "fields": "",
-              "values": false
-            },
-            "showUnfilled": true,
-            "text": {}
-          },
-          "pluginVersion": "9.2.5",
-          "targets": [
-            {
-              "application": {
-                "filter": "Network"
-              },
-              "datasource": {
-                "type": "prometheus",
-                "uid": "E1M7U50Gz"
-              },
-              "editorMode": "code",
-              "expr": "rate(mktxp_collection_time_total{routerboard_name=\"$node\"}[4m])  ",
-              "format": "time_series",
-              "functions": [],
-              "group": {
-                "filter": "Network"
-              },
-              "hide": false,
-              "host": {
-                "filter": "MikroTik Router"
-              },
-              "instant": true,
-              "interval": "",
-              "intervalFactor": 1,
-              "item": {
-                "filter": "Incoming traffic on interface ether1-gateway"
-              },
-              "legendFormat": "{{ name }}",
-              "mode": 0,
-              "options": {
-                "showDisabledItems": false
-              },
-              "refId": "A"
-            }
-          ],
-          "title": "MKTXP Collection Times",
-          "type": "bargauge"
-        },
-        {
-          "aliasColors": {
-            "Incoming traffic on interface ether1-gateway": "#1F78C1",
-            "Outgoing traffic on interface ether1-gateway": "#EAB839"
-          },
-          "bars": false,
-          "dashLength": 10,
-          "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "E1M7U50Gz"
-          },
-          "editable": true,
-          "error": false,
-          "fieldConfig": {
-            "defaults": {
-              "links": []
-            },
-            "overrides": []
-          },
-          "fill": 3,
-          "fillGradient": 0,
-          "gridPos": {
-            "h": 8,
-            "w": 18,
-            "x": 6,
-            "y": 68
-          },
-          "hiddenSeries": false,
-          "id": 77,
-          "legend": {
-            "alignAsTable": true,
-            "avg": true,
-            "current": false,
-            "hideEmpty": false,
-            "hideZero": true,
-            "max": false,
-            "min": false,
-            "rightSide": true,
-            "show": true,
-            "total": false,
-            "values": true
-          },
-          "lines": true,
-          "linewidth": 1,
-          "links": [],
-          "nullPointMode": "connected",
-          "options": {
-            "alertThreshold": true
-          },
-          "paceLength": 10,
-          "percentage": false,
-          "pluginVersion": "9.2.5",
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [
-            {
-              "$$hashKey": "object:176",
-              "alias": "/In/"
-            },
-            {
-              "$$hashKey": "object:177",
-              "alias": "/Out/",
-              "color": "#EAB839",
-              "transform": "negative-Y"
-            }
-          ],
-          "spaceLength": 10,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "application": {
-                "filter": "Network"
-              },
-              "datasource": {
-                "type": "prometheus",
-                "uid": "E1M7U50Gz"
-              },
-              "editorMode": "code",
-              "expr": "rate(mktxp_collection_time_total{routerboard_name=\"$node\"}[4m])",
-              "format": "time_series",
-              "functions": [],
-              "group": {
-                "filter": "Network"
-              },
-              "hide": false,
-              "host": {
-                "filter": "MikroTik Router"
-              },
-              "instant": false,
-              "interval": "",
-              "intervalFactor": 1,
-              "item": {
-                "filter": "Incoming traffic on interface ether1-gateway"
-              },
-              "legendFormat": "{{ name }}",
-              "mode": 0,
-              "options": {
-                "showDisabledItems": false
-              },
-              "refId": "A"
-            },
-            {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "E1M7U50Gz"
-              },
-              "editorMode": "code",
-              "expr": "sum(rate(mktxp_collection_time_total{routerboard_name=\"$node\"}[4m]))",
-              "interval": "",
-              "legendFormat": "Total",
-              "range": true,
-              "refId": "B"
-            }
-          ],
-          "thresholds": [],
-          "timeRegions": [],
-          "title": "MKTXP Collection Times",
-          "tooltip": {
-            "msResolution": false,
-            "shared": true,
-            "sort": 2,
-            "value_type": "individual"
-          },
-          "type": "graph",
-          "xaxis": {
-            "mode": "time",
-            "show": true,
-            "values": []
-          },
-          "yaxes": [
-            {
-              "$$hashKey": "object:706",
-              "format": "ms",
-              "logBase": 2,
-              "show": true
-            },
-            {
-              "$$hashKey": "object:707",
-              "format": "short",
-              "logBase": 2,
-              "show": true
-            }
-          ],
-          "yaxis": {
-            "align": false
-          }
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "dashLength": 10,
-          "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "E1M7U50Gz"
-          },
-          "decimals": 0,
-          "fieldConfig": {
-            "defaults": {
-              "links": [],
-              "unit": "binbps"
-            },
-            "overrides": []
-          },
-          "fill": 1,
-          "fillGradient": 0,
-          "gridPos": {
-            "h": 7,
-            "w": 12,
-            "x": 0,
-            "y": 76
-          },
-          "hiddenSeries": false,
-          "id": 27,
-          "legend": {
-            "alignAsTable": true,
-            "avg": true,
-            "current": true,
-            "hideEmpty": true,
-            "hideZero": true,
-            "max": true,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": true
-          },
-          "lines": true,
-          "linewidth": 1,
-          "nullPointMode": "null",
-          "options": {
-            "alertThreshold": false
-          },
-          "percentage": false,
-          "pluginVersion": "9.2.5",
-          "pointradius": 2,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "spaceLength": 10,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "E1M7U50Gz"
-              },
-              "expr": "mktxp_internet_bandwidth",
-              "instant": false,
-              "interval": "",
-              "legendFormat": "{{direction}}",
-              "refId": "A"
-            }
-          ],
-          "thresholds": [],
-          "timeRegions": [],
-          "title": "Internet Bandwidth",
-          "tooltip": {
-            "shared": true,
-            "sort": 0,
-            "value_type": "individual"
-          },
-          "type": "graph",
-          "xaxis": {
-            "mode": "time",
-            "show": true,
-            "values": []
-          },
-          "yaxes": [
-            {
-              "$$hashKey": "object:54",
-              "decimals": 0,
-              "format": "binbps",
-              "label": "",
-              "logBase": 1,
-              "show": true
-            },
-            {
-              "$$hashKey": "object:55",
-              "format": "short",
-              "logBase": 1,
-              "show": true
-            }
-          ],
-          "yaxis": {
-            "align": false
-          }
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "dashLength": 10,
-          "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "E1M7U50Gz"
-          },
-          "decimals": 0,
-          "fieldConfig": {
-            "defaults": {
-              "links": [],
-              "unit": "ms"
-            },
-            "overrides": []
-          },
-          "fill": 1,
-          "fillGradient": 0,
-          "gridPos": {
-            "h": 7,
-            "w": 12,
-            "x": 12,
-            "y": 76
-          },
-          "hiddenSeries": false,
-          "id": 74,
-          "legend": {
-            "alignAsTable": true,
-            "avg": true,
-            "current": true,
-            "hideEmpty": true,
-            "hideZero": true,
-            "max": true,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": true
-          },
-          "lines": true,
-          "linewidth": 1,
-          "nullPointMode": "null",
-          "options": {
-            "alertThreshold": false
-          },
-          "percentage": false,
-          "pluginVersion": "9.2.5",
-          "pointradius": 2,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "spaceLength": 10,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "E1M7U50Gz"
-              },
-              "expr": "mktxp_internet_latency",
-              "instant": false,
-              "interval": "",
-              "legendFormat": "latency",
-              "refId": "A"
-            }
-          ],
-          "thresholds": [],
-          "timeRegions": [],
-          "title": "Internet Latency",
-          "tooltip": {
-            "shared": true,
-            "sort": 0,
-            "value_type": "individual"
-          },
-          "type": "graph",
-          "xaxis": {
-            "mode": "time",
-            "show": true,
-            "values": []
-          },
-          "yaxes": [
-            {
-              "$$hashKey": "object:54",
-              "decimals": 0,
-              "format": "ms",
-              "label": "",
-              "logBase": 1,
-              "show": true
-            },
-            {
-              "$$hashKey": "object:55",
-              "format": "short",
-              "logBase": 1,
-              "show": false
-            }
-          ],
-          "yaxis": {
-            "align": false
-          }
-        }
-      ],
+      "panels": [],
       "targets": [
         {
           "datasource": {
@@ -6725,6 +6269,455 @@
       ],
       "title": "MKTXP Metrics",
       "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "links": [],
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "yellow",
+                "value": 10
+              },
+              {
+                "color": "purple",
+                "value": 20
+              },
+              {
+                "color": "orange",
+                "value": 50
+              }
+            ]
+          },
+          "unit": "ms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 6,
+        "x": 0,
+        "y": 68
+      },
+      "id": 78,
+      "links": [],
+      "options": {
+        "displayMode": "gradient",
+        "minVizHeight": 10,
+        "minVizWidth": 0,
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "9.2.5",
+      "targets": [
+        {
+          "application": {
+            "filter": "Network"
+          },
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "rate(mktxp_collection_time_total{routerboard_name=\"$node\"}[4m])  ",
+          "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": "Network"
+          },
+          "hide": false,
+          "host": {
+            "filter": "MikroTik Router"
+          },
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "item": {
+            "filter": "Incoming traffic on interface ether1-gateway"
+          },
+          "legendFormat": "{{ name }}",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "MKTXP Collection Times",
+      "type": "bargauge"
+    },
+    {
+      "aliasColors": {
+        "Incoming traffic on interface ether1-gateway": "#1F78C1",
+        "Outgoing traffic on interface ether1-gateway": "#EAB839"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "editable": true,
+      "error": false,
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
+      "fill": 3,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 18,
+        "x": 6,
+        "y": 68
+      },
+      "hiddenSeries": false,
+      "id": 77,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": true,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "paceLength": 10,
+      "percentage": false,
+      "pluginVersion": "9.2.5",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:176",
+          "alias": "/In/"
+        },
+        {
+          "$$hashKey": "object:177",
+          "alias": "/Out/",
+          "color": "#EAB839",
+          "transform": "negative-Y"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "Network"
+          },
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "rate(mktxp_collection_time_total{routerboard_name=\"$node\"}[4m])",
+          "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": "Network"
+          },
+          "hide": false,
+          "host": {
+            "filter": "MikroTik Router"
+          },
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "item": {
+            "filter": "Incoming traffic on interface ether1-gateway"
+          },
+          "legendFormat": "{{ name }}",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "sum(rate(mktxp_collection_time_total{routerboard_name=\"$node\"}[4m]))",
+          "interval": "",
+          "legendFormat": "Total",
+          "range": true,
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "MKTXP Collection Times",
+      "tooltip": {
+        "msResolution": false,
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:706",
+          "format": "ms",
+          "logBase": 2,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:707",
+          "format": "short",
+          "logBase": 2,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "decimals": 0,
+      "fieldConfig": {
+        "defaults": {
+          "links": [],
+          "unit": "binbps"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 76
+      },
+      "hiddenSeries": false,
+      "id": 27,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": false
+      },
+      "percentage": false,
+      "pluginVersion": "9.2.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "mktxp_internet_bandwidth",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "{{direction}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Internet Bandwidth",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:54",
+          "decimals": 0,
+          "format": "binbps",
+          "label": "",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:55",
+          "format": "short",
+          "logBase": 1,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "decimals": 0,
+      "fieldConfig": {
+        "defaults": {
+          "links": [],
+          "unit": "ms"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 76
+      },
+      "hiddenSeries": false,
+      "id": 74,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": false
+      },
+      "percentage": false,
+      "pluginVersion": "9.2.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "mktxp_internet_latency",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "latency",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Internet Latency",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:54",
+          "decimals": 0,
+          "format": "ms",
+          "label": "",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:55",
+          "format": "short",
+          "logBase": 1,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
     }
   ],
   "refresh": "10s",
@@ -6745,7 +6738,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "E1M7U50Gz"
+          "uid": "PBFA97CFB590B2093"
         },
         "definition": "label_values(mktxp_system_identity_info, routerboard_name)",
         "hide": 0,
@@ -6770,13 +6763,13 @@
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-12h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Mikrotik MKTXP Exporter New",
-  "uid": "Drt6FlxMk-N",
-  "version": 38,
+  "title": "Mikrotik MKTXP Exporter",
+  "uid": "Drt6FlxMk",
+  "version": 1,
   "weekStart": ""
 }
