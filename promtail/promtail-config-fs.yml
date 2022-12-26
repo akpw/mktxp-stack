@@ -1,0 +1,28 @@
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+
+positions:
+  filename: /tmp/positions.yaml
+
+clients:
+  - url: http://loki:3100/loki/api/v1/push
+
+scrape_configs:
+
+  - job_name: mktxp-syslog
+    static_configs:
+    - targets:
+        - localhost
+      labels:
+        job: "syslog"
+        __path__: /var/log/*.log
+    pipeline_stages:
+    - match:
+        selector: '{job="syslog"}'
+        stages:
+        - regex:
+            source: filename
+            expression: "/var/log/(?P<routerboard>.+).log"
+        - labels:
+            routerboard:

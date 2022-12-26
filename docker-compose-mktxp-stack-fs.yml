@@ -1,0 +1,99 @@
+networks:
+  mktxp: {}
+services:
+  mktxp:
+    container_name: mktxp
+    image: ghcr.io/akpw/mktxp:latest
+    volumes:
+      - './mktxp/:/home/mktxp/mktxp/'
+    networks:
+      mktxp: null
+    restart: unless-stopped  
+  grafana:
+    container_name: grafana
+    environment:
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: Admin
+      GF_AUTH_BASIC_ENABLED: "false"
+      GF_AUTH_DISABLE_LOGIN_FORM: "true"
+      GF_USERS_DEFAULT_THEME: "light"
+      GF_INSTALL_PLUGINS: "flant-statusmap-panel"
+      GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /var/lib/grafana/dashboards/mikrotik/mikrotik_mktxp_exporter.json
+    image: grafana/grafana:latest
+    networks:
+      mktxp: null
+    ports:
+    - protocol: tcp
+      published: 3000
+      target: 3000
+    restart: always
+    volumes:
+    - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources:ro
+    - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards:ro
+    - ./grafana/dashboards:/var/lib/grafana/dashboards
+  loki:
+    command: -config.file=/etc/loki/loki-config.yml
+    container_name: loki
+    image: grafana/loki:2.3.0
+    networks:
+      mktxp: null
+    ports:
+    - protocol: tcp
+      published: 3100
+      target: 3100
+    restart: always
+    volumes:
+    - ./loki/loki-config.yml:/etc/loki/loki-config.yml
+  prometheus:
+    command:
+    - --config.file=/etc/prometheus/prometheus.yml
+    - --storage.tsdb.path=/prometheus
+    - --web.enable-admin-api
+    - --web.enable-lifecycle
+    container_name: prometheus
+    image: prom/prometheus:latest
+    networks:
+      mktxp: null
+    ports:
+    - published: 9090
+      target: 9090
+    restart: always
+    volumes:
+    - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+  promtail:
+    command: -config.file=/etc/promtail/promtail-config.yml
+    container_name: promtail
+    image: grafana/promtail:2.3.0
+    networks:
+      mktxp: null
+    ports:
+    - protocol: tcp
+      published: 1514
+      target: 1514
+    - protocol: tcp
+      published: 9080
+      target: 9080
+    restart: always
+    volumes:
+    - ./promtail/promtail-config-fs.yml:/etc/promtail/promtail-config.yml:ro
+    - ./syslog-ng/logs:/var/log:ro
+  syslog-ng:
+    command: -edv
+    container_name: syslog-ng
+    depends_on:
+    - promtail
+    image: balabit/syslog-ng:latest
+    networks:
+      mktxp: null
+    ports:
+    - protocol: udp
+      published: 514
+      target: 514
+    - protocol: tcp
+      published: 601
+      target: 601
+    restart: always
+    volumes:
+    - ./syslog-ng/syslog-ng-fs.conf:/etc/syslog-ng/syslog-ng.conf:ro
+    - ./syslog-ng/logs:/var/log/syslog-ng
+version: '3.3'
