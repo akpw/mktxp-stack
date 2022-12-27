@@ -1,5 +1,8 @@
+version: '3.4'
+
 networks:
   mktxp: {}
+
 services:
   mktxp:
     container_name: mktxp
@@ -9,6 +12,7 @@ services:
     networks:
       mktxp: null
     restart: unless-stopped  
+
   grafana:
     container_name: grafana
     environment:
@@ -31,6 +35,7 @@ services:
     - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources:ro
     - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards:ro
     - ./grafana/dashboards:/var/lib/grafana/dashboards
+
   prometheus:
     command:
     - --config.file=/etc/prometheus/prometheus.yml
@@ -47,4 +52,3 @@ services:
     restart: always
     volumes:
     - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
-version: '3.3'

@@ -1,5 +1,15 @@
+version: '3.4'
+
 networks:
   mktxp: {}
+
+volumes:
+  mktxp-logs:
+    driver_opts:
+       o: bind
+       type: none
+       device: $PWD/syslog-ng/logs
+
 services:
   mktxp:
     container_name: mktxp
@@ -9,6 +19,7 @@ services:
     networks:
       mktxp: null
     restart: unless-stopped  
+
   grafana:
     container_name: grafana
     environment:
@@ -31,6 +42,7 @@ services:
     - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources:ro
     - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards:ro
     - ./grafana/dashboards:/var/lib/grafana/dashboards
+
   loki:
     command: -config.file=/etc/loki/loki-config.yml
     container_name: loki
@@ -44,6 +56,7 @@ services:
     restart: always
     volumes:
     - ./loki/loki-config.yml:/etc/loki/loki-config.yml
+
   prometheus:
     command:
     - --config.file=/etc/prometheus/prometheus.yml
@@ -60,6 +73,7 @@ services:
     restart: always
     volumes:
     - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+
   promtail:
     command: -config.file=/etc/promtail/promtail-config.yml
     container_name: promtail
@@ -76,7 +90,8 @@ services:
     restart: always
     volumes:
     - ./promtail/promtail-config-fs.yml:/etc/promtail/promtail-config.yml:ro
-    - ./syslog-ng/logs:/var/log:ro
+    - mktxp-logs:/var/log:ro
+
   syslog-ng:
     command: -edv
     container_name: syslog-ng
@@ -95,5 +110,5 @@ services:
     restart: always
     volumes:
     - ./syslog-ng/syslog-ng-fs.conf:/etc/syslog-ng/syslog-ng.conf:ro
-    - ./syslog-ng/logs:/var/log/syslog-ng
-version: '3.3'
+    - mktxp-logs:/var/log/syslog-ng
+
