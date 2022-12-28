@@ -92,7 +92,7 @@ If you want more control over managing your routers' logs, such a specific file-
 ```
 docker-compose -f ./docker-compose-mktxp-stack-fs-logs.yml up -d
 ```
-This configuration makes it easy to implement log rotation or any additional management / cleanup functionality on top. By default, the devices' logs will be send to `syslog-ng/logs/` where you can check it out with:
+This configuration makes it easy to implement log rotation or any additional management functionality on top. By default, the devices' logs will be send to `syslog-ng/logs/` where you can check it out with:
 ```
 ls -l syslog-ng/logs/
 ```
