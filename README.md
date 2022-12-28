@@ -10,7 +10,7 @@ As an out-of-the-box solution, it lets you quickly get up & running with [MKTXP]
 
 While complementary to [MKTXP](https://github.com/akpw/mktxp), this project also adds some extra capabilities such an [centralized Mikrotik log processing](https://github.com/akpw/mktxp-stack#mikrotik-centralized-logging-configuration) based on a preconfigured  [syslog-ng](https://www.syslog-ng.com/) / [promtail](https://grafana.com/docs/loki/latest/clients/promtail/) / [Loki](https://grafana.com/docs/loki/latest) stack. 
 
-The project offers multiple [docker-compose configurations](https://github.com/akpw/mktxp-stack/blob/main/README.md#alternative-docker-compose-configurations), so only relevant parts of the stack can be loaded.
+The project offers multiple [docker-compose configurations](https://github.com/akpw/mktxp-stack/blob/main/README.md#alternative-docker-compose-configurations), to allow loading relevant parts of the stack as well as multiple log management options.
 
 
 ### Requirements:
@@ -79,18 +79,39 @@ docker-compose -f ./docker-compose-mktxp-stack.yml up -d
 As soon as the containers are up & running, just point your Web browser to included [Grafana dashboards](http://localhost:3000/dashboards) and open the one called "Mikrotik Loki Logs".
 
 ## Alternative docker-compose configurations
-The project offers multiple docker-compose files to load only relevant parts of the stack as actually required.
+The project offers multiple docker-compose files, for loading relevant parts of the stack as well as multiple log management options.
 
+### Full stack
 To go with full stack, run docker-compose as described above:
 ```
 docker-compose -f ./docker-compose-mktxp-stack.yml up -d
 ```
 
-In case you need only MKTXP Exporter functionality:
+### File-system based logs
+If you want more control over managing your routers' logs, such configuring a specific file-system location for separate log files:
+```
+docker-compose -f ./docker-compose-mktxp-stack-fs-logs.yml up -d
+```
+This set makes it easy to manage log rotation and any additional management / cleanup functionality on top. <br>
+By default, the devices' logs will be send to `syslog-ng/logs/` where you can check it out with:
+```
+ls -l syslog-ng/logs/
+```
+To set a different location on your mktxp-stack host, just edit the device path of the ```mktxp-stack/docker-compose-mktxp-stack-fs.yml``` configuration:
+```
+volumes:
+  mktxp-logs:
+    driver_opts:
+       o: bind
+       type: none
+       device: $PWD/syslog-ng/logs
+```
+
+###  MKTXP Exporter only
+Finally, in case you need just MKTXP Exporter functionality and no logs:
 ```
 docker-compose -f ./docker-compose-mktxp-stack-no-logs.yml up -d
 ```
-
 
 
 ## Overview of components used in this project:
