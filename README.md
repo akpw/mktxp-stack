@@ -92,6 +92,7 @@ If you want more control over managing your routers' logs, such a specific file-
 ```
 docker-compose -f ./docker-compose-mktxp-stack-fs-logs.yml up -d
 ```
+
 This configuration makes it easy to implement log rotation or any additional management functionality on top. By default, the devices' logs will be send to `syslog-ng/logs/` where you can check it out with:
 ```
 ls -l syslog-ng/logs/
@@ -105,6 +106,9 @@ volumes:
        type: none
        device: $PWD/syslog-ng/logs
 ```
+
+💡 *For newly added log files, it might take a while to appear in the dashboard. <br>
+In case this happens, an easy solution is to restart the promtail container via `docker restart promtail`*
 
 ###  MKTXP Exporter only
 Finally, in case you need just MKTXP Exporter functionality and no logs:
