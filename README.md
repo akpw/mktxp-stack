@@ -107,7 +107,7 @@ volumes:
        device: $PWD/syslog-ng/logs
 ```
 
-💡 *For newly added log files, it might take a while to appear in the dashboard. <br>
+💡 *With mktxp-stack up & running, it might take a while for newly added log files to appear in the dashboard. <br>
 In case this happens, an easy solution is to restart the promtail container via `docker restart promtail`*
 
 ###  MKTXP Exporter only
