@@ -97,6 +97,9 @@ This configuration makes it easy to implement log rotation or any additional man
 ```
 ls -l syslog-ng/logs/
 ```
+💡 *With mktxp-stack up & running, it might take a while for newly added log files to appear in the dashboard. <br>
+In case this happens, an easy solution is to restart the promtail container via `docker restart promtail`*
+
 To set a different location on your mktxp-stack host, just edit the device path in the ```mktxp-stack/docker-compose-mktxp-stack-fs.yml``` configuration:
 ```
 volumes:
@@ -107,8 +110,6 @@ volumes:
        device: $PWD/syslog-ng/logs
 ```
 
-💡 *With mktxp-stack up & running, it might take a while for newly added log files to appear in the dashboard. <br>
-In case this happens, an easy solution is to restart the promtail container via `docker restart promtail`*
 
 ###  MKTXP Exporter only
 Finally, in case you need just MKTXP Exporter functionality and no logs:
