@@ -26,7 +26,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 17139,
   "graphTooltip": 0,
-  "id": 7,
+  "id": 3,
   "links": [
     {
       "asDropdown": false,
@@ -104,7 +104,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "9.2.1",
+      "pluginVersion": "9.3.2",
       "targets": [
         {
           "datasource": {
@@ -211,7 +211,7 @@
             "uid": "P8E80F9AEF21F6940"
           },
           "editorMode": "code",
-          "expr": "count_over_time({job=\"syslog\", routerboard=\"$routerboard\"} [$__interval] | pattern \"<prefix>:<_>\" |~\"(?i)$topics\" |~\"(?i)$searchable_pattern\" !~\"(?i)$exclude\")",
+          "expr": "count_over_time({job=\"syslog\", routerboard=\"$routerboard\"} [$__interval] |regexp \"(?P<prefix>\\\\w+)\\\\: \" |~\"(?i)$topics\" |~\"(?i)$searchable_pattern\" !~\"(?i)$exclude\")",
           "legendFormat": "{{prefix}}",
           "queryType": "range",
           "refId": "A"
@@ -228,7 +228,7 @@
       },
       "description": "",
       "gridPos": {
-        "h": 17,
+        "h": 23,
         "w": 24,
         "x": 0,
         "y": 7
@@ -240,7 +240,7 @@
         "prettifyLogMessage": false,
         "showCommonLabels": false,
         "showLabels": false,
-        "showTime": true,
+        "showTime": false,
         "sortOrder": "Descending",
         "wrapLogMessage": false
       },
@@ -274,8 +274,8 @@
       {
         "current": {
           "selected": false,
-          "text": "MKT-GT-PD",
-          "value": "MKT-GT-PD"
+          "text": "MKT-GT",
+          "value": "MKT-GT"
         },
         "datasource": {
           "type": "loki",
@@ -302,7 +302,7 @@
       },
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": [
             "All"
           ],
@@ -533,13 +533,13 @@
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-12h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Mikrotik Loki Logs",
   "uid": "awslix6doiakp-mkt-loki",
-  "version": 8,
+  "version": 1,
   "weekStart": ""
 }
