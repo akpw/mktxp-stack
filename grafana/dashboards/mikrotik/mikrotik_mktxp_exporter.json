@@ -26,7 +26,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 13679,
   "graphTooltip": 0,
-  "id": 6,
+  "id": 8,
   "links": [
     {
       "asDropdown": false,
@@ -515,60 +515,93 @@
       "type": "bargauge"
     },
     {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
       "datasource": {
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "editable": true,
-      "error": false,
       "fieldConfig": {
         "defaults": {
-          "links": []
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "log": 2,
+              "type": "symlog"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "links": [],
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
         },
         "overrides": []
       },
-      "fill": 1,
-      "fillGradient": 0,
       "gridPos": {
         "h": 6,
         "w": 9,
         "x": 15,
         "y": 1
       },
-      "hiddenSeries": false,
       "id": 16,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "max": true,
-        "min": true,
-        "rightSide": false,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
       "links": [],
-      "nullPointMode": "connected",
       "options": {
-        "alertThreshold": true
+        "legend": {
+          "calcs": [
+            "mean",
+            "lastNotNull",
+            "max",
+            "min"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
       },
-      "paceLength": 10,
-      "percentage": false,
       "pluginVersion": "9.3.2",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
       "targets": [
         {
           "application": {
@@ -602,40 +635,8 @@
           "refId": "A"
         }
       ],
-      "thresholds": [],
-      "timeRegions": [],
       "title": "CPU load",
-      "tooltip": {
-        "msResolution": false,
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "mode": "time",
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:398",
-          "format": "percent",
-          "logBase": 10,
-          "max": "100",
-          "min": "0",
-          "show": true
-        },
-        {
-          "$$hashKey": "object:399",
-          "format": "short",
-          "logBase": 1,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false
-      }
+      "type": "timeseries"
     },
     {
       "datasource": {
@@ -2240,60 +2241,101 @@
       "type": "bargauge"
     },
     {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
       "datasource": {
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "editable": true,
-      "error": false,
       "fieldConfig": {
         "defaults": {
-          "links": []
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "log": 2,
+              "type": "symlog"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "links": [],
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "pps"
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/Out/"
+            },
+            "properties": [
+              {
+                "id": "custom.transform",
+                "value": "negative-Y"
+              }
+            ]
+          }
+        ]
       },
-      "fill": 1,
-      "fillGradient": 0,
       "gridPos": {
         "h": 16,
         "w": 12,
         "x": 12,
         "y": 33
       },
-      "hiddenSeries": false,
       "id": 55,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": false,
-        "max": false,
-        "min": false,
-        "rightSide": true,
-        "show": true,
-        "total": true,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
       "links": [],
-      "nullPointMode": "connected",
       "options": {
-        "alertThreshold": true
+        "legend": {
+          "calcs": [
+            "sum"
+          ],
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
       },
-      "paceLength": 10,
-      "percentage": false,
       "pluginVersion": "9.3.2",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
       "targets": [
         {
           "application": {
@@ -2304,7 +2346,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "mktxp_interface_rx_error_total{routerboard_name=\"$node\"}",
+          "expr": "rate(mktxp_interface_rx_error_total{routerboard_name=\"$node\"}[4m])",
           "format": "time_series",
           "functions": [],
           "group": {
@@ -2333,7 +2375,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "mktxp_interface_tx_error_total{routerboard_name=\"$node\"}",
+          "expr": "rate(mktxp_interface_tx_error_total{routerboard_name=\"$node\"}[4m])",
           "format": "time_series",
           "hide": false,
           "interval": "",
@@ -2343,38 +2385,8 @@
           "refId": "B"
         }
       ],
-      "thresholds": [],
-      "timeRegions": [],
       "title": "Interface Errors",
-      "tooltip": {
-        "msResolution": false,
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "mode": "time",
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:265",
-          "format": "short",
-          "logBase": 1,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:266",
-          "format": "short",
-          "logBase": 1,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false
-      }
+      "type": "timeseries"
     },
     {
       "datasource": {
@@ -2799,30 +2811,18 @@
         "overrides": [
           {
             "matcher": {
-              "id": "byName",
-              "options": "Incoming traffic on interface ether1-gateway"
+              "id": "byRegexp",
+              "options": "/Out/"
             },
             "properties": [
               {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#1F78C1",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Outgoing traffic on interface ether1-gateway"
-            },
-            "properties": [
+                "id": "custom.transform",
+                "value": "negative-Y"
+              },
               {
                 "id": "color",
                 "value": {
-                  "fixedColor": "#EAB839",
-                  "mode": "fixed"
+                  "mode": "continuous-GrYlRd"
                 }
               }
             ]
@@ -2830,19 +2830,14 @@
           {
             "matcher": {
               "id": "byRegexp",
-              "options": "/Out/"
+              "options": "/In/"
             },
             "properties": [
               {
                 "id": "color",
                 "value": {
-                  "fixedColor": "#EAB839",
-                  "mode": "fixed"
+                  "mode": "continuous-BlPu"
                 }
-              },
-              {
-                "id": "custom.transform",
-                "value": "negative-Y"
               }
             ]
           }
@@ -2859,7 +2854,9 @@
       "options": {
         "legend": {
           "calcs": [
-            "mean"
+            "mean",
+            "max",
+            "min"
           ],
           "displayMode": "table",
           "placement": "right",
@@ -2881,7 +2878,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "rate(mktxp_interface_rx_byte_total{routerboard_name=\"$node\"}[4m])",
+          "expr": "rate(mktxp_interface_rx_byte_total{routerboard_name=\"$node\"}[4m])*8",
           "format": "time_series",
           "functions": [],
           "group": {
@@ -2913,7 +2910,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "rate(mktxp_interface_tx_byte_total{routerboard_name=\"$node\"}[4m])",
+          "expr": "rate(mktxp_interface_tx_byte_total{routerboard_name=\"$node\"}[4m])*8",
           "format": "time_series",
           "functions": [],
           "group": {
@@ -2967,67 +2964,91 @@
       "type": "row"
     },
     {
-      "aliasColors": {
-        "Incoming traffic on interface ether1-gateway": "#1F78C1",
-        "Outgoing traffic on interface ether1-gateway": "#EAB839"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
       "datasource": {
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
       "description": "",
-      "editable": true,
-      "error": false,
       "fieldConfig": {
         "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 30,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "log": 2,
+              "type": "log"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
           "links": [],
-          "unit": "decbytes"
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "bps"
         },
         "overrides": []
       },
-      "fill": 3,
-      "fillGradient": 0,
       "gridPos": {
-        "h": 7,
+        "h": 12,
         "w": 12,
         "x": 0,
         "y": 64
       },
-      "hiddenSeries": false,
       "id": 81,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": true,
-        "max": true,
-        "min": true,
-        "rightSide": false,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
       "links": [],
-      "nullPointMode": "connected",
       "options": {
-        "alertThreshold": true
+        "legend": {
+          "calcs": [
+            "mean",
+            "max",
+            "min"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
       },
-      "paceLength": 10,
-      "percentage": false,
       "pluginVersion": "9.3.2",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
       "targets": [
         {
           "application": {
@@ -3038,7 +3059,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "rate(mktxp_firewall_filter_total{routerboard_name=\"$node\", log=\"1\"}[4m])",
+          "expr": "rate(mktxp_firewall_filter_total{routerboard_name=\"$node\", log=\"1\"}[4m])*8",
           "format": "time_series",
           "functions": [],
           "group": {
@@ -3062,102 +3083,95 @@
           "refId": "A"
         }
       ],
-      "thresholds": [],
-      "timeRegions": [],
       "title": "Logged Firewall Rules Traffic ",
-      "tooltip": {
-        "msResolution": false,
-        "shared": true,
-        "sort": 2,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "mode": "time",
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:706",
-          "format": "decbytes",
-          "label": "",
-          "logBase": 2,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:707",
-          "format": "short",
-          "logBase": 1,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false
-      }
+      "type": "timeseries"
     },
     {
-      "aliasColors": {
-        "Incoming traffic on interface ether1-gateway": "#1F78C1",
-        "Outgoing traffic on interface ether1-gateway": "#EAB839"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
       "datasource": {
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
       "description": "",
-      "editable": true,
-      "error": false,
       "fieldConfig": {
         "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 30,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "log": 2,
+              "type": "log"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
           "links": [],
-          "unit": "decbytes"
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "bps"
         },
         "overrides": []
       },
-      "fill": 3,
-      "fillGradient": 0,
       "gridPos": {
-        "h": 7,
+        "h": 12,
         "w": 12,
         "x": 12,
         "y": 64
       },
-      "hiddenSeries": false,
       "id": 82,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": true,
-        "max": true,
-        "min": true,
-        "rightSide": false,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
       "links": [],
-      "nullPointMode": "connected",
       "options": {
-        "alertThreshold": true
+        "legend": {
+          "calcs": [
+            "mean",
+            "max",
+            "min"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
       },
-      "paceLength": 10,
-      "percentage": false,
       "pluginVersion": "9.3.2",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
       "targets": [
         {
           "application": {
@@ -3168,7 +3182,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "rate(mktxp_firewall_raw_total{routerboard_name=\"$node\", log=\"1\"}[4m])",
+          "expr": "rate(mktxp_firewall_raw_total{routerboard_name=\"$node\", log=\"1\"}[4m])*8",
           "format": "time_series",
           "functions": [],
           "group": {
@@ -3192,102 +3206,95 @@
           "refId": "A"
         }
       ],
-      "thresholds": [],
-      "timeRegions": [],
       "title": "Logged Raw Firewall Rules Traffic ",
-      "tooltip": {
-        "msResolution": false,
-        "shared": true,
-        "sort": 2,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "mode": "time",
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:706",
-          "format": "decbytes",
-          "label": "",
-          "logBase": 2,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:707",
-          "format": "short",
-          "logBase": 1,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false
-      }
+      "type": "timeseries"
     },
     {
-      "aliasColors": {
-        "Incoming traffic on interface ether1-gateway": "#1F78C1",
-        "Outgoing traffic on interface ether1-gateway": "#EAB839"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
       "datasource": {
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
       "description": "",
-      "editable": true,
-      "error": false,
       "fieldConfig": {
         "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 30,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "log": 2,
+              "type": "log"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
           "links": [],
-          "unit": "decbytes"
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "bps"
         },
         "overrides": []
       },
-      "fill": 3,
-      "fillGradient": 0,
       "gridPos": {
-        "h": 11,
+        "h": 14,
         "w": 12,
         "x": 0,
-        "y": 71
+        "y": 76
       },
-      "hiddenSeries": false,
       "id": 43,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": true,
-        "max": true,
-        "min": true,
-        "rightSide": false,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
       "links": [],
-      "nullPointMode": "connected",
       "options": {
-        "alertThreshold": true
+        "legend": {
+          "calcs": [
+            "mean",
+            "max",
+            "min"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
       },
-      "paceLength": 10,
-      "percentage": false,
       "pluginVersion": "9.3.2",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
       "targets": [
         {
           "application": {
@@ -3298,7 +3305,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "rate(mktxp_firewall_filter_total{routerboard_name=\"$node\"}[4m])",
+          "expr": "rate(mktxp_firewall_filter_total{routerboard_name=\"$node\"}[4m])*8",
           "format": "time_series",
           "functions": [],
           "group": {
@@ -3322,102 +3329,95 @@
           "refId": "A"
         }
       ],
-      "thresholds": [],
-      "timeRegions": [],
       "title": "Firewall Rules Traffic ",
-      "tooltip": {
-        "msResolution": false,
-        "shared": true,
-        "sort": 2,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "mode": "time",
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:706",
-          "format": "decbytes",
-          "label": "",
-          "logBase": 2,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:707",
-          "format": "short",
-          "logBase": 1,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false
-      }
+      "type": "timeseries"
     },
     {
-      "aliasColors": {
-        "Incoming traffic on interface ether1-gateway": "#1F78C1",
-        "Outgoing traffic on interface ether1-gateway": "#EAB839"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
       "datasource": {
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
       "description": "",
-      "editable": true,
-      "error": false,
       "fieldConfig": {
         "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 30,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "log": 2,
+              "type": "log"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
           "links": [],
-          "unit": "decbytes"
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "bps"
         },
         "overrides": []
       },
-      "fill": 3,
-      "fillGradient": 0,
       "gridPos": {
-        "h": 11,
+        "h": 14,
         "w": 12,
         "x": 12,
-        "y": 71
+        "y": 76
       },
-      "hiddenSeries": false,
       "id": 76,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": true,
-        "max": true,
-        "min": true,
-        "rightSide": false,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
       "links": [],
-      "nullPointMode": "connected",
       "options": {
-        "alertThreshold": true
+        "legend": {
+          "calcs": [
+            "mean",
+            "max",
+            "min"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
       },
-      "paceLength": 10,
-      "percentage": false,
       "pluginVersion": "9.3.2",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
       "targets": [
         {
           "application": {
@@ -3428,7 +3428,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "rate(mktxp_firewall_raw_total{routerboard_name=\"$node\"}[4m])",
+          "expr": "rate(mktxp_firewall_raw_total{routerboard_name=\"$node\"}[4m])*8",
           "format": "time_series",
           "functions": [],
           "group": {
@@ -3452,39 +3452,8 @@
           "refId": "A"
         }
       ],
-      "thresholds": [],
-      "timeRegions": [],
       "title": "Raw Firewall Rules Traffic ",
-      "tooltip": {
-        "msResolution": false,
-        "shared": true,
-        "sort": 2,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "mode": "time",
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:706",
-          "format": "decbytes",
-          "label": "",
-          "logBase": 2,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:707",
-          "format": "short",
-          "logBase": 1,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false
-      }
+      "type": "timeseries"
     },
     {
       "collapsed": false,
@@ -3496,7 +3465,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 82
+        "y": 90
       },
       "id": 90,
       "panels": [],
@@ -3549,7 +3518,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 83
+        "y": 91
       },
       "hideBranding": false,
       "highlightCards": true,
@@ -3704,7 +3673,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 83
+        "y": 91
       },
       "id": 88,
       "options": {
@@ -3791,7 +3760,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 91
+        "y": 99
       },
       "id": 29,
       "panels": [],
@@ -3828,7 +3797,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 92
+        "y": 100
       },
       "hiddenSeries": false,
       "id": 31,
@@ -3928,7 +3897,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 92
+        "y": 100
       },
       "hiddenSeries": false,
       "id": 73,
@@ -4104,7 +4073,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 100
+        "y": 108
       },
       "id": 68,
       "options": {
@@ -4197,7 +4166,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 100
+        "y": 108
       },
       "hiddenSeries": false,
       "id": 37,
@@ -4298,7 +4267,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 108
+        "y": 116
       },
       "hiddenSeries": false,
       "id": 61,
@@ -4404,7 +4373,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 108
+        "y": 116
       },
       "hiddenSeries": false,
       "id": 63,
@@ -4571,7 +4540,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 116
+        "y": 124
       },
       "hiddenSeries": false,
       "id": 65,
@@ -4692,7 +4661,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 116
+        "y": 124
       },
       "hiddenSeries": false,
       "id": 66,
@@ -4801,7 +4770,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 123
+        "y": 131
       },
       "id": 33,
       "panels": [],
@@ -4890,7 +4859,7 @@
         "h": 6,
         "w": 6,
         "x": 0,
-        "y": 124
+        "y": 132
       },
       "id": 35,
       "options": {
@@ -5050,7 +5019,7 @@
         "h": 15,
         "w": 18,
         "x": 6,
-        "y": 124
+        "y": 132
       },
       "id": 41,
       "options": {
@@ -5159,7 +5128,7 @@
         "h": 7,
         "w": 6,
         "x": 0,
-        "y": 130
+        "y": 138
       },
       "id": 47,
       "links": [],
@@ -5273,7 +5242,7 @@
         "h": 11,
         "w": 6,
         "x": 0,
-        "y": 137
+        "y": 145
       },
       "id": 48,
       "links": [],
@@ -5352,7 +5321,7 @@
         "h": 9,
         "w": 18,
         "x": 6,
-        "y": 139
+        "y": 147
       },
       "hiddenSeries": false,
       "id": 49,
@@ -5454,76 +5423,122 @@
       }
     },
     {
-      "aliasColors": {
-        "Incoming traffic on interface ether1-gateway": "#1F78C1",
-        "Outgoing traffic on interface ether1-gateway": "#EAB839"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
       "datasource": {
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "editable": true,
-      "error": false,
       "fieldConfig": {
         "defaults": {
-          "links": []
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 30,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "links": [],
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "bps"
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/Out/"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#EAB839",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.transform",
+                "value": "negative-Y"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/In/"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
       },
-      "fill": 3,
-      "fillGradient": 0,
       "gridPos": {
         "h": 10,
         "w": 24,
         "x": 0,
-        "y": 148
+        "y": 156
       },
-      "hiddenSeries": false,
       "id": 39,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": true,
-        "max": false,
-        "min": false,
-        "rightSide": true,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
       "links": [],
-      "nullPointMode": "connected",
       "options": {
-        "alertThreshold": true
-      },
-      "paceLength": 10,
-      "percentage": false,
-      "pluginVersion": "9.3.2",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:176",
-          "alias": "/In/"
+        "legend": {
+          "calcs": [
+            "mean"
+          ],
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true
         },
-        {
-          "$$hashKey": "object:177",
-          "alias": "/Out/",
-          "color": "#EAB839",
-          "transform": "negative-Y"
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
         }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
+      },
+      "pluginVersion": "9.3.2",
       "targets": [
         {
           "application": {
@@ -5534,7 +5549,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "rate(mktxp_capsman_clients_tx_bytes_total{routerboard_name=\"$node\"}[4m])",
+          "expr": "rate(mktxp_capsman_clients_tx_bytes_total{routerboard_name=\"$node\"}[4m])*8",
           "format": "time_series",
           "functions": [],
           "group": {
@@ -5566,7 +5581,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "rate(mktxp_capsman_clients_rx_bytes_total{routerboard_name=\"$node\"}[4m])",
+          "expr": "rate(mktxp_capsman_clients_rx_bytes_total{routerboard_name=\"$node\"}[4m])*8",
           "format": "time_series",
           "functions": [],
           "group": {
@@ -5590,38 +5605,8 @@
           "refId": "B"
         }
       ],
-      "thresholds": [],
-      "timeRegions": [],
       "title": "CAPsMAN Clients Traffic",
-      "tooltip": {
-        "msResolution": false,
-        "shared": true,
-        "sort": 2,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "mode": "time",
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:706",
-          "format": "bps",
-          "logBase": 1,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:707",
-          "format": "short",
-          "logBase": 1,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false
-      }
+      "type": "timeseries"
     },
     {
       "collapsed": false,
@@ -5629,7 +5614,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 158
+        "y": 166
       },
       "id": 109,
       "panels": [],
@@ -5692,39 +5677,9 @@
               }
             ]
           },
-          "unit": "Bps"
+          "unit": "bps"
         },
         "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Incoming traffic on interface ether1-gateway"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#1F78C1",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Outgoing traffic on interface ether1-gateway"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#EAB839",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
           {
             "matcher": {
               "id": "byRegexp",
@@ -5743,7 +5698,7 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 159
+        "y": 167
       },
       "id": 107,
       "links": [],
@@ -5774,7 +5729,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "mktxp_queue_simple_rates_download_total{routerboard_name=\"$node\"}",
+          "expr": "mktxp_queue_simple_rates_download_total{routerboard_name=\"$node\"}*8",
           "format": "time_series",
           "functions": [],
           "group": {
@@ -5806,7 +5761,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "mktxp_queue_simple_rates_upload_total{routerboard_name=\"$node\"}",
+          "expr": "mktxp_queue_simple_rates_upload_total{routerboard_name=\"$node\"}*8",
           "format": "time_series",
           "functions": [],
           "group": {
@@ -5894,21 +5849,6 @@
         "overrides": [
           {
             "matcher": {
-              "id": "byName",
-              "options": "Incoming traffic on interface ether1-gateway"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#1F78C1",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
               "id": "byRegexp",
               "options": "/Upload/"
             },
@@ -5925,7 +5865,7 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 159
+        "y": 167
       },
       "id": 102,
       "links": [],
@@ -6073,24 +6013,9 @@
               }
             ]
           },
-          "unit": "decbytes"
+          "unit": "Bps"
         },
         "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Incoming traffic on interface ether1-gateway"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#1F78C1",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
           {
             "matcher": {
               "id": "byRegexp",
@@ -6109,7 +6034,7 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 170
+        "y": 178
       },
       "id": 111,
       "links": [],
@@ -6257,24 +6182,9 @@
               }
             ]
           },
-          "unit": "decbytes"
+          "unit": "Bps"
         },
         "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Incoming traffic on interface ether1-gateway"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#1F78C1",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
           {
             "matcher": {
               "id": "byRegexp",
@@ -6284,13 +6194,6 @@
               {
                 "id": "custom.transform",
                 "value": "negative-Y"
-              },
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "light-purple",
-                  "mode": "fixed"
-                }
               }
             ]
           }
@@ -6300,7 +6203,7 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 170
+        "y": 178
       },
       "id": 112,
       "links": [],
@@ -6398,7 +6301,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 181
+        "y": 189
       },
       "id": 100,
       "panels": [],
@@ -6461,36 +6364,18 @@
               }
             ]
           },
-          "unit": "Bps"
+          "unit": "bps"
         },
         "overrides": [
           {
             "matcher": {
-              "id": "byName",
-              "options": "Incoming traffic on interface ether1-gateway"
+              "id": "byRegexp",
+              "options": "/Upload/"
             },
             "properties": [
               {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#1F78C1",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Outgoing traffic on interface ether1-gateway"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#EAB839",
-                  "mode": "fixed"
-                }
+                "id": "custom.transform",
+                "value": "negative-Y"
               }
             ]
           }
@@ -6500,7 +6385,7 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 182
+        "y": 190
       },
       "id": 101,
       "links": [],
@@ -6531,7 +6416,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "mktxp_queue_tree_rates_total{routerboard_name=\"$node\"}",
+          "expr": "mktxp_queue_tree_rates_total{routerboard_name=\"$node\"}*8",
           "format": "time_series",
           "functions": [],
           "group": {
@@ -6619,31 +6504,13 @@
         "overrides": [
           {
             "matcher": {
-              "id": "byName",
-              "options": "Incoming traffic on interface ether1-gateway"
+              "id": "byRegexp",
+              "options": "/Upload/"
             },
             "properties": [
               {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#1F78C1",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Outgoing traffic on interface ether1-gateway"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#EAB839",
-                  "mode": "fixed"
-                }
+                "id": "custom.transform",
+                "value": "negative-Y"
               }
             ]
           }
@@ -6653,7 +6520,7 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 182
+        "y": 190
       },
       "id": 110,
       "links": [],
@@ -6769,36 +6636,18 @@
               }
             ]
           },
-          "unit": "decbytes"
+          "unit": "Bps"
         },
         "overrides": [
           {
             "matcher": {
-              "id": "byName",
-              "options": "Incoming traffic on interface ether1-gateway"
+              "id": "byRegexp",
+              "options": "/Upload/"
             },
             "properties": [
               {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#1F78C1",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Outgoing traffic on interface ether1-gateway"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#EAB839",
-                  "mode": "fixed"
-                }
+                "id": "custom.transform",
+                "value": "negative-Y"
               }
             ]
           }
@@ -6808,7 +6657,7 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 193
+        "y": 201
       },
       "id": 106,
       "links": [],
@@ -6924,36 +6773,18 @@
               }
             ]
           },
-          "unit": "decbytes"
+          "unit": "Bps"
         },
         "overrides": [
           {
             "matcher": {
-              "id": "byName",
-              "options": "Incoming traffic on interface ether1-gateway"
+              "id": "byRegexp",
+              "options": "/Upload/"
             },
             "properties": [
               {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#1F78C1",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Outgoing traffic on interface ether1-gateway"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#EAB839",
-                  "mode": "fixed"
-                }
+                "id": "custom.transform",
+                "value": "negative-Y"
               }
             ]
           }
@@ -6963,7 +6794,7 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 193
+        "y": 201
       },
       "id": 105,
       "links": [],
@@ -7033,7 +6864,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 204
+        "y": 212
       },
       "id": 80,
       "panels": [],
@@ -7090,7 +6921,7 @@
         "h": 8,
         "w": 6,
         "x": 0,
-        "y": 205
+        "y": 213
       },
       "id": 78,
       "links": [],
@@ -7148,76 +6979,88 @@
       "type": "bargauge"
     },
     {
-      "aliasColors": {
-        "Incoming traffic on interface ether1-gateway": "#1F78C1",
-        "Outgoing traffic on interface ether1-gateway": "#EAB839"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
       "datasource": {
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "editable": true,
-      "error": false,
       "fieldConfig": {
         "defaults": {
-          "links": []
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 30,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "log": 2,
+              "type": "log"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "links": [],
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "ms"
         },
         "overrides": []
       },
-      "fill": 3,
-      "fillGradient": 0,
       "gridPos": {
         "h": 8,
         "w": 18,
         "x": 6,
-        "y": 205
+        "y": 213
       },
-      "hiddenSeries": false,
       "id": 77,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": false,
-        "hideEmpty": false,
-        "hideZero": true,
-        "max": false,
-        "min": false,
-        "rightSide": true,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
       "links": [],
-      "nullPointMode": "connected",
       "options": {
-        "alertThreshold": true
-      },
-      "paceLength": 10,
-      "percentage": false,
-      "pluginVersion": "9.3.2",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:176",
-          "alias": "/In/"
+        "legend": {
+          "calcs": [
+            "mean"
+          ],
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true
         },
-        {
-          "$$hashKey": "object:177",
-          "alias": "/Out/",
-          "color": "#EAB839",
-          "transform": "negative-Y"
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
         }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
+      },
+      "pluginVersion": "9.3.2",
       "targets": [
         {
           "application": {
@@ -7264,38 +7107,8 @@
           "refId": "B"
         }
       ],
-      "thresholds": [],
-      "timeRegions": [],
       "title": "MKTXP Collection Times",
-      "tooltip": {
-        "msResolution": false,
-        "shared": true,
-        "sort": 2,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "mode": "time",
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:706",
-          "format": "ms",
-          "logBase": 2,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:707",
-          "format": "short",
-          "logBase": 2,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false
-      }
+      "type": "timeseries"
     },
     {
       "aliasColors": {},
@@ -7310,7 +7123,7 @@
       "fieldConfig": {
         "defaults": {
           "links": [],
-          "unit": "binbps"
+          "unit": "bps"
         },
         "overrides": []
       },
@@ -7320,7 +7133,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 213
+        "y": 221
       },
       "hiddenSeries": false,
       "id": 27,
@@ -7382,7 +7195,7 @@
         {
           "$$hashKey": "object:54",
           "decimals": 0,
-          "format": "binbps",
+          "format": "bps",
           "label": "",
           "logBase": 1,
           "show": true
@@ -7421,7 +7234,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 213
+        "y": 221
       },
       "hiddenSeries": false,
       "id": 74,
@@ -7543,13 +7356,13 @@
     ]
   },
   "time": {
-    "from": "now-12h",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Mikrotik MKTXP Exporter",
-  "uid": "Drt6FlxMk",
+  "uid": "Drt6FlxMkt",
   "version": 1,
   "weekStart": ""
 }
