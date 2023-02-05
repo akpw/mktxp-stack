@@ -318,7 +318,7 @@
         ]
       },
       "gridPos": {
-        "h": 5,
+        "h": 6,
         "w": 5,
         "x": 5,
         "y": 1
@@ -430,8 +430,8 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 5,
-        "w": 5,
+        "h": 6,
+        "w": 4,
         "x": 10,
         "y": 1
       },
@@ -577,9 +577,9 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
-        "w": 9,
-        "x": 15,
+        "h": 7,
+        "w": 5,
+        "x": 14,
         "y": 1
       },
       "id": 16,
@@ -588,7 +588,6 @@
         "legend": {
           "calcs": [
             "mean",
-            "lastNotNull",
             "max",
             "min"
           ],
@@ -646,20 +645,197 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "fixedColor": "green",
-            "mode": "fixed"
+            "mode": "palette-classic"
           },
-          "mappings": [
-            {
-              "options": {
-                "match": "null",
-                "result": {
-                  "text": "N/A"
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 50,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "links": [],
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "hertz"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Total memory"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#E24D42",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Used memory"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#1F78C1",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Total memory"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#E24D42",
+                  "mode": "fixed"
                 }
               },
-              "type": "special"
-            }
+              {
+                "id": "custom.fillOpacity",
+                "value": 20
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 0
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Used memory"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#1F78C1",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 5,
+        "x": 19,
+        "y": 1
+      },
+      "id": 115,
+      "links": [],
+      "options": {
+        "legend": {
+          "calcs": [
+            "mean",
+            "max",
+            "min"
           ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "9.2.5",
+      "targets": [
+        {
+          "application": {
+            "filter": "Memory"
+          },
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "mktxp_system_cpu_frequency{routerboard_name=\"$node\"}*1000000",
+          "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": "Network"
+          },
+          "host": {
+            "filter": "MikroTik Router"
+          },
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "item": {
+            "filter": "Used memory"
+          },
+          "legendFormat": "{{cpu}}",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "CPU Frequency",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -669,7 +845,7 @@
               }
             ]
           },
-          "unit": "none"
+          "unit": "hertz"
         },
         "overrides": []
       },
@@ -679,14 +855,14 @@
         "x": 2,
         "y": 3
       },
-      "id": 8,
+      "id": 116,
       "links": [],
       "maxDataPoints": 100,
       "options": {
         "colorMode": "value",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -694,45 +870,26 @@
           "fields": "",
           "values": false
         },
-        "text": {},
-        "textMode": "name"
+        "textMode": "value_and_name"
       },
       "pluginVersion": "9.3.2",
       "targets": [
         {
-          "application": {
-            "filter": "General"
-          },
           "datasource": {
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "mktxp_system_uptime{routerboard_name=\"$node\"}",
-          "format": "time_series",
-          "functions": [],
-          "group": {
-            "filter": "Network"
-          },
-          "hide": false,
-          "host": {
-            "filter": "MikroTik Router"
-          },
+          "exemplar": false,
+          "expr": "mktxp_system_cpu_frequency{routerboard_name=\"$node\"}*1000",
           "instant": true,
           "interval": "",
-          "intervalFactor": 1,
-          "item": {
-            "filter": "System version and hw"
-          },
-          "legendFormat": "{{version}} ",
-          "mode": 2,
-          "options": {
-            "showDisabledItems": false
-          },
-          "refId": "A"
+          "legendFormat": "{{cpu}} ",
+          "range": false,
+          "refId": "B"
         }
       ],
-      "title": "System version",
+      "title": "CPU",
       "type": "stat"
     },
     {
@@ -855,7 +1012,7 @@
               }
             ]
           },
-          "unit": "dtdurations"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -864,6 +1021,103 @@
         "w": 3,
         "x": 2,
         "y": 5
+      },
+      "id": 8,
+      "links": [],
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "name"
+      },
+      "pluginVersion": "9.3.2",
+      "targets": [
+        {
+          "application": {
+            "filter": "General"
+          },
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "mktxp_system_uptime{routerboard_name=\"$node\"}",
+          "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": "Network"
+          },
+          "hide": false,
+          "host": {
+            "filter": "MikroTik Router"
+          },
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "item": {
+            "filter": "System version and hw"
+          },
+          "legendFormat": "{{version}} ",
+          "mode": 2,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "System version",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "green",
+            "mode": "fixed"
+          },
+          "mappings": [
+            {
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "dtdurations"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 2,
+        "y": 7
       },
       "id": 12,
       "links": [],
@@ -997,10 +1251,10 @@
         ]
       },
       "gridPos": {
-        "h": 6,
-        "w": 10,
+        "h": 7,
+        "w": 9,
         "x": 5,
-        "y": 6
+        "y": 7
       },
       "id": 98,
       "options": {
@@ -1071,94 +1325,6 @@
         }
       ],
       "type": "table"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "fixedColor": "green",
-            "mode": "fixed"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              }
-            ]
-          },
-          "unit": "volt"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 3,
-        "x": 2,
-        "y": 7
-      },
-      "id": 57,
-      "links": [],
-      "maxDataPoints": 100,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "horizontal",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "text": {},
-        "textMode": "value"
-      },
-      "pluginVersion": "9.3.2",
-      "targets": [
-        {
-          "application": {
-            "filter": "General"
-          },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
-          "editorMode": "code",
-          "expr": "mktxp_system_routerboard_voltage{routerboard_name=\"$node\"}",
-          "format": "time_series",
-          "functions": [],
-          "group": {
-            "filter": "Network"
-          },
-          "hide": false,
-          "host": {
-            "filter": "MikroTik Router"
-          },
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "item": {
-            "filter": "System version and hw"
-          },
-          "legendFormat": "",
-          "mode": 2,
-          "options": {
-            "showDisabledItems": false
-          },
-          "refId": "A"
-        }
-      ],
-      "title": "Voltage",
-      "type": "stat"
     },
     {
       "datasource": {
@@ -1290,23 +1456,20 @@
         ]
       },
       "gridPos": {
-        "h": 5,
-        "w": 9,
-        "x": 15,
-        "y": 7
+        "h": 6,
+        "w": 10,
+        "x": 14,
+        "y": 8
       },
       "id": 18,
       "links": [],
       "options": {
         "legend": {
           "calcs": [
-            "mean",
-            "lastNotNull",
-            "max",
-            "min"
+            "lastNotNull"
           ],
           "displayMode": "table",
-          "placement": "bottom",
+          "placement": "right",
           "showLegend": true
         },
         "tooltip": {
@@ -1392,6 +1555,172 @@
         "defaults": {
           "color": {
             "fixedColor": "green",
+            "mode": "fixed"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "volt"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 0,
+        "y": 9
+      },
+      "id": 57,
+      "links": [],
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "value"
+      },
+      "pluginVersion": "9.3.2",
+      "targets": [
+        {
+          "application": {
+            "filter": "General"
+          },
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "mktxp_system_routerboard_voltage{routerboard_name=\"$node\"}",
+          "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": "Network"
+          },
+          "hide": false,
+          "host": {
+            "filter": "MikroTik Router"
+          },
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "item": {
+            "filter": "System version and hw"
+          },
+          "legendFormat": "",
+          "mode": 2,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "Voltage",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "green",
+            "mode": "palette-classic"
+          },
+          "mappings": [
+            {
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 2,
+        "y": 9
+      },
+      "id": 113,
+      "links": [],
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "name"
+      },
+      "pluginVersion": "9.3.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "mktxp_public_ip_address_info{routerboard_name=\"$node\"}",
+          "instant": true,
+          "interval": "",
+          "legendFormat": "{{routerboard_address}}",
+          "refId": "B"
+        }
+      ],
+      "title": "IP Address",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "green",
             "mode": "palette-classic"
           },
           "mappings": [
@@ -1422,7 +1751,7 @@
         "h": 3,
         "w": 5,
         "x": 0,
-        "y": 9
+        "y": 11
       },
       "id": 93,
       "links": [],
@@ -1483,7 +1812,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 12
+        "y": 14
       },
       "id": 2,
       "panels": [],
@@ -1535,7 +1864,7 @@
         "h": 8,
         "w": 5,
         "x": 0,
-        "y": 13
+        "y": 15
       },
       "id": 97,
       "links": [],
@@ -1702,7 +2031,7 @@
         "h": 19,
         "w": 19,
         "x": 5,
-        "y": 13
+        "y": 15
       },
       "id": 25,
       "options": {
@@ -1814,7 +2143,7 @@
         "h": 8,
         "w": 5,
         "x": 0,
-        "y": 21
+        "y": 23
       },
       "id": 20,
       "links": [],
@@ -1907,7 +2236,7 @@
         "h": 3,
         "w": 5,
         "x": 0,
-        "y": 29
+        "y": 31
       },
       "id": 23,
       "links": [],
@@ -1974,7 +2303,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 32
+        "y": 34
       },
       "id": 45,
       "panels": [],
@@ -2036,7 +2365,7 @@
         "h": 5,
         "w": 2,
         "x": 0,
-        "y": 33
+        "y": 35
       },
       "id": 70,
       "options": {
@@ -2100,7 +2429,7 @@
         "h": 5,
         "w": 4,
         "x": 2,
-        "y": 33
+        "y": 35
       },
       "id": 71,
       "links": [],
@@ -2165,6 +2494,7 @@
       "description": "",
       "fieldConfig": {
         "defaults": {
+          "displayName": "${__series.name}",
           "mappings": [
             {
               "options": {
@@ -2203,7 +2533,7 @@
         "h": 5,
         "w": 6,
         "x": 6,
-        "y": 33
+        "y": 35
       },
       "id": 69,
       "options": {
@@ -2268,8 +2598,7 @@
             "lineWidth": 1,
             "pointSize": 5,
             "scaleDistribution": {
-              "log": 2,
-              "type": "symlog"
+              "type": "linear"
             },
             "showPoints": "never",
             "spanNulls": true,
@@ -2317,7 +2646,7 @@
         "h": 16,
         "w": 12,
         "x": 12,
-        "y": 33
+        "y": 35
       },
       "id": 55,
       "links": [],
@@ -2434,7 +2763,7 @@
         "h": 7,
         "w": 6,
         "x": 0,
-        "y": 38
+        "y": 40
       },
       "id": 51,
       "options": {
@@ -2506,7 +2835,7 @@
         "h": 7,
         "w": 6,
         "x": 6,
-        "y": 38
+        "y": 40
       },
       "id": 53,
       "options": {
@@ -2671,7 +3000,7 @@
         "h": 4,
         "w": 12,
         "x": 0,
-        "y": 45
+        "y": 47
       },
       "id": 85,
       "options": {
@@ -2847,7 +3176,7 @@
         "h": 14,
         "w": 24,
         "x": 0,
-        "y": 49
+        "y": 51
       },
       "id": 75,
       "links": [],
@@ -2947,7 +3276,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 63
+        "y": 65
       },
       "id": 84,
       "panels": [],
@@ -2962,6 +3291,284 @@
       ],
       "title": "Firewall",
       "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed"
+          },
+          "custom": {
+            "align": "center",
+            "displayMode": "auto",
+            "filterable": false,
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "disabled"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "enabled"
+              },
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "false": {
+                        "color": "green",
+                        "index": 0,
+                        "text": "Yes"
+                      },
+                      "true": {
+                        "color": "red",
+                        "index": 1,
+                        "text": "No"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "disabled"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 80
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "dst_addresses"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 424
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 66
+      },
+      "id": 117,
+      "options": {
+        "footer": {
+          "enablePagination": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": true,
+            "displayName": "Count"
+          }
+        ]
+      },
+      "pluginVersion": "9.3.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "mktxp_connection_stats{routerboard_name=\"$node\"}",
+          "format": "table",
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "title": "Open Connections",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Time": true,
+              "Value": false,
+              "__name__": true,
+              "instance": true,
+              "job": true,
+              "routerboard_address": true,
+              "routerboard_name": true,
+              "version": true
+            },
+            "indexByName": {
+              "Time": 0,
+              "Value": 7,
+              "__name__": 1,
+              "dhcp_name": 6,
+              "dst_addresses": 8,
+              "instance": 2,
+              "job": 3,
+              "routerboard_address": 4,
+              "routerboard_name": 5,
+              "src_address": 9
+            },
+            "renameByName": {
+              "Value": "Count",
+              "disabled": ""
+            }
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 0,
+          "links": [],
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#6ED0E0",
+                "value": 5
+              },
+              {
+                "color": "#EAB839",
+                "value": 10
+              },
+              {
+                "color": "#EF843C",
+                "value": 40
+              },
+              {
+                "color": "red",
+                "value": 60
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 66
+      },
+      "id": 118,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [
+            "last",
+            "mean",
+            "max"
+          ],
+          "displayMode": "table",
+          "placement": "right",
+          "showLegend": true,
+          "sortBy": "Last",
+          "sortDesc": true
+        },
+        "orientation": "auto",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "9.3.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "mktxp_connection_stats{routerboard_name=\"$node\"}",
+          "instant": true,
+          "interval": "",
+          "legendFormat": "{{dhcp_name}}",
+          "range": false,
+          "refId": "A"
+        }
+      ],
+      "title": "Open Connections Stats",
+      "type": "barchart"
     },
     {
       "datasource": {
@@ -3028,7 +3635,7 @@
         "h": 12,
         "w": 12,
         "x": 0,
-        "y": 64
+        "y": 74
       },
       "id": 81,
       "links": [],
@@ -3151,7 +3758,7 @@
         "h": 12,
         "w": 12,
         "x": 12,
-        "y": 64
+        "y": 74
       },
       "id": 82,
       "links": [],
@@ -3274,7 +3881,7 @@
         "h": 14,
         "w": 12,
         "x": 0,
-        "y": 76
+        "y": 86
       },
       "id": 43,
       "links": [],
@@ -3397,7 +4004,7 @@
         "h": 14,
         "w": 12,
         "x": 12,
-        "y": 76
+        "y": 86
       },
       "id": 76,
       "links": [],
@@ -3465,7 +4072,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 90
+        "y": 100
       },
       "id": 90,
       "panels": [],
@@ -3518,7 +4125,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 91
+        "y": 101
       },
       "hideBranding": false,
       "highlightCards": true,
@@ -3673,7 +4280,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 91
+        "y": 101
       },
       "id": 88,
       "options": {
@@ -3760,7 +4367,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 99
+        "y": 109
       },
       "id": 29,
       "panels": [],
@@ -3797,7 +4404,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 100
+        "y": 110
       },
       "hiddenSeries": false,
       "id": 31,
@@ -3897,7 +4504,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 100
+        "y": 110
       },
       "hiddenSeries": false,
       "id": 73,
@@ -4073,7 +4680,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 108
+        "y": 118
       },
       "id": 68,
       "options": {
@@ -4166,7 +4773,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 108
+        "y": 118
       },
       "hiddenSeries": false,
       "id": 37,
@@ -4267,7 +4874,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 116
+        "y": 126
       },
       "hiddenSeries": false,
       "id": 61,
@@ -4373,7 +4980,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 116
+        "y": 126
       },
       "hiddenSeries": false,
       "id": 63,
@@ -4540,7 +5147,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 124
+        "y": 134
       },
       "hiddenSeries": false,
       "id": 65,
@@ -4661,7 +5268,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 124
+        "y": 134
       },
       "hiddenSeries": false,
       "id": 66,
@@ -4770,7 +5377,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 131
+        "y": 141
       },
       "id": 33,
       "panels": [],
@@ -4859,7 +5466,7 @@
         "h": 6,
         "w": 6,
         "x": 0,
-        "y": 132
+        "y": 142
       },
       "id": 35,
       "options": {
@@ -5019,7 +5626,7 @@
         "h": 15,
         "w": 18,
         "x": 6,
-        "y": 132
+        "y": 142
       },
       "id": 41,
       "options": {
@@ -5128,7 +5735,7 @@
         "h": 7,
         "w": 6,
         "x": 0,
-        "y": 138
+        "y": 148
       },
       "id": 47,
       "links": [],
@@ -5242,7 +5849,7 @@
         "h": 11,
         "w": 6,
         "x": 0,
-        "y": 145
+        "y": 155
       },
       "id": 48,
       "links": [],
@@ -5321,7 +5928,7 @@
         "h": 9,
         "w": 18,
         "x": 6,
-        "y": 147
+        "y": 157
       },
       "hiddenSeries": false,
       "id": 49,
@@ -5520,7 +6127,7 @@
         "h": 10,
         "w": 24,
         "x": 0,
-        "y": 156
+        "y": 166
       },
       "id": 39,
       "links": [],
@@ -5614,7 +6221,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 166
+        "y": 176
       },
       "id": 109,
       "panels": [],
@@ -5698,7 +6305,7 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 167
+        "y": 177
       },
       "id": 107,
       "links": [],
@@ -5865,7 +6472,7 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 167
+        "y": 177
       },
       "id": 102,
       "links": [],
@@ -6034,7 +6641,7 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 178
+        "y": 188
       },
       "id": 111,
       "links": [],
@@ -6203,7 +6810,7 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 178
+        "y": 188
       },
       "id": 112,
       "links": [],
@@ -6301,7 +6908,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 189
+        "y": 199
       },
       "id": 100,
       "panels": [],
@@ -6385,7 +6992,7 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 190
+        "y": 200
       },
       "id": 101,
       "links": [],
@@ -6520,7 +7127,7 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 190
+        "y": 200
       },
       "id": 110,
       "links": [],
@@ -6657,7 +7264,7 @@
         "h": 11,
         "w": 12,
         "x": 0,
-        "y": 201
+        "y": 211
       },
       "id": 106,
       "links": [],
@@ -6794,7 +7401,7 @@
         "h": 11,
         "w": 12,
         "x": 12,
-        "y": 201
+        "y": 211
       },
       "id": 105,
       "links": [],
@@ -6864,7 +7471,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 212
+        "y": 222
       },
       "id": 80,
       "panels": [],
@@ -6921,7 +7528,7 @@
         "h": 8,
         "w": 6,
         "x": 0,
-        "y": 213
+        "y": 223
       },
       "id": 78,
       "links": [],
@@ -7042,7 +7649,7 @@
         "h": 8,
         "w": 18,
         "x": 6,
-        "y": 213
+        "y": 223
       },
       "id": 77,
       "links": [],
@@ -7111,59 +7718,90 @@
       "type": "timeseries"
     },
     {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
       "datasource": {
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "decimals": 0,
       "fieldConfig": {
         "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 0,
           "links": [],
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
           "unit": "bps"
         },
         "overrides": []
       },
-      "fill": 1,
-      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 221
+        "y": 231
       },
-      "hiddenSeries": false,
       "id": 27,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "hideEmpty": true,
-        "hideZero": true,
-        "max": true,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
       "options": {
-        "alertThreshold": false
+        "legend": {
+          "calcs": [
+            "mean",
+            "lastNotNull",
+            "max",
+            "min"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
       },
-      "percentage": false,
       "pluginVersion": "9.3.2",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
       "targets": [
         {
           "datasource": {
@@ -7177,94 +7815,94 @@
           "refId": "A"
         }
       ],
-      "thresholds": [],
-      "timeRegions": [],
       "title": "Internet Bandwidth",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "mode": "time",
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:54",
-          "decimals": 0,
-          "format": "bps",
-          "label": "",
-          "logBase": 1,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:55",
-          "format": "short",
-          "logBase": 1,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false
-      }
+      "type": "timeseries"
     },
     {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
       "datasource": {
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "decimals": 0,
       "fieldConfig": {
         "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 0,
           "links": [],
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
           "unit": "ms"
         },
         "overrides": []
       },
-      "fill": 1,
-      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 221
+        "y": 231
       },
-      "hiddenSeries": false,
       "id": 74,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "hideEmpty": true,
-        "hideZero": true,
-        "max": true,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
       "options": {
-        "alertThreshold": false
+        "legend": {
+          "calcs": [
+            "mean",
+            "lastNotNull",
+            "max",
+            "min"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
       },
-      "percentage": false,
       "pluginVersion": "9.3.2",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
       "targets": [
         {
           "datasource": {
@@ -7278,39 +7916,8 @@
           "refId": "A"
         }
       ],
-      "thresholds": [],
-      "timeRegions": [],
       "title": "Internet Latency",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "mode": "time",
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:54",
-          "decimals": 0,
-          "format": "ms",
-          "label": "",
-          "logBase": 1,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:55",
-          "format": "short",
-          "logBase": 1,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false
-      }
+      "type": "timeseries"
     }
   ],
   "refresh": "10s",
@@ -7325,7 +7932,7 @@
     "list": [
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "MKT-GT",
           "value": "MKT-GT"
         },
@@ -7352,6 +7959,17 @@
         "tagsQuery": "",
         "type": "query",
         "useTags": false
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "PBFA97CFB590B2093"
+        },
+        "filters": [],
+        "hide": 0,
+        "name": "Filters",
+        "skipUrlSync": false,
+        "type": "adhoc"
       }
     ]
   },
@@ -7362,7 +7980,7 @@
   "timepicker": {},
   "timezone": "",
   "title": "Mikrotik MKTXP Exporter",
-  "uid": "Drt6FlxMkt",
+  "uid": "Drt6FlxMk",
   "version": 1,
   "weekStart": ""
 }
