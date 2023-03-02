@@ -97,7 +97,11 @@ This configuration makes it easy to implement log rotation or any additional man
 ls -l syslog-ng/logs/
 ```
 💡 *With mktxp-stack up & running, it might take a while for newly added log files to appear in the dashboard. <br>
-In case this happens, an easy solution is to restart the promtail container via `docker restart promtail`*
+In case this happens, an easy solution is to restart the promtail and syslog containers via: 
+```
+docker restart promtail
+docker restart syslog-ng
+```
 
 To set a different location on your mktxp-stack host, just edit the device path in the ```mktxp-stack/docker-compose-mktxp-stack-fs.yml``` configuration:
 ```
