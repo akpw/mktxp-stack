@@ -26,7 +26,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 13679,
   "graphTooltip": 0,
-  "id": 9,
+  "id": 3,
   "links": [
     {
       "asDropdown": false,
@@ -2280,9 +2280,10 @@
           "values": false
         },
         "showUnfilled": true,
-        "text": {}
+        "text": {},
+        "valueMode": "color"
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.0.1",
       "targets": [
         {
           "application": {
@@ -2407,7 +2408,7 @@
         "showThresholdMarkers": true,
         "text": {}
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.0.1",
       "targets": [
         {
           "datasource": {
@@ -2471,9 +2472,10 @@
           "values": false
         },
         "showUnfilled": true,
-        "text": {}
+        "text": {},
+        "valueMode": "color"
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.0.1",
       "targets": [
         {
           "application": {
@@ -2519,7 +2521,6 @@
       "description": "",
       "fieldConfig": {
         "defaults": {
-          "displayName": "${__series.name}",
           "mappings": [
             {
               "options": {
@@ -2573,9 +2574,10 @@
           "values": false
         },
         "showUnfilled": true,
-        "text": {}
+        "text": {},
+        "valueMode": "color"
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.0.1",
       "targets": [
         {
           "datasource": {
@@ -2801,9 +2803,10 @@
           "values": false
         },
         "showUnfilled": true,
-        "text": {}
+        "text": {},
+        "valueMode": "color"
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.0.1",
       "targets": [
         {
           "datasource": {
@@ -2862,7 +2865,9 @@
       },
       "id": 53,
       "options": {
+        "cellHeight": "sm",
         "footer": {
+          "countRows": false,
           "fields": "",
           "reducer": [
             "sum"
@@ -2871,7 +2876,7 @@
         },
         "showHeader": true
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.0.1",
       "targets": [
         {
           "datasource": {
@@ -3028,7 +3033,9 @@
       },
       "id": 85,
       "options": {
+        "cellHeight": "sm",
         "footer": {
+          "countRows": false,
           "fields": "",
           "reducer": [
             "sum"
@@ -3043,7 +3050,7 @@
           }
         ]
       },
-      "pluginVersion": "9.3.2",
+      "pluginVersion": "10.0.1",
       "targets": [
         {
           "datasource": {
@@ -7931,16 +7938,12 @@
   "refresh": "10s",
   "schemaVersion": 38,
   "style": "dark",
-  "tags": [
-    "mikrotik",
-    "dashboard",
-    "mktxp"
-  ],
+  "tags": [],
   "templating": {
     "list": [
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "MKT-GT-PD",
           "value": "MKT-GT-PD"
         },
@@ -7987,8 +7990,8 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Mikrotik MKTXP Exporter Import",
-  "uid": "Drt6FlxMktp",
+  "title": "Mikrotik MKTXP Exporter",
+  "uid": "abc4ae8a-f097-482d-ad73-5bfcedc92ae3",
   "version": 1,
   "weekStart": ""
 }
