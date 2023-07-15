@@ -26,7 +26,6 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 13679,
   "graphTooltip": 0,
-  "id": 3,
   "links": [
     {
       "asDropdown": false,
@@ -7938,7 +7937,10 @@
   "refresh": "10s",
   "schemaVersion": 38,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "mikrotik",
+    "mktxp"
+  ],
   "templating": {
     "list": [
       {
