@@ -40,7 +40,7 @@ services:
   loki:
     command: -config.file=/etc/loki/loki-config.yml
     container_name: loki
-    image: grafana/loki:2.3.0
+    image: grafana/loki:latest
     networks:
       mktxp: null
     ports:
@@ -71,7 +71,7 @@ services:
   promtail:
     command: -config.file=/etc/promtail/promtail-config.yml
     container_name: promtail
-    image: grafana/promtail:2.3.0
+    image: grafana/promtail:latest
     networks:
       mktxp: null
     ports:
