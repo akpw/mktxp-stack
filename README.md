@@ -10,7 +10,7 @@ As an out-of-the-box solution, it lets you quickly get up & running with [MKTXP]
 
 While complementary to [MKTXP](https://github.com/akpw/mktxp), this project also adds some extra capabilities such an [centralized Mikrotik log processing](https://github.com/akpw/mktxp-stack#mikrotik-centralized-logging-configuration) based on a preconfigured  [syslog-ng](https://www.syslog-ng.com/) / [promtail](https://grafana.com/docs/loki/latest/clients/promtail/) / [Loki](https://grafana.com/docs/loki/latest) stack. 
 
-The project offers multiple [docker-compose configurations](https://github.com/akpw/mktxp-stack/blob/main/README.md#alternative-docker-compose-configurations), for loading only relevant parts of the stack as well as for multiple log management options.
+The project offers multiple [docker compose configurations](https://github.com/akpw/mktxp-stack/blob/main/README.md#alternative-docker-compose-configurations), for loading only relevant parts of the stack as well as for multiple log management options.
 
 
 ### Requirements:
@@ -37,9 +37,9 @@ cd mktxp-stack
   /user add name=mktxp_user group=mktxp_group password=mktxp_user_password
   ```
 
-With that out the of way, things should be ready for running docker-compose:
+With that out the of way, things should be ready for running `docker compose`:
 ```
-docker-compose -f ./docker-compose-mktxp-stack.yml up -d
+docker compose -f ./docker-compose-mktxp-stack.yml up -d
 ```
 
 Now give the containers some time to start up, and then point a Web browser to [Grafana](http://localhost:3000). You should see the default [MKTXP Exporter Dashboard](https://grafana.com/grafana/dashboards/13679-mikrotik-mktxp-exporter/):\
@@ -51,7 +51,7 @@ In addition to RouterOS devices monitoring, MKTXP-Stack provides a preconfigured
 
 <img width="96%" alt="loki" src="https://user-images.githubusercontent.com/5028474/210771516-06a3e6ab-8eab-458c-9f38-5d44f95d23d4.png">
 
-To make this work, we need to configure our Mikrotik devices to send their logs to a specified log server target. Let's first configure the corresponding remote logging action (replace XX.XX.XX.XX with your docker-compose host IP address):
+To make this work, we need to configure our Mikrotik devices to send their logs to a specified log server target. Let's first configure the corresponding remote logging action (replace XX.XX.XX.XX with your docker compose host IP address):
 ```
 /system logging action
 set remote bsd-syslog=yes name=remote remote=XX.XX.XX.XX remote-port=514 src-address=0.0.0.0 syslog-facility=local0 syslog-severity=auto target=remote
@@ -71,25 +71,25 @@ add action=remote disabled=no prefix=:Wireles topics=wireless
 ```
 You can extend the list above as needed, following [Mikrotik's description](https://help.mikrotik.com/docs/display/ROS/Log) of the log topics used by various RouterOS facilities 
 
-Now all should be ready and, unless you already done so during the previous [MKTXP Exporter configuration](https://github.com/akpw/mktxp-stack#mktxp-exporter-configuration), it's time for docker-compose:
+Now all should be ready and, unless you already done so during the previous [MKTXP Exporter configuration](https://github.com/akpw/mktxp-stack#mktxp-exporter-configuration), it's time for `docker compose`:
 ```
-docker-compose -f ./docker-compose-mktxp-stack.yml up -d
+docker compose -f ./docker-compose-mktxp-stack.yml up -d
 ```
 As soon as the containers are up & running, just point your Web browser to included [Grafana dashboards](http://localhost:3000/dashboards) and open the one called "Mikrotik Loki Logs".
 
-## Alternative docker-compose configurations
-The project offers multiple docker-compose files, for loading relevant parts of the stack as well as multiple log management options.
+## Alternative docker compose configurations
+The project offers multiple docker compose files, for loading relevant parts of the stack as well as multiple log management options.
 
 ### Default stack
-To go with default full stack, just run docker-compose as described above:
+To go with default full stack, just run docker compose as described above:
 ```
-docker-compose -f ./docker-compose-mktxp-stack.yml up -d
+docker compose -f ./docker-compose-mktxp-stack.yml up -d
 ```
 
 ### File-system based logs
 If you want more control over managing your routers' logs, such a specific file-system location and separate log files:
 ```
-docker-compose -f ./docker-compose-mktxp-stack-fs.yml up -d
+docker compose -f ./docker-compose-mktxp-stack-fs.yml up -d
 ```
 
 This configuration makes it easy to implement log rotation or any additional management functionality on top. By default, the devices' logs will be send to `syslog-ng/logs/` where you can check it out with:
@@ -112,7 +112,7 @@ volumes:
 ###  MKTXP Exporter only
 Finally, in case you need just MKTXP Exporter functionality and no logs:
 ```
-docker-compose -f ./docker-compose-mktxp-stack-no-logs.yml up -d
+docker compose -f ./docker-compose-mktxp-stack-no-logs.yml up -d
 ```
 
 

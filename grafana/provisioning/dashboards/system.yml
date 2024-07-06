@@ -9,4 +9,4 @@ providers:
   editable: true
   updateIntervalSeconds: 10
   options:
-    path: /var/lib/grafana/dashboards/system
+    path: /etc/grafana/provisioning/dashboards/system
