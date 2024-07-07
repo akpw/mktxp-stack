@@ -1,5 +1,3 @@
-version: '3.9'
-
 networks:
   mktxp: {}
 
@@ -11,9 +9,9 @@ services:
   mktxp:
     container_name: mktxp
     image: ghcr.io/akpw/mktxp:latest
-    user: root
+    user: mktxp
     volumes:
-      - './mktxp/:/root/mktxp/'
+      - './mktxp/:/home/mktxp/mktxp/'
     networks:
       mktxp: null
     restart: unless-stopped  
@@ -34,7 +32,7 @@ services:
     - protocol: tcp
       published: 3000
       target: 3000
-    restart: always
+    restart: unless-stopped
     volumes:
     -  grafana_storage:/var/lib/grafana
     - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources:ro
@@ -50,7 +48,7 @@ services:
     - protocol: tcp
       published: 3100
       target: 3100
-    restart: always
+    restart: unless-stopped
     volumes:
     - ./loki/loki-config.yml:/etc/loki/loki-config.yml
 
@@ -68,7 +66,7 @@ services:
     ports:
     - published: 9090
       target: 9090
-    restart: always
+    restart: unless-stopped
     volumes:
     - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
     - prometheus_storage:/prometheus
@@ -86,7 +84,7 @@ services:
     - protocol: tcp
       published: 9080
       target: 9080
-    restart: always
+    restart: unless-stopped
     volumes:
     - ./promtail/promtail-config.yml:/etc/promtail/promtail-config.yml:ro
 
@@ -105,7 +103,7 @@ services:
     - protocol: tcp
       published: 601
       target: 601
-    restart: always
+    restart: unless-stopped
     volumes:
     - ./syslog-ng/syslog-ng.conf:/etc/syslog-ng/syslog-ng.conf:ro
 
