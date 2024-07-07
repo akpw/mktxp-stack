@@ -14,9 +14,9 @@ services:
   mktxp:
     container_name: mktxp
     image: ghcr.io/akpw/mktxp:latest
-    user: mktxp
+    user: root
     volumes:
-      - './mktxp/:/home/mktxp/mktxp/'
+      - './mktxp/:/root/mktxp/'
     networks:
       mktxp: null
     restart: unless-stopped  
