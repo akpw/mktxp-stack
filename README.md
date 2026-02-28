@@ -54,8 +54,10 @@ In addition to RouterOS devices monitoring, MKTXP-Stack provides a preconfigured
 To make this work, we need to configure our Mikrotik devices to send their logs to a specified log server target. Let's first configure the corresponding remote logging action (replace XX.XX.XX.XX with your docker compose host IP address):
 ```
 /system logging action
-set remote bsd-syslog=yes name=remote remote=XX.XX.XX.XX remote-port=514 src-address=0.0.0.0 syslog-facility=local0 syslog-severity=auto target=remote
+set remote name=remote remote=XX.XX.XX.XX remote-port=514 src-address=0.0.0.0 target=remote remote-log-format=syslog remote-protocol=udp syslog-time-format=bsd-syslog syslog-facility=local0 syslog-severity=auto
 ```
+On RouterOS 7.18+, `bsd-syslog` is configured via `syslog-time-format=bsd-syslog` while the remote syslog payload format is controlled by `remote-log-format=syslog`.
+
 Next, let's modify relevant log topics to use with this remote action:
 ```
 /system logging
@@ -129,4 +131,3 @@ docker compose -f ./docker-compose-mktxp-stack-no-logs.yml up -d
   - [Mikrotik Loki Logs](https://grafana.com/grafana/dashboards/17139-mikrotik-loki-logs/): logging dashboard designed for this project
   - [Grafana Internals](https://grafana.com/grafana/dashboards/3590-grafana-internals/): Grafana-related stats for system overivew, credited to [Grafana community](https://grafana.com/grafana/dashboards/)
   - [Prometheus 2.0 Stats](https://grafana.com/grafana/dashboards/15489-prometheus-2-0-stats/): Prometheus-related stats for system overivew, credited to [Grafana community](https://grafana.com/grafana/dashboards/)
-
