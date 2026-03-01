@@ -56,7 +56,7 @@ To make this work, we need to configure our Mikrotik devices to send their logs 
 /system logging action
 set remote name=remote remote=XX.XX.XX.XX remote-port=514 src-address=0.0.0.0 target=remote remote-log-format=syslog remote-protocol=udp syslog-time-format=bsd-syslog syslog-facility=local0 syslog-severity=auto
 ```
-On RouterOS 7.18+, `bsd-syslog` is configured via `syslog-time-format=bsd-syslog` while the remote syslog payload format is controlled by `remote-log-format=syslog`.
+<sup>💡</sup> *On RouterOS 7.18+, `bsd-syslog` is configured via `syslog-time-format=bsd-syslog` while the remote syslog payload format is controlled by `remote-log-format=syslog`.*
 
 Next, let's modify relevant log topics to use with this remote action:
 ```
