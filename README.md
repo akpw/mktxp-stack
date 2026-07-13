@@ -38,12 +38,14 @@ cd mktxp-stack
   ```
 
 With that out the of way, things should be ready for running `docker compose`:
-```
+```bash
 docker compose -f ./docker-compose-mktxp-stack.yml up -d
 ```
 
 Now give the containers some time to start up, and then point a Web browser to [Grafana](http://localhost:3000). You should see the default [MKTXP Exporter Dashboard](https://grafana.com/grafana/dashboards/13679-mikrotik-mktxp-exporter/):\
 <img width="32%" alt="1" src="https://user-images.githubusercontent.com/5028474/211141785-3d71df65-28cb-45fa-bd22-70022f40f162.png"> <img width="32%" alt="2" src="https://user-images.githubusercontent.com/5028474/211141871-30b409fe-5c77-4616-9cc6-c0556432cfea.png"> <img width="32%" alt="3" src="https://user-images.githubusercontent.com/5028474/211141793-61bee869-9125-4b74-a5b4-a02f0f82cc6d.png">
+
+<sup>💡</sup> *If you are upgrading an existing installation from an older version, the `mktxp` container now runs as a secure non-root user. You might need to update the permissions on your local config folder (`sudo chown -R 1000:1000 ./mktxp`) before starting the stack to prevent file permission errors.*
 
 &nbsp;
 #### Mikrotik Centralized Logging configuration

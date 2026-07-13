@@ -8,13 +8,12 @@ volumes:
 services:
   mktxp:
     container_name: mktxp
-    image: ghcr.io/akpw/mktxp:latest
-    user: root
+    image: ghcr.io/akpw/mktxp:main
     volumes:
-      - './mktxp/:/root/mktxp/'
+      - './mktxp/:/etc/mktxp/'
     networks:
       mktxp: null
-    restart: unless-stopped  
+    restart: unless-stopped
 
   grafana:
     container_name: grafana

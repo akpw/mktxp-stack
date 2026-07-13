@@ -4,7 +4,7 @@
       {
         "builtIn": 1,
         "datasource": {
-          "type": "datasource",
+          "type": "grafana",
           "uid": "grafana"
         },
         "enable": true,
@@ -24,8 +24,8 @@
   "description": "Mikrotik MKTXP Exporter metrics",
   "editable": true,
   "fiscalYearStartMonth": 0,
+  "gnetId": 13679,
   "graphTooltip": 0,
-  "id": 8,
   "links": [
     {
       "asDropdown": false,
@@ -57,6 +57,7 @@
       "url": ""
     }
   ],
+  "liveNow": false,
   "panels": [
     {
       "collapsed": false,
@@ -66,8 +67,7 @@
         "x": 0,
         "y": 0
       },
-      "id": 10,
-      "panels": [],
+      "id": 129,
       "title": "System",
       "type": "row"
     },
@@ -76,7 +76,6 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -133,7 +132,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -156,7 +155,6 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -213,7 +211,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -252,7 +250,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -323,7 +320,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -430,6 +427,7 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": false
         },
@@ -450,7 +448,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -467,7 +465,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -509,7 +506,6 @@
           "refId": "B"
         }
       ],
-      "title": "",
       "type": "bargauge"
     },
     {
@@ -557,8 +553,6 @@
               "mode": "off"
             }
           },
-          "links": [],
-          "mappings": [],
           "max": 100,
           "min": 0,
           "thresholds": {
@@ -586,6 +580,10 @@
       },
       "id": 16,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "mean",
@@ -593,6 +591,8 @@
             "min"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -603,7 +603,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -684,8 +684,6 @@
               "mode": "off"
             }
           },
-          "links": [],
-          "mappings": [],
           "min": 0,
           "thresholds": {
             "mode": "absolute",
@@ -781,6 +779,10 @@
       },
       "id": 115,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "mean",
@@ -788,6 +790,8 @@
             "min"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -798,7 +802,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -840,10 +844,8 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -882,7 +884,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -909,7 +911,6 @@
       },
       "fieldConfig": {
         "defaults": {
-          "mappings": [],
           "max": 100,
           "min": 0,
           "thresholds": {
@@ -949,6 +950,14 @@
       },
       "id": 59,
       "options": {
+        "barShape": "flat",
+        "barWidthFactor": 0.5,
+        "effects": {
+          "barGlow": false,
+          "centerGlow": false,
+          "gradient": false
+        },
+        "endpointMarker": "point",
         "minVizHeight": 75,
         "minVizWidth": 75,
         "orientation": "auto",
@@ -959,12 +968,17 @@
           "fields": "",
           "values": false
         },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "gauge",
         "showThresholdLabels": false,
-        "showThresholdMarkers": true,
+        "showThresholdMarkers": false,
         "sizing": "auto",
-        "text": {}
+        "sparkline": false,
+        "text": {},
+        "textMode": "auto"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -985,7 +999,6 @@
           },
           "editorMode": "code",
           "expr": "mktxp_system_cpu_temperature{routerboard_name=\"$node\"}  ",
-          "hide": false,
           "legendFormat": "__auto",
           "range": true,
           "refId": "B"
@@ -1055,7 +1068,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1072,7 +1085,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -1096,7 +1108,6 @@
           },
           "editorMode": "code",
           "expr": "mktxp_system_update_available{routerboard_name=\"$node\"}",
-          "hide": false,
           "instant": false,
           "legendFormat": "Latest available: {{newest_version}}",
           "range": true,
@@ -1167,7 +1178,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1184,7 +1195,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -1226,7 +1236,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1302,7 +1311,7 @@
           }
         ]
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -1399,8 +1408,6 @@
               "mode": "off"
             }
           },
-          "links": [],
-          "mappings": [],
           "min": 0,
           "thresholds": {
             "mode": "absolute",
@@ -1496,11 +1503,17 @@
       },
       "id": 18,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "lastNotNull"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "right",
           "showLegend": true
         },
@@ -1511,7 +1524,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1584,14 +1597,12 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
             "fixedColor": "green",
             "mode": "fixed"
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1631,7 +1642,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1648,7 +1659,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -1674,7 +1684,6 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1731,7 +1740,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -1754,7 +1763,6 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1811,7 +1819,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -1832,7 +1840,6 @@
           },
           "editorMode": "code",
           "expr": "mktxp_public_ip_address_info{routerboard_name=\"$node\"}",
-          "hide": false,
           "instant": true,
           "interval": "",
           "legendFormat": "{{dns_name}}",
@@ -1850,8 +1857,7 @@
         "x": 0,
         "y": 15
       },
-      "id": 2,
-      "panels": [],
+      "id": 130,
       "title": "DHCP",
       "type": "row"
     },
@@ -1860,13 +1866,11 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "decimals": 0,
-          "links": [],
-          "mappings": [],
-          "min": 1,
+          "max": 1,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1876,19 +1880,20 @@
               },
               {
                 "color": "#EAB839",
-                "value": 30
+                "value": 0.6
               },
               {
                 "color": "red",
-                "value": 80
+                "value": 0.8
               }
             ]
-          }
+          },
+          "unit": "percentunit"
         },
         "overrides": []
       },
       "gridPos": {
-        "h": 8,
+        "h": 11,
         "w": 5,
         "x": 0,
         "y": 16
@@ -1899,6 +1904,7 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": false
         },
@@ -1919,7 +1925,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1930,13 +1936,12 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "mktxp_ip_pool_used{routerboard_name=\"$node\"} ",
+          "expr": " mktxp_ip_pool_used{routerboard_name=\"$node\"} /  mktxp_ip_pool_total{routerboard_name=\"$node\"}",
           "format": "time_series",
           "functions": [],
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -1978,7 +1983,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2069,7 +2073,7 @@
         ]
       },
       "gridPos": {
-        "h": 19,
+        "h": 22,
         "w": 19,
         "x": 5,
         "y": 16
@@ -2085,7 +2089,7 @@
           }
         ]
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -2147,12 +2151,13 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
+          "color": {
+            "fixedColor": "blue",
+            "mode": "continuous-BlPu"
+          },
           "decimals": 0,
-          "links": [],
-          "mappings": [],
           "min": 1,
           "thresholds": {
             "mode": "absolute",
@@ -2178,7 +2183,7 @@
         "h": 8,
         "w": 5,
         "x": 0,
-        "y": 24
+        "y": 27
       },
       "id": 20,
       "options": {
@@ -2186,6 +2191,7 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": false
         },
@@ -2206,7 +2212,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -2223,7 +2229,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -2249,12 +2254,12 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
+          "color": {
+            "mode": "continuous-BlPu"
+          },
           "decimals": 0,
-          "links": [],
-          "mappings": [],
           "min": 1,
           "thresholds": {
             "mode": "absolute",
@@ -2280,7 +2285,7 @@
         "h": 3,
         "w": 5,
         "x": 0,
-        "y": 32
+        "y": 35
       },
       "id": 23,
       "options": {
@@ -2288,6 +2293,7 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": false
         },
@@ -2308,7 +2314,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -2325,7 +2331,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -2352,10 +2357,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 35
+        "y": 38
       },
-      "id": 45,
-      "panels": [],
+      "id": 131,
       "title": "Network",
       "type": "row"
     },
@@ -2364,7 +2368,6 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "mappings": [
@@ -2405,10 +2408,18 @@
         "h": 5,
         "w": 2,
         "x": 0,
-        "y": 36
+        "y": 39
       },
       "id": 70,
       "options": {
+        "barShape": "flat",
+        "barWidthFactor": 0.5,
+        "effects": {
+          "barGlow": false,
+          "centerGlow": false,
+          "gradient": false
+        },
+        "endpointMarker": "point",
         "minVizHeight": 75,
         "minVizWidth": 75,
         "orientation": "horizontal",
@@ -2419,12 +2430,17 @@
           "fields": "",
           "values": false
         },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "gauge",
         "showThresholdLabels": false,
-        "showThresholdMarkers": true,
+        "showThresholdMarkers": false,
         "sizing": "auto",
-        "text": {}
+        "sparkline": false,
+        "text": {},
+        "textMode": "auto"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -2450,8 +2466,6 @@
       },
       "fieldConfig": {
         "defaults": {
-          "links": [],
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2472,7 +2486,7 @@
         "h": 5,
         "w": 4,
         "x": 2,
-        "y": 36
+        "y": 39
       },
       "id": 71,
       "options": {
@@ -2480,6 +2494,7 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": false
         },
@@ -2500,7 +2515,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -2517,7 +2532,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -2543,7 +2557,6 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "mappings": [
@@ -2584,7 +2597,7 @@
         "h": 5,
         "w": 6,
         "x": 6,
-        "y": 36
+        "y": 39
       },
       "id": 69,
       "options": {
@@ -2592,6 +2605,7 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": false
         },
@@ -2612,7 +2626,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -2675,8 +2689,6 @@
               "mode": "off"
             }
           },
-          "links": [],
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2711,15 +2723,21 @@
         "h": 16,
         "w": 12,
         "x": 12,
-        "y": 36
+        "y": 39
       },
       "id": 55,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "sum"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "right",
           "showLegend": true
         },
@@ -2730,7 +2748,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -2747,7 +2765,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -2772,7 +2789,6 @@
           "editorMode": "code",
           "expr": "rate(mktxp_interface_tx_error_total{routerboard_name=\"$node\"}[4m])",
           "format": "time_series",
-          "hide": false,
           "interval": "",
           "intervalFactor": 1,
           "legendFormat": "Out Errors | {{name}}",
@@ -2788,7 +2804,6 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "mappings": [
@@ -2829,7 +2844,7 @@
         "h": 7,
         "w": 6,
         "x": 0,
-        "y": 41
+        "y": 44
       },
       "id": 51,
       "options": {
@@ -2837,6 +2852,7 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": false
         },
@@ -2857,7 +2873,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -2894,7 +2910,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2916,14 +2931,14 @@
         "h": 7,
         "w": 6,
         "x": 6,
-        "y": 41
+        "y": 44
       },
       "id": 53,
       "options": {
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -2987,7 +3002,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3080,7 +3094,7 @@
         "h": 4,
         "w": 12,
         "x": 0,
-        "y": 48
+        "y": 51
       },
       "id": 85,
       "options": {
@@ -3093,7 +3107,7 @@
           }
         ]
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -3158,7 +3172,6 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -3198,8 +3211,6 @@
               "mode": "off"
             }
           },
-          "links": [],
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3254,10 +3265,14 @@
         "h": 14,
         "w": 24,
         "x": 0,
-        "y": 52
+        "y": 55
       },
       "id": 75,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "mean",
@@ -3265,6 +3280,8 @@
             "min"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "right",
           "showLegend": true
         },
@@ -3275,7 +3292,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -3292,7 +3309,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -3324,7 +3340,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -3351,10 +3366,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 66
+        "y": 69
       },
-      "id": 84,
-      "panels": [],
+      "id": 132,
       "title": "Firewall",
       "type": "row"
     },
@@ -3365,8 +3379,6 @@
       },
       "fieldConfig": {
         "defaults": {
-          "links": [],
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3387,7 +3399,7 @@
         "h": 6,
         "w": 6,
         "x": 0,
-        "y": 67
+        "y": 70
       },
       "id": 128,
       "options": {
@@ -3395,6 +3407,7 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": false
         },
@@ -3415,7 +3428,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -3432,7 +3445,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -3460,8 +3472,6 @@
       },
       "fieldConfig": {
         "defaults": {
-          "links": [],
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3482,7 +3492,7 @@
         "h": 6,
         "w": 6,
         "x": 6,
-        "y": 67
+        "y": 70
       },
       "id": 126,
       "options": {
@@ -3490,6 +3500,7 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": false
         },
@@ -3510,7 +3521,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -3527,7 +3538,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -3569,7 +3579,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3620,7 +3629,7 @@
         "h": 6,
         "w": 12,
         "x": 12,
-        "y": 67
+        "y": 70
       },
       "id": 127,
       "options": {
@@ -3633,7 +3642,7 @@
           }
         ]
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -3715,7 +3724,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3790,7 +3798,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 73
+        "y": 76
       },
       "id": 117,
       "options": {
@@ -3804,7 +3812,7 @@
           }
         ]
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -3888,8 +3896,6 @@
             }
           },
           "decimals": 0,
-          "links": [],
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3923,7 +3929,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 73
+        "y": 76
       },
       "id": 118,
       "options": {
@@ -3938,6 +3944,7 @@
             "max"
           ],
           "displayMode": "table",
+          "overflow": "ellipsis",
           "placement": "right",
           "showLegend": true,
           "sortBy": "Last",
@@ -3955,7 +3962,7 @@
         "xTickLabelRotation": 0,
         "xTickLabelSpacing": 0
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -3980,7 +3987,6 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -4021,8 +4027,6 @@
               "mode": "off"
             }
           },
-          "links": [],
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4044,10 +4048,14 @@
         "h": 12,
         "w": 12,
         "x": 0,
-        "y": 81
+        "y": 84
       },
       "id": 81,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "mean",
@@ -4055,6 +4063,8 @@
             "min"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -4065,7 +4075,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -4082,7 +4092,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -4108,7 +4117,6 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -4149,8 +4157,6 @@
               "mode": "off"
             }
           },
-          "links": [],
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4172,10 +4178,14 @@
         "h": 12,
         "w": 12,
         "x": 12,
-        "y": 81
+        "y": 84
       },
       "id": 82,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "mean",
@@ -4183,6 +4193,8 @@
             "min"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -4193,7 +4205,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -4210,7 +4222,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -4236,7 +4247,6 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -4277,8 +4287,6 @@
               "mode": "off"
             }
           },
-          "links": [],
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4300,10 +4308,14 @@
         "h": 14,
         "w": 12,
         "x": 0,
-        "y": 93
+        "y": 96
       },
       "id": 43,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "mean",
@@ -4311,6 +4323,8 @@
             "min"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -4321,7 +4335,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -4338,7 +4352,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -4364,7 +4377,6 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -4405,8 +4417,6 @@
               "mode": "off"
             }
           },
-          "links": [],
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4428,10 +4438,14 @@
         "h": 14,
         "w": 12,
         "x": 12,
-        "y": 93
+        "y": 96
       },
       "id": 76,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "mean",
@@ -4439,6 +4453,8 @@
             "min"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -4449,7 +4465,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -4466,7 +4482,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -4493,10 +4508,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 107
+        "y": 110
       },
-      "id": 90,
-      "panels": [],
+      "id": 133,
       "title": "Netwatch",
       "type": "row"
     },
@@ -4505,7 +4519,6 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -4556,13 +4569,18 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 108
+        "y": 111
       },
       "id": 87,
       "options": {
         "alignValue": "left",
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "displayMode": "list",
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -4576,7 +4594,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -4593,7 +4611,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -4635,7 +4652,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4695,7 +4711,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 108
+        "y": 111
       },
       "id": 88,
       "options": {
@@ -4703,7 +4719,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -4772,9 +4788,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 116
+        "y": 119
       },
-      "id": 29,
+      "id": 134,
       "panels": [
         {
           "datasource": {
@@ -4819,8 +4835,6 @@
                 }
               },
               "decimals": 1,
-              "links": [],
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
@@ -4882,7 +4896,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 292
+            "y": 120
           },
           "id": 31,
           "options": {
@@ -4964,8 +4978,6 @@
                 }
               },
               "decimals": 2,
-              "links": [],
-              "mappings": [],
               "max": 100,
               "thresholds": {
                 "mode": "absolute",
@@ -5028,7 +5040,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 292
+            "y": 120
           },
           "id": 73,
           "options": {
@@ -5085,7 +5097,6 @@
                 "filterable": false,
                 "inspect": false
               },
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
@@ -5165,7 +5176,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 300
+            "y": 128
           },
           "id": 68,
           "options": {
@@ -5281,8 +5292,6 @@
                 }
               },
               "decimals": 0,
-              "links": [],
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
@@ -5344,7 +5353,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 300
+            "y": 128
           },
           "id": 37,
           "options": {
@@ -5388,7 +5397,6 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
-          "description": "",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -5426,8 +5434,6 @@
                   "mode": "off"
                 }
               },
-              "links": [],
-              "mappings": [],
               "max": 100,
               "thresholds": {
                 "mode": "absolute",
@@ -5470,7 +5476,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 308
+            "y": 136
           },
           "id": 61,
           "options": {
@@ -5511,7 +5517,6 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
-          "description": "",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -5549,8 +5554,6 @@
                   "mode": "off"
                 }
               },
-              "links": [],
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
@@ -5641,7 +5644,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 308
+            "y": 136
           },
           "id": 63,
           "options": {
@@ -5674,7 +5677,6 @@
               "group": {
                 "filter": "Network"
               },
-              "hide": false,
               "host": {
                 "filter": "MikroTik Router"
               },
@@ -5706,7 +5708,6 @@
               "group": {
                 "filter": "Network"
               },
-              "hide": false,
               "host": {
                 "filter": "MikroTik Router"
               },
@@ -5769,8 +5770,6 @@
                   "mode": "off"
                 }
               },
-              "links": [],
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
@@ -5784,14 +5783,13 @@
                 ]
               },
               "unit": "dB"
-            },
-            "overrides": []
+            }
           },
           "gridPos": {
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 316
+            "y": 144
           },
           "id": 65,
           "options": {
@@ -5826,7 +5824,6 @@
               "group": {
                 "filter": "Network"
               },
-              "hide": false,
               "host": {
                 "filter": "MikroTik Router"
               },
@@ -5889,8 +5886,6 @@
                   "mode": "off"
                 }
               },
-              "links": [],
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
@@ -5904,14 +5899,13 @@
                 ]
               },
               "unit": "none"
-            },
-            "overrides": []
+            }
           },
           "gridPos": {
             "h": 7,
             "w": 12,
             "x": 12,
-            "y": 316
+            "y": 144
           },
           "id": 66,
           "options": {
@@ -5946,7 +5940,6 @@
               "group": {
                 "filter": "Network"
               },
-              "hide": false,
               "host": {
                 "filter": "MikroTik Router"
               },
@@ -5977,10 +5970,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 117
+        "y": 120
       },
-      "id": 33,
-      "panels": [],
+      "id": 135,
       "title": "CAPsMAN",
       "type": "row"
     },
@@ -6003,7 +5995,6 @@
             "inspect": false
           },
           "decimals": 2,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -6062,7 +6053,7 @@
         "h": 6,
         "w": 6,
         "x": 0,
-        "y": 118
+        "y": 121
       },
       "id": 35,
       "options": {
@@ -6070,7 +6061,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -6140,7 +6131,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -6221,7 +6211,7 @@
         "h": 15,
         "w": 18,
         "x": 6,
-        "y": 118
+        "y": 121
       },
       "id": 41,
       "options": {
@@ -6234,7 +6224,7 @@
           }
         ]
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -6293,12 +6283,9 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "decimals": 0,
-          "links": [],
-          "mappings": [],
           "min": 1,
           "thresholds": {
             "mode": "absolute",
@@ -6324,7 +6311,7 @@
         "h": 7,
         "w": 6,
         "x": 0,
-        "y": 124
+        "y": 127
       },
       "id": 47,
       "options": {
@@ -6332,6 +6319,7 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": false
         },
@@ -6352,7 +6340,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -6369,7 +6357,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -6412,8 +6399,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "links": [],
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -6447,7 +6432,7 @@
         "h": 11,
         "w": 6,
         "x": 0,
-        "y": 131
+        "y": 134
       },
       "id": 48,
       "options": {
@@ -6455,6 +6440,7 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": false
         },
@@ -6475,7 +6461,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -6492,7 +6478,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -6557,8 +6542,6 @@
               "mode": "off"
             }
           },
-          "links": [],
-          "mappings": [],
           "max": -16,
           "min": -80,
           "thresholds": {
@@ -6582,15 +6565,21 @@
         "h": 9,
         "w": 18,
         "x": 6,
-        "y": 133
+        "y": 136
       },
       "id": 49,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "mean"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "right",
           "showLegend": true
         },
@@ -6601,7 +6590,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -6618,7 +6607,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -6683,8 +6671,6 @@
               "mode": "off"
             }
           },
-          "links": [],
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -6741,15 +6727,21 @@
         "h": 10,
         "w": 24,
         "x": 0,
-        "y": 142
+        "y": 145
       },
       "id": 39,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "mean"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "right",
           "showLegend": true
         },
@@ -6760,7 +6752,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -6777,7 +6769,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -6809,7 +6800,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -6836,16 +6826,15 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 152
+        "y": 155
       },
-      "id": 109,
+      "id": 136,
       "panels": [
         {
           "datasource": {
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
-          "description": "",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -6883,8 +6872,6 @@
                   "mode": "off"
                 }
               },
-              "links": [],
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
@@ -6918,7 +6905,7 @@
             "h": 11,
             "w": 12,
             "x": 0,
-            "y": 328
+            "y": 156
           },
           "id": 107,
           "options": {
@@ -6955,7 +6942,6 @@
               "group": {
                 "filter": "Network"
               },
-              "hide": false,
               "host": {
                 "filter": "MikroTik Router"
               },
@@ -6987,7 +6973,6 @@
               "group": {
                 "filter": "Network"
               },
-              "hide": false,
               "host": {
                 "filter": "MikroTik Router"
               },
@@ -7013,7 +6998,6 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
-          "description": "",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -7051,8 +7035,6 @@
                   "mode": "off"
                 }
               },
-              "links": [],
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
@@ -7086,7 +7068,7 @@
             "h": 11,
             "w": 12,
             "x": 12,
-            "y": 328
+            "y": 156
           },
           "id": 102,
           "options": {
@@ -7125,7 +7107,6 @@
               "group": {
                 "filter": "Network"
               },
-              "hide": false,
               "host": {
                 "filter": "MikroTik Router"
               },
@@ -7157,7 +7138,6 @@
               "group": {
                 "filter": "Network"
               },
-              "hide": false,
               "host": {
                 "filter": "MikroTik Router"
               },
@@ -7183,7 +7163,6 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
-          "description": "",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -7221,8 +7200,6 @@
                   "mode": "off"
                 }
               },
-              "links": [],
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
@@ -7256,7 +7233,7 @@
             "h": 11,
             "w": 12,
             "x": 0,
-            "y": 339
+            "y": 167
           },
           "id": 111,
           "options": {
@@ -7295,7 +7272,6 @@
               "group": {
                 "filter": "Network"
               },
-              "hide": false,
               "host": {
                 "filter": "MikroTik Router"
               },
@@ -7327,7 +7303,6 @@
               "group": {
                 "filter": "Network"
               },
-              "hide": false,
               "host": {
                 "filter": "MikroTik Router"
               },
@@ -7353,7 +7328,6 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
-          "description": "",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -7391,8 +7365,6 @@
                   "mode": "off"
                 }
               },
-              "links": [],
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
@@ -7426,7 +7398,7 @@
             "h": 11,
             "w": 12,
             "x": 12,
-            "y": 339
+            "y": 167
           },
           "id": 112,
           "options": {
@@ -7465,7 +7437,6 @@
               "group": {
                 "filter": "Network"
               },
-              "hide": false,
               "host": {
                 "filter": "MikroTik Router"
               },
@@ -7497,7 +7468,6 @@
               "group": {
                 "filter": "Network"
               },
-              "hide": false,
               "host": {
                 "filter": "MikroTik Router"
               },
@@ -7528,16 +7498,15 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 153
+        "y": 156
       },
-      "id": 100,
+      "id": 137,
       "panels": [
         {
           "datasource": {
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
-          "description": "",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -7575,8 +7544,6 @@
                   "mode": "off"
                 }
               },
-              "links": [],
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
@@ -7610,7 +7577,7 @@
             "h": 11,
             "w": 12,
             "x": 0,
-            "y": 329
+            "y": 157
           },
           "id": 101,
           "options": {
@@ -7647,7 +7614,6 @@
               "group": {
                 "filter": "Network"
               },
-              "hide": false,
               "host": {
                 "filter": "MikroTik Router"
               },
@@ -7673,7 +7639,6 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
-          "description": "",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -7711,8 +7676,6 @@
                   "mode": "off"
                 }
               },
-              "links": [],
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
@@ -7746,7 +7709,7 @@
             "h": 11,
             "w": 12,
             "x": 12,
-            "y": 329
+            "y": 157
           },
           "id": 110,
           "options": {
@@ -7785,7 +7748,6 @@
               "group": {
                 "filter": "Network"
               },
-              "hide": false,
               "host": {
                 "filter": "MikroTik Router"
               },
@@ -7811,7 +7773,6 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
-          "description": "",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -7849,8 +7810,6 @@
                   "mode": "off"
                 }
               },
-              "links": [],
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
@@ -7884,7 +7843,7 @@
             "h": 11,
             "w": 12,
             "x": 0,
-            "y": 340
+            "y": 168
           },
           "id": 106,
           "options": {
@@ -7923,7 +7882,6 @@
               "group": {
                 "filter": "Network"
               },
-              "hide": false,
               "host": {
                 "filter": "MikroTik Router"
               },
@@ -7949,7 +7907,6 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
-          "description": "",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -7987,8 +7944,6 @@
                   "mode": "off"
                 }
               },
-              "links": [],
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
@@ -8022,7 +7977,7 @@
             "h": 11,
             "w": 12,
             "x": 12,
-            "y": 340
+            "y": 168
           },
           "id": 105,
           "options": {
@@ -8061,7 +8016,6 @@
               "group": {
                 "filter": "Network"
               },
-              "hide": false,
               "host": {
                 "filter": "MikroTik Router"
               },
@@ -8092,10 +8046,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 154
+        "y": 157
       },
-      "id": 122,
-      "panels": [],
+      "id": 138,
       "title": "Kid Control Devices",
       "type": "row"
     },
@@ -8120,7 +8073,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -8225,7 +8177,7 @@
         "h": 13,
         "w": 12,
         "x": 0,
-        "y": 155
+        "y": 158
       },
       "id": 121,
       "options": {
@@ -8238,7 +8190,7 @@
           }
         ]
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -8303,7 +8255,6 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -8343,8 +8294,6 @@
               "mode": "off"
             }
           },
-          "links": [],
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -8401,10 +8350,14 @@
         "h": 13,
         "w": 12,
         "x": 12,
-        "y": 155
+        "y": 158
       },
       "id": 124,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "mean",
@@ -8412,6 +8365,8 @@
             "min"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "right",
           "showLegend": true,
           "sortBy": "Mean",
@@ -8424,7 +8379,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -8441,7 +8396,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -8465,7 +8419,6 @@
           },
           "editorMode": "code",
           "expr": "mktxp_kid_control_device_rate_up{routerboard_name=\"$node\"}*8",
-          "hide": false,
           "instant": false,
           "legendFormat": "Up | {{ dhcp_name }}",
           "range": true,
@@ -8480,14 +8433,11 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
             "mode": "thresholds"
           },
-          "fieldMinMax": true,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -8541,7 +8491,7 @@
         "h": 13,
         "w": 12,
         "x": 0,
-        "y": 168
+        "y": 171
       },
       "id": 125,
       "options": {
@@ -8549,6 +8499,7 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": false
         },
@@ -8568,7 +8519,7 @@
         "sizing": "auto",
         "valueMode": "text"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -8585,7 +8536,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -8650,8 +8600,6 @@
               "mode": "off"
             }
           },
-          "links": [],
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -8708,15 +8656,21 @@
         "h": 13,
         "w": 12,
         "x": 12,
-        "y": 168
+        "y": 171
       },
       "id": 123,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "mean"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "right",
           "showLegend": true,
           "sortBy": "Mean",
@@ -8729,7 +8683,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -8746,7 +8700,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -8778,7 +8731,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -8805,10 +8757,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 181
+        "y": 184
       },
-      "id": 80,
-      "panels": [],
+      "id": 139,
       "title": "MKTXP Metrics",
       "type": "row"
     },
@@ -8822,8 +8773,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "links": [],
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -8853,7 +8802,7 @@
         "h": 8,
         "w": 6,
         "x": 0,
-        "y": 182
+        "y": 185
       },
       "id": 78,
       "options": {
@@ -8861,6 +8810,7 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": false
         },
@@ -8881,7 +8831,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -8898,7 +8848,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -8964,8 +8913,6 @@
               "mode": "off"
             }
           },
-          "links": [],
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -8987,15 +8934,21 @@
         "h": 8,
         "w": 18,
         "x": 6,
-        "y": 182
+        "y": 185
       },
       "id": 77,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "mean"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "right",
           "showLegend": true
         },
@@ -9006,7 +8959,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -9023,7 +8976,6 @@
           "group": {
             "filter": "Network"
           },
-          "hide": false,
           "host": {
             "filter": "MikroTik Router"
           },
@@ -9101,8 +9053,6 @@
             }
           },
           "decimals": 0,
-          "links": [],
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -9124,10 +9074,14 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 190
+        "y": 193
       },
       "id": 27,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "mean",
@@ -9136,6 +9090,8 @@
             "min"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -9146,7 +9102,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -9208,8 +9164,6 @@
             }
           },
           "decimals": 0,
-          "links": [],
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -9231,10 +9185,14 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 190
+        "y": 193
       },
       "id": 74,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "mean",
@@ -9243,6 +9201,8 @@
             "min"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -9253,7 +9213,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
@@ -9274,17 +9234,12 @@
   "preload": false,
   "refresh": "10s",
   "schemaVersion": 42,
-  "tags": [
-    "mikrotik",
-    "mktxp"
-  ],
+  "tags": [],
   "templating": {
     "list": [
       {
-        "current": {
-          "text": "MKT-GT",
-          "value": "MKT-GT"
-        },
+        "allowCustomValue": true,
+        "current": {},
         "datasource": {
           "type": "prometheus",
           "uid": "PBFA97CFB590B2093"
@@ -9300,15 +9255,18 @@
         },
         "refresh": 1,
         "regex": "",
+        "regexApplyTo": "value",
         "sort": 1,
         "type": "query"
       },
       {
+        "allowCustomValue": true,
         "baseFilters": [],
         "datasource": {
           "type": "prometheus",
-          "uid": "PBFA97CFB590B2093"
+          "uid": "${DS_PROMETHEUS}"
         },
+        "enableGroupBy": false,
         "filters": [],
         "name": "Filters",
         "type": "adhoc"
@@ -9319,9 +9277,24 @@
     "from": "now-12h",
     "to": "now"
   },
-  "timepicker": {},
-  "timezone": "",
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "browser",
   "title": "Mikrotik MKTXP Exporter",
-  "uid": "78d5fa8d-8a24-4a63-bfa7-802d55bb1638",
-  "version": 1
+  "weekStart": "",
+  "version": 1,
+  "uid": "gxf3edrffkw",
+  "id": 4270643622404096
 }
