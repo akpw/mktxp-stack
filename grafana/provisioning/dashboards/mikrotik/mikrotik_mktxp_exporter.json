@@ -9234,7 +9234,10 @@
   "preload": false,
   "refresh": "10s",
   "schemaVersion": 42,
-  "tags": [],
+  "tags": [
+    "mikrotik",
+    "mktxp"
+  ],
   "templating": {
     "list": [
       {
