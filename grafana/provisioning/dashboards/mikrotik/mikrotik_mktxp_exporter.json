@@ -24,7 +24,6 @@
   "description": "Mikrotik MKTXP Exporter metrics",
   "editable": true,
   "fiscalYearStartMonth": 0,
-  "gnetId": 13679,
   "graphTooltip": 0,
   "links": [
     {
@@ -67,7 +66,7 @@
         "x": 0,
         "y": 0
       },
-      "id": 129,
+      "id": 130,
       "title": "System",
       "type": "row"
     },
@@ -103,8 +102,7 @@
             ]
           },
           "unit": "none"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -132,7 +130,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -182,8 +180,7 @@
             ]
           },
           "unit": "none"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -211,7 +208,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -320,7 +317,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -411,8 +408,7 @@
             ]
           },
           "unit": "percent"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 7,
@@ -448,7 +444,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -506,6 +502,7 @@
           "refId": "B"
         }
       ],
+      "title": "",
       "type": "bargauge"
     },
     {
@@ -569,8 +566,7 @@
             ]
           },
           "unit": "percent"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 7,
@@ -603,7 +599,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -802,7 +798,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -856,8 +852,7 @@
             ]
           },
           "unit": "hertz"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -884,7 +879,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -939,8 +934,7 @@
             ]
           },
           "unit": "celsius"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 6,
@@ -978,7 +972,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -1039,8 +1033,7 @@
             ]
           },
           "unit": "none"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -1068,7 +1061,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1149,8 +1142,7 @@
             ]
           },
           "unit": "dtdurations"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -1178,7 +1170,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1311,7 +1303,7 @@
           }
         ]
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -1524,7 +1516,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1613,8 +1605,7 @@
             ]
           },
           "unit": "volt"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -1642,7 +1633,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1711,8 +1702,7 @@
             ]
           },
           "unit": "none"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -1740,7 +1730,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -1790,8 +1780,7 @@
             ]
           },
           "unit": "none"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -1819,7 +1808,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -1857,7 +1846,7 @@
         "x": 0,
         "y": 15
       },
-      "id": 130,
+      "id": 131,
       "title": "DHCP",
       "type": "row"
     },
@@ -1889,8 +1878,7 @@
             ]
           },
           "unit": "percentunit"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 11,
@@ -1925,7 +1913,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -2006,7 +1994,8 @@
             },
             "properties": [
               {
-                "id": "displayName"
+                "id": "displayName",
+                "value": null
               }
             ]
           },
@@ -2089,7 +2078,7 @@
           }
         ]
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -2176,8 +2165,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 8,
@@ -2212,7 +2200,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -2278,8 +2266,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -2314,7 +2301,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -2359,7 +2346,7 @@
         "x": 0,
         "y": 38
       },
-      "id": 131,
+      "id": 132,
       "title": "Network",
       "type": "row"
     },
@@ -2401,8 +2388,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 5,
@@ -2440,7 +2426,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -2458,99 +2444,6 @@
       ],
       "title": "Total Routes",
       "type": "gauge"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": 0
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 5,
-        "w": 4,
-        "x": 2,
-        "y": 39
-      },
-      "id": 71,
-      "options": {
-        "displayMode": "lcd",
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "overflow": "ellipsis",
-          "placement": "bottom",
-          "showLegend": false
-        },
-        "maxVizHeight": 300,
-        "minVizHeight": 10,
-        "minVizWidth": 0,
-        "namePlacement": "auto",
-        "orientation": "horizontal",
-        "reduceOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showUnfilled": true,
-        "sizing": "auto",
-        "text": {},
-        "valueMode": "color"
-      },
-      "pluginVersion": "13.1.0",
-      "targets": [
-        {
-          "application": {
-            "filter": "Network"
-          },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
-          "editorMode": "code",
-          "expr": "mktxp_routes_protocol_count{routerboard_name=\"$node\"}",
-          "format": "time_series",
-          "functions": [],
-          "group": {
-            "filter": "Network"
-          },
-          "host": {
-            "filter": "MikroTik Router"
-          },
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "item": {
-            "filter": "/errors on interface/"
-          },
-          "legendFormat": "{{protocol}}",
-          "mode": 0,
-          "options": {
-            "showDisabledItems": false
-          },
-          "refId": "A"
-        }
-      ],
-      "title": "Routes per protocol",
-      "type": "bargauge"
     },
     {
       "datasource": {
@@ -2590,13 +2483,12 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 5,
-        "w": 6,
-        "x": 6,
+        "w": 5,
+        "x": 2,
         "y": 39
       },
       "id": 69,
@@ -2626,7 +2518,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -2643,6 +2535,98 @@
         }
       ],
       "title": "Ethernet Ports: Full Duplex",
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 5,
+        "x": 7,
+        "y": 39
+      },
+      "id": 71,
+      "options": {
+        "displayMode": "lcd",
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "overflow": "ellipsis",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "maxVizHeight": 300,
+        "minVizHeight": 10,
+        "minVizWidth": 0,
+        "namePlacement": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "sizing": "auto",
+        "text": {},
+        "valueMode": "color"
+      },
+      "pluginVersion": "13.1.1",
+      "targets": [
+        {
+          "application": {
+            "filter": "Network"
+          },
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "mktxp_routes_protocol_count{routerboard_name=\"$node\"}",
+          "format": "time_series",
+          "functions": [],
+          "group": {
+            "filter": "Network"
+          },
+          "host": {
+            "filter": "MikroTik Router"
+          },
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "item": {
+            "filter": "/errors on interface/"
+          },
+          "legendFormat": "{{protocol}}",
+          "mode": 0,
+          "options": {
+            "showDisabledItems": false
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "Routes per protocol",
       "type": "bargauge"
     },
     {
@@ -2720,7 +2704,7 @@
         ]
       },
       "gridPos": {
-        "h": 16,
+        "h": 15,
         "w": 12,
         "x": 12,
         "y": 39
@@ -2748,7 +2732,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -2837,12 +2821,11 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
-        "h": 7,
-        "w": 6,
+        "h": 10,
+        "w": 7,
         "x": 0,
         "y": 44
       },
@@ -2873,7 +2856,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -2925,12 +2908,26 @@
           },
           "unit": "Mbits"
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Interface",
+              "scope": "series"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 217
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
-        "h": 7,
-        "w": 6,
-        "x": 6,
+        "h": 10,
+        "w": 5,
+        "x": 7,
         "y": 44
       },
       "id": 53,
@@ -2938,7 +2935,7 @@
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -2988,6 +2985,92 @@
       },
       "fieldConfig": {
         "defaults": {
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "scaleDistribution": {
+              "type": "linear"
+            }
+          }
+        }
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 54
+      },
+      "id": 129,
+      "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
+        "calculate": false,
+        "cellGap": 1,
+        "color": {
+          "exponent": 0.5,
+          "fill": "dark-orange",
+          "min": 100,
+          "mode": "scheme",
+          "reverse": true,
+          "scale": "exponential",
+          "scheme": "PiYG",
+          "steps": 71
+        },
+        "exemplars": {
+          "color": "rgba(255,0,255,0.7)"
+        },
+        "filterValues": {
+          "le": 1e-09
+        },
+        "legend": {
+          "show": true
+        },
+        "rowsFrame": {
+          "layout": "auto"
+        },
+        "tooltip": {
+          "mode": "single",
+          "showColorScale": false,
+          "yHistogram": false
+        },
+        "yAxis": {
+          "axisPlacement": "left",
+          "reverse": false
+        }
+      },
+      "pluginVersion": "13.1.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "avg by(name) (mktxp_interface_rate{routerboard_name=\"$node\"})",
+          "format": "time_series",
+          "instant": false,
+          "interval": "8m",
+          "legendFormat": "{{name}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Rates over Time",
+      "type": "heatmap"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
           "color": {
             "mode": "fixed"
           },
@@ -3024,7 +3107,8 @@
             },
             "properties": [
               {
-                "id": "displayName"
+                "id": "displayName",
+                "value": null
               }
             ]
           },
@@ -3091,10 +3175,10 @@
         ]
       },
       "gridPos": {
-        "h": 4,
+        "h": 9,
         "w": 12,
-        "x": 0,
-        "y": 51
+        "x": 12,
+        "y": 54
       },
       "id": 85,
       "options": {
@@ -3107,7 +3191,7 @@
           }
         ]
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -3265,7 +3349,7 @@
         "h": 14,
         "w": 24,
         "x": 0,
-        "y": 55
+        "y": 63
       },
       "id": 75,
       "options": {
@@ -3292,7 +3376,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -3366,9 +3450,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 69
+        "y": 77
       },
-      "id": 132,
+      "id": 133,
       "title": "Firewall",
       "type": "row"
     },
@@ -3392,14 +3476,13 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 6,
         "w": 6,
         "x": 0,
-        "y": 70
+        "y": 78
       },
       "id": 128,
       "options": {
@@ -3428,7 +3511,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -3485,14 +3568,13 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 6,
         "w": 6,
         "x": 6,
-        "y": 70
+        "y": 78
       },
       "id": 126,
       "options": {
@@ -3521,7 +3603,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -3629,7 +3711,7 @@
         "h": 6,
         "w": 12,
         "x": 12,
-        "y": 70
+        "y": 78
       },
       "id": 127,
       "options": {
@@ -3642,7 +3724,7 @@
           }
         ]
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -3798,7 +3880,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 76
+        "y": 84
       },
       "id": 117,
       "options": {
@@ -3812,7 +3894,7 @@
           }
         ]
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -3922,14 +4004,13 @@
             ]
           },
           "unit": "none"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 76
+        "y": 84
       },
       "id": 118,
       "options": {
@@ -3962,7 +4043,7 @@
         "xTickLabelRotation": 0,
         "xTickLabelSpacing": 0
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -4041,14 +4122,13 @@
             ]
           },
           "unit": "bps"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 12,
         "w": 12,
         "x": 0,
-        "y": 84
+        "y": 92
       },
       "id": 81,
       "options": {
@@ -4075,7 +4155,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -4171,14 +4251,13 @@
             ]
           },
           "unit": "bps"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 12,
         "w": 12,
         "x": 12,
-        "y": 84
+        "y": 92
       },
       "id": 82,
       "options": {
@@ -4205,7 +4284,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -4301,14 +4380,13 @@
             ]
           },
           "unit": "bps"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 14,
         "w": 12,
         "x": 0,
-        "y": 96
+        "y": 104
       },
       "id": 43,
       "options": {
@@ -4335,7 +4413,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -4431,14 +4509,13 @@
             ]
           },
           "unit": "bps"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 14,
         "w": 12,
         "x": 12,
-        "y": 96
+        "y": 104
       },
       "id": 76,
       "options": {
@@ -4465,7 +4542,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -4508,9 +4585,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 110
+        "y": 118
       },
-      "id": 133,
+      "id": 134,
       "title": "Netwatch",
       "type": "row"
     },
@@ -4562,14 +4639,13 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 111
+        "y": 119
       },
       "id": 87,
       "options": {
@@ -4594,7 +4670,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -4711,7 +4787,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 111
+        "y": 119
       },
       "id": 88,
       "options": {
@@ -4719,7 +4795,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -4788,9 +4864,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 119
+        "y": 127
       },
-      "id": 134,
+      "id": 135,
       "panels": [
         {
           "datasource": {
@@ -4839,7 +4915,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -4896,7 +4973,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 120
+            "y": 128
           },
           "id": 31,
           "options": {
@@ -4983,7 +5060,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -5040,7 +5118,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 120
+            "y": 128
           },
           "id": 73,
           "options": {
@@ -5101,7 +5179,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -5118,7 +5197,8 @@
                 },
                 "properties": [
                   {
-                    "id": "displayName"
+                    "id": "displayName",
+                    "value": null
                   }
                 ]
               },
@@ -5176,7 +5256,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 128
+            "y": 136
           },
           "id": 68,
           "options": {
@@ -5296,7 +5376,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -5353,7 +5434,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 128
+            "y": 136
           },
           "id": 37,
           "options": {
@@ -5439,7 +5520,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -5476,7 +5558,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 136
+            "y": 144
           },
           "id": 61,
           "options": {
@@ -5558,7 +5640,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -5644,7 +5727,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 136
+            "y": 144
           },
           "id": 63,
           "options": {
@@ -5774,7 +5857,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -5789,7 +5873,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 144
+            "y": 152
           },
           "id": 65,
           "options": {
@@ -5890,7 +5974,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -5905,7 +5990,7 @@
             "h": 7,
             "w": 12,
             "x": 12,
-            "y": 144
+            "y": 152
           },
           "id": 66,
           "options": {
@@ -5970,9 +6055,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 120
+        "y": 128
       },
-      "id": 135,
+      "id": 136,
       "title": "CAPsMAN",
       "type": "row"
     },
@@ -6053,7 +6138,7 @@
         "h": 6,
         "w": 6,
         "x": 0,
-        "y": 121
+        "y": 129
       },
       "id": 35,
       "options": {
@@ -6061,7 +6146,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -6153,7 +6238,8 @@
             },
             "properties": [
               {
-                "id": "displayName"
+                "id": "displayName",
+                "value": null
               }
             ]
           },
@@ -6211,7 +6297,7 @@
         "h": 15,
         "w": 18,
         "x": 6,
-        "y": 121
+        "y": 129
       },
       "id": 41,
       "options": {
@@ -6224,7 +6310,7 @@
           }
         ]
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -6304,14 +6390,13 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 7,
         "w": 6,
         "x": 0,
-        "y": 127
+        "y": 135
       },
       "id": 47,
       "options": {
@@ -6340,7 +6425,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -6425,14 +6510,13 @@
             ]
           },
           "unit": "dB"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 11,
         "w": 6,
         "x": 0,
-        "y": 134
+        "y": 142
       },
       "id": 48,
       "options": {
@@ -6461,7 +6545,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -6558,14 +6642,13 @@
             ]
           },
           "unit": "dB"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 9,
         "w": 18,
         "x": 6,
-        "y": 136
+        "y": 144
       },
       "id": 49,
       "options": {
@@ -6590,7 +6673,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -6727,7 +6810,7 @@
         "h": 10,
         "w": 24,
         "x": 0,
-        "y": 145
+        "y": 153
       },
       "id": 39,
       "options": {
@@ -6752,7 +6835,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -6826,9 +6909,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 155
+        "y": 163
       },
-      "id": 136,
+      "id": 137,
       "panels": [
         {
           "datasource": {
@@ -6876,7 +6959,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -6905,7 +6989,7 @@
             "h": 11,
             "w": 12,
             "x": 0,
-            "y": 156
+            "y": 164
           },
           "id": 107,
           "options": {
@@ -7039,7 +7123,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -7068,7 +7153,7 @@
             "h": 11,
             "w": 12,
             "x": 12,
-            "y": 156
+            "y": 164
           },
           "id": 102,
           "options": {
@@ -7204,7 +7289,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -7233,7 +7319,7 @@
             "h": 11,
             "w": 12,
             "x": 0,
-            "y": 167
+            "y": 175
           },
           "id": 111,
           "options": {
@@ -7369,7 +7455,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -7398,7 +7485,7 @@
             "h": 11,
             "w": 12,
             "x": 12,
-            "y": 167
+            "y": 175
           },
           "id": 112,
           "options": {
@@ -7498,9 +7585,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 156
+        "y": 164
       },
-      "id": 137,
+      "id": 138,
       "panels": [
         {
           "datasource": {
@@ -7548,7 +7635,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -7577,7 +7665,7 @@
             "h": 11,
             "w": 12,
             "x": 0,
-            "y": 157
+            "y": 165
           },
           "id": 101,
           "options": {
@@ -7680,7 +7768,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -7709,7 +7798,7 @@
             "h": 11,
             "w": 12,
             "x": 12,
-            "y": 157
+            "y": 165
           },
           "id": 110,
           "options": {
@@ -7814,7 +7903,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -7843,7 +7933,7 @@
             "h": 11,
             "w": 12,
             "x": 0,
-            "y": 168
+            "y": 176
           },
           "id": 106,
           "options": {
@@ -7948,7 +8038,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -7977,7 +8068,7 @@
             "h": 11,
             "w": 12,
             "x": 12,
-            "y": 168
+            "y": 176
           },
           "id": 105,
           "options": {
@@ -8046,9 +8137,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 157
+        "y": 165
       },
-      "id": 138,
+      "id": 139,
       "title": "Kid Control Devices",
       "type": "row"
     },
@@ -8095,7 +8186,8 @@
             },
             "properties": [
               {
-                "id": "displayName"
+                "id": "displayName",
+                "value": null
               }
             ]
           },
@@ -8177,7 +8269,7 @@
         "h": 13,
         "w": 12,
         "x": 0,
-        "y": 158
+        "y": 166
       },
       "id": 121,
       "options": {
@@ -8190,7 +8282,7 @@
           }
         ]
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -8350,7 +8442,7 @@
         "h": 13,
         "w": 12,
         "x": 12,
-        "y": 158
+        "y": 166
       },
       "id": 124,
       "options": {
@@ -8379,7 +8471,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -8484,14 +8576,13 @@
             ]
           },
           "unit": "s"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 13,
         "w": 12,
         "x": 0,
-        "y": 171
+        "y": 179
       },
       "id": 125,
       "options": {
@@ -8519,7 +8610,7 @@
         "sizing": "auto",
         "valueMode": "text"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -8656,7 +8747,7 @@
         "h": 13,
         "w": 12,
         "x": 12,
-        "y": 171
+        "y": 179
       },
       "id": 123,
       "options": {
@@ -8683,7 +8774,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -8757,9 +8848,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 184
+        "y": 192
       },
-      "id": 139,
+      "id": 140,
       "title": "MKTXP Metrics",
       "type": "row"
     },
@@ -8795,14 +8886,13 @@
             ]
           },
           "unit": "ms"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 8,
         "w": 6,
         "x": 0,
-        "y": 185
+        "y": 193
       },
       "id": 78,
       "options": {
@@ -8831,7 +8921,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -8927,14 +9017,13 @@
             ]
           },
           "unit": "ms"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 8,
         "w": 18,
         "x": 6,
-        "y": 185
+        "y": 193
       },
       "id": 77,
       "options": {
@@ -8959,7 +9048,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -9067,14 +9156,13 @@
             ]
           },
           "unit": "bps"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 193
+        "y": 201
       },
       "id": 27,
       "options": {
@@ -9102,7 +9190,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -9178,14 +9266,13 @@
             ]
           },
           "unit": "ms"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 193
+        "y": 201
       },
       "id": 74,
       "options": {
@@ -9213,7 +9300,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
@@ -9242,14 +9329,19 @@
     "list": [
       {
         "allowCustomValue": true,
-        "current": {},
+        "current": {
+          "text": "MKT-GT",
+          "value": "MKT-GT"
+        },
         "datasource": {
           "type": "prometheus",
           "uid": "PBFA97CFB590B2093"
         },
         "definition": "label_values(mktxp_system_identity_info, routerboard_name)",
+        "hide": 0,
         "includeAll": false,
         "label": "Routerboard",
+        "multi": false,
         "name": "node",
         "options": [],
         "query": {
@@ -9259,19 +9351,20 @@
         "refresh": 1,
         "regex": "",
         "regexApplyTo": "value",
+        "skipUrlSync": false,
         "sort": 1,
         "type": "query"
       },
       {
         "allowCustomValue": true,
-        "baseFilters": [],
         "datasource": {
           "type": "prometheus",
-          "uid": "${DS_PROMETHEUS}"
+          "uid": "PBFA97CFB590B2093"
         },
         "enableGroupBy": false,
-        "filters": [],
+        "hide": 0,
         "name": "Filters",
+        "skipUrlSync": false,
         "type": "adhoc"
       }
     ]
@@ -9296,8 +9389,8 @@
   },
   "timezone": "browser",
   "title": "Mikrotik MKTXP Exporter",
-  "weekStart": "",
-  "version": 1,
+  "version": 2,
   "uid": "gxf3edrffkw",
-  "id": 4270643622404096
+  "id": null,
+  "gnetId": 13679
 }
