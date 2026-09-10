@@ -42,7 +42,7 @@ With that out the of way, things should be ready for running `docker compose`:
 docker compose -f ./docker-compose-mktxp-stack.yml up -d
 ```
 
-<sup>💡</sup> *If you are upgrading an existing installation from an older version, the `mktxp` container now runs as a secure non-root user. You might need to update the permissions on your local config folder (`sudo chown -R 1000:1000 ./mktxp`) before starting the stack to prevent file permission errors.*
+> 💡 *If you are upgrading an existing installation from an older version, the `mktxp` container now runs as a secure non-root user. You might need to update the permissions on your local config folder (`sudo chown -R 1000:1000 ./mktxp`) before starting the stack to prevent file permission errors.*
 
 Now give the containers some time to start up, and then point a Web browser to [Grafana](http://localhost:3000). You should see the default [MKTXP Exporter Dashboard](https://grafana.com/grafana/dashboards/13679-mikrotik-mktxp-exporter/):\
 <img width="32%" alt="1" src="https://user-images.githubusercontent.com/5028474/211141785-3d71df65-28cb-45fa-bd22-70022f40f162.png"> <img width="32%" alt="2" src="https://user-images.githubusercontent.com/5028474/211141871-30b409fe-5c77-4616-9cc6-c0556432cfea.png"> <img width="32%" alt="3" src="https://user-images.githubusercontent.com/5028474/211141793-61bee869-9125-4b74-a5b4-a02f0f82cc6d.png">
@@ -58,7 +58,7 @@ To make this work, we need to configure our Mikrotik devices to send their logs 
 /system logging action
 set remote name=remote remote=XX.XX.XX.XX remote-port=514 src-address=0.0.0.0 target=remote remote-log-format=syslog remote-protocol=udp syslog-time-format=bsd-syslog syslog-facility=local0 syslog-severity=auto
 ```
-<sup>💡</sup> *On RouterOS 7.18+, `bsd-syslog` is configured via `syslog-time-format=bsd-syslog` while the remote syslog payload format is controlled by `remote-log-format=syslog`.*
+> 💡 *On RouterOS 7.18+, `bsd-syslog` is configured via `syslog-time-format=bsd-syslog` while the remote syslog payload format is controlled by `remote-log-format=syslog`.*
 
 Next, let's modify relevant log topics to use with this remote action:
 ```
@@ -100,7 +100,7 @@ This configuration makes it easy to implement log rotation or any additional man
 ```
 ls -l syslog-ng/logs/
 ```
-💡 *With mktxp-stack up & running, it might take a while for newly added log files to appear in the dashboard. In case this happens, an easy solution is to restart the promtail and syslog containers via `docker restart promtail; docker restart syslog-ng`*
+> 💡 *With mktxp-stack up & running, it might take a while for newly added log files to appear in the dashboard. In case this happens, an easy solution is to restart the promtail and syslog containers via `docker restart promtail; docker restart syslog-ng`*
 
 To set a different location on your mktxp-stack host, just edit the device path in the ```mktxp-stack/docker-compose-mktxp-stack-fs.yml``` configuration:
 ```
